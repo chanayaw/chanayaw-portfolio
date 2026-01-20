@@ -1,26 +1,255 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* globals.css
+   Chanaya W Design Tokens
+   Dark mode is the default.
+   Light mode overrides are under html:not(.dark).
+*/
+
+@theme {
+  /* ------------------------------------------------------------
+     Core neutrals (dark mode default)
+  ------------------------------------------------------------ */
+  --color-background: #0e1116; /* page canvas */
+  --color-surface: #141923; /* elevated panels */
+  --color-card: #161c27; /* cards */
+  --color-border: #263041; /* hairlines, outlines */
+
+  --color-foreground: #e6eaf0; /* primary text */
+  --color-text-muted: #a6b0c3; /* secondary text */
+  --color-text-subtle: #7f8aa3; /* metadata text */
+
+  /* ------------------------------------------------------------
+     Brand accents (controlled whimsy)
+     Use accents sparingly and intentionally.
+  ------------------------------------------------------------ */
+  --color-primary: #8fa2ff; /* periwinkle, primary actions and links */
+  --color-secondary: #4fb7a6; /* mineral teal, secondary actions and data series */
+  --color-tertiary: #c78aa8; /* muted mauve, subtle emphasis only */
+  --color-highlight: #e0c36a; /* warm signal, tiny callouts and thresholds only */
+
+  /* Whimsy layer (annotation energy, not UI energy) */
+  --color-poetic: #d6b7a3; /* warm linen */
+  --color-poetic-soft: #bfa08c; /* shadowed linen */
+
+  /* Semantic mappings */
+  --color-link: var(--color-primary);
+  --color-cta: var(--color-primary);
+  --color-cta-foreground: #0b0e14;
+
+  --color-success: var(--color-secondary);
+  --color-warning: var(--color-highlight);
+  --color-error: #e57373;
+
+  /* ------------------------------------------------------------
+     Chips and tags (optional, matches your component recipes)
+  ------------------------------------------------------------ */
+  --color-chip-bg: rgba(230, 234, 240, 0.04);
+  --color-chip-text: var(--color-text-muted);
+
+  /* ------------------------------------------------------------
+     Shadows and glow
+     Keep subtle. Use for focus, hover lift, and small highlights.
+  ------------------------------------------------------------ */
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.28);
+  --shadow-pop: 0 14px 40px rgba(0, 0, 0, 0.36);
+
+  /* Tiny ambient highlight, not a neon glow */
+  --shadow-glow: 0 0 24px rgba(143, 162, 255, 0.14);
+
+  /* ------------------------------------------------------------
+     Focus rings
+     Use as: box-shadow: var(--ring-brand);
+  ------------------------------------------------------------ */
+  --ring-brand:
+    0 0 0 2px rgba(143, 162, 255, 0.35), 0 0 0 6px rgba(143, 162, 255, 0.15);
+
+  --ring-secondary:
+    0 0 0 2px rgba(79, 183, 166, 0.35), 0 0 0 6px rgba(79, 183, 166, 0.14);
+
+  /* ------------------------------------------------------------
+     Data visualization tokens
+  ------------------------------------------------------------ */
+  --color-chart-1: var(--color-secondary);
+  --color-chart-2: var(--color-primary);
+  --color-chart-hi: var(--color-highlight);
+  --color-chart-grid: var(--color-border);
+  --color-chart-axis: var(--color-text-subtle);
+
+  /* ------------------------------------------------------------
+     Gradients
+     Use gradients only as background ambience or micro accents.
+  ------------------------------------------------------------ */
+
+  /* Hero ambience (background only, very faint) */
+  --gradient-hero:
+    radial-gradient(
+      1200px 600px at 20% 20%,
+      rgba(143, 162, 255, 0.08),
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px 500px at 80% 40%,
+      rgba(79, 183, 166, 0.06),
+      transparent 55%
+    );
+
+  /* Micro-accent gradient for 2px bars, underlines, separators */
+  --gradient-accent: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  /* Optional poetic wash for small callouts (use sparingly) */
+  --gradient-poetic-wash: radial-gradient(
+    800px 320px at 20% 30%,
+    rgba(214, 183, 163, 0.1),
+    transparent 62%
+  );
+
+  /* ------------------------------------------------------------
+     Interaction states helpers
+  ------------------------------------------------------------ */
+  --opacity-disabled: 0.5;
+
+  /* Button hover brightness (if you use filter: brightness()) */
+  --hover-brightness: 1.08;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ------------------------------------------------------------
+   Light mode overrides
+   apply .light on <html> or <body>
+------------------------------------------------------------ */
+:root.light,
+light {
+  --color-background: #f6f7fb;
+  --color-surface: #ffffff;
+  --color-card: #ffffff;
+  --color-border: #d6dbe6;
+
+  --color-foreground: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-subtle: #64748b;
+
+  --color-primary: #5b6fe8;
+  --color-secondary: #2fa89a;
+  --color-tertiary: #b56d8c;
+  --color-highlight: #c9a43d;
+
+  --color-poetic: #c8a889;
+  --color-poetic-soft: #a9866d;
+
+  --color-link: var(--color-primary);
+  --color-cta: var(--color-primary);
+  --color-cta-foreground: #ffffff;
+
+  --color-success: var(--color-secondary);
+  --color-warning: var(--color-highlight);
+  --color-error: #d85b5b;
+
+  --color-chip-bg: rgba(15, 23, 42, 0.04);
+  --color-chip-text: var(--color-text-muted);
+
+  --shadow-card: 0 10px 26px rgba(15, 23, 42, 0.1);
+  --shadow-pop: 0 14px 34px rgba(15, 23, 42, 0.14);
+
+  --shadow-glow: 0 0 22px rgba(91, 111, 232, 0.14);
+
+  --ring-brand:
+    0 0 0 2px rgba(91, 111, 232, 0.3), 0 0 0 6px rgba(91, 111, 232, 0.14);
+
+  --ring-secondary:
+    0 0 0 2px rgba(47, 168, 154, 0.3), 0 0 0 6px rgba(47, 168, 154, 0.12);
+
+  --color-chart-1: var(--color-secondary);
+  --color-chart-2: var(--color-primary);
+  --color-chart-hi: var(--color-highlight);
+  --color-chart-grid: var(--color-border);
+  --color-chart-axis: var(--color-text-subtle);
+
+  /* Light mode should be calmer and flatter */
+  --gradient-hero:
+    radial-gradient(
+      1200px 600px at 20% 20%,
+      rgba(91, 111, 232, 0.06),
+      transparent 62%
+    ),
+    radial-gradient(
+      1000px 500px at 80% 40%,
+      rgba(47, 168, 154, 0.05),
+      transparent 58%
+    );
+
+  --gradient-accent: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  --gradient-poetic-wash: radial-gradient(
+    800px 320px at 20% 30%,
+    rgba(200, 168, 137, 0.1),
+    transparent 64%
+  );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ------------------------------------------------------------
+   Optional utility classes (pure CSS)
+   Use if you want consistent focus styles without Tailwind plugins.
+------------------------------------------------------------ */
+
+.ring-brand:focus-visible {
+  outline: none;
+  box-shadow: var(--ring-brand);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.ring-secondary:focus-visible {
+  outline: none;
+  box-shadow: var(--ring-secondary);
+}
+
+/* A gentle underline accent for headings or separators */
+.micro-accent-bar {
+  background: var(--gradient-accent);
+  height: 2px;
+  border-radius: 999px;
+}
+
+/* Hero background helper */
+.hero-ambient {
+  background-image: var(--gradient-hero);
+}
+
+/* Poetic annotation wash for small callouts */
+.poetic-wash {
+  background-image: var(--gradient-poetic-wash);
+}
+
+/* Base surfaces (optional helpers) */
+.bg-background {
+  background-color: var(--color-background);
+}
+.bg-surface {
+  background-color: var(--color-surface);
+}
+.bg-card {
+  background-color: var(--color-card);
+}
+
+.text-foreground {
+  color: var(--color-foreground);
+}
+.text-muted {
+  color: var(--color-text-muted);
+}
+.text-subtle {
+  color: var(--color-text-subtle);
+}
+.text-link {
+  color: var(--color-link);
+}
+
+.border-default {
+  border-color: var(--color-border);
 }
