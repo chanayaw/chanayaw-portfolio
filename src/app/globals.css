@@ -171,10 +171,29 @@
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
+
+  /* Soft indigo → slate with a hint of poetic ink wash */
+  .fx-gradient {
+    background:
+      radial-gradient(60% 100% at 10% 10%, var(--color-primary), transparent 80%),
+      radial-gradient(70% 100% at 90% 20%, var(--color-secondary), transparent 80%),
+      radial-gradient(50% 100% at 50% 90%, var(--color-poetic), transparent 80%);
+  }
+
+  /* Large, soft blur equivalent to ~60px */
+  .fx-blur {
+    filter: blur(60px);
+    transform: translateZ(0);
+  }
+
+  /* Canvas blending for a gentle light effect */
+  .fx-blend-screen {
+    mix-blend-mode: screen;
+  }
 }
 
 @layer base {
-  	.link {
-		@apply text-foreground hover:text-link transition-opacity;
-	}
+  .link {
+    @apply text-foreground hover:text-link transition-opacity;
+  }
 }
