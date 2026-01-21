@@ -22,7 +22,7 @@ export default function Hero() {
             <div className="space-y-4">
               <p className="text-muted text-lg leading-relaxed font-light md:text-xl">
                 I&apos;m Chanaya
-                <span className="ml-2 align-top text-sm font-light tracking-wider text-poetic-soft opacity-70 md:text-base">
+                <span className="text-poetic-soft ml-2 align-top text-sm font-light tracking-wider opacity-70 md:text-base">
                   (shh-nay-yuh)
                 </span>
                 , a software engineer focused on building data driven systems, research tooling, and
