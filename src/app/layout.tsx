@@ -26,7 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} ${jetbrainsMono.variable} antialiased`}>{children}</body>
+      <body
+        className={`${lexend.variable} ${jetbrainsMono.variable} bg-background text-foreground overflow-x-hidden overflow-y-scroll antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

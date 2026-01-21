@@ -99,7 +99,7 @@ export default function TokenSanityCheck() {
         <h2 className="text-lg font-medium">Buttons and Focus</h2>
 
         <div className="flex flex-wrap gap-4">
-          <button className="ring-brand rounded-lg bg-[--color-cta] px-4 py-2 text-[--color-cta-foreground] transition">
+          <button className="ring-brand rounded-lg bg-cta px-4 py-2 text-cta-foreground transition">
             Primary CTA (tab to test focus)
           </button>
 
@@ -112,7 +112,7 @@ export default function TokenSanityCheck() {
           </button>
 
           <button
-            className="cursor-not-allowed rounded-lg bg-[--color-cta] px-4 py-2 text-[--color-cta-foreground] opacity-[var(--opacity-disabled)]"
+            className="cursor-not-allowed rounded-lg bg-cta px-4 py-2 text-cta-foreground opacity-disabled"
             disabled
           >
             Disabled
