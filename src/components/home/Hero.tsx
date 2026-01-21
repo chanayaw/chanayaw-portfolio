@@ -21,9 +21,13 @@ export default function Hero() {
           <div className="max-w-4xl">
             <div className="space-y-4">
               <p className="text-muted text-lg leading-relaxed font-light md:text-xl">
-                I am Chanaya Wheeler, a software engineer focused on building data driven systems,
-                research tooling, and technical infrastructure that make women&apos;s health
-                disparities visible and actionable.
+                I&apos;m Chanaya
+                <span className="ml-2 align-top text-sm font-light tracking-wider text-poetic-soft opacity-70 md:text-base">
+                  (shh-nay-yuh)
+                </span>
+                , a software engineer focused on building data driven systems, research tooling, and
+                technical infrastructure that make women&apos;s health disparities visible and
+                actionable.
               </p>
 
               <p className="text-muted text-base leading-relaxed font-light md:text-lg">
