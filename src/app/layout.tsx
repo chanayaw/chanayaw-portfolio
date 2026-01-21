@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { JetBrains_Mono, Lexend } from 'next/font/google';
 import './globals.css';
 import Header from '../components/nav/Header';
+import Footer from '../components/nav/Footer';
 
 const lexend = Lexend({
   variable: '--font-lexend',
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
