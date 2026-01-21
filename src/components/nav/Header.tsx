@@ -31,7 +31,7 @@ const Header = () => {
     <header>
       <nav
         aria-label="Primary"
-        className="bg-surface flex flex-row items-center justify-between p-4 backdrop-blur"
+        className="bg-background flex flex-row items-center justify-between p-4 backdrop-blur"
       >
         <Link href={'/'} className="link text-2xl font-light tracking-widest">
           chanaya w
