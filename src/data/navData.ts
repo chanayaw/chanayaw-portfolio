@@ -55,5 +55,9 @@ export const SocialIcons: SocialIcon[] = [
   { label: 'Instagram', href: 'https://instagram.com/chanayaw', icon: Instagram },
   { label: 'Threads', href: 'https://threads.com/chanayaw', icon: Threads },
   // { label: 'X', href: 'https://x.com', icon: X }, // coming soon
-  { label: 'TikTok', href: 'https://tiktok.com/chanaya.w', icon: TikTok },
+  {
+    label: 'TikTok',
+    href: 'https://www.tiktok.com/@chanaya.w',
+    icon: TikTok,
+  },
 ];
