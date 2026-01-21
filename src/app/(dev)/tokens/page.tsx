@@ -205,7 +205,7 @@ export default function TokenSanityCheck() {
           <p className="text-muted">Divider patterns</p>
           <div className="space-y-3">
             <div className="micro-accent-bar w-40" />
-            <div className="h-px w-full bg-[--color-border]" />
+            <div className="h-px w-full bg-border" />
             <div className="micro-accent-bar w-24" />
           </div>
         </div>
