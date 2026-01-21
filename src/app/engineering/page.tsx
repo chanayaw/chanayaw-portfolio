@@ -1,19 +1,23 @@
+import PageHeader from '@/src/components/shared/PageHeader';
+
 export default function Engineering() {
   return (
-    <main className="mx-auto w-full max-w-7xl space-y-10 px-10 py-10 ">
-      <div>
-        <h1 className="mb-6 text-6xl font-semibold tracking-widest">Engineering Systems</h1>
+    <main>
+      <PageHeader
+        heading="Engineering Systems"
+        subtext={
+          <>
+            This page documents engineering systems I have designed and built to model real-world
+            workflows, data constraints, and operational requirements.
+            <br />
+            <br />
+            Each project emphasizes system design, data integrity, and clarity of tradeoffs, with
+            explicit assumptions and limitations documented throughout.
+          </>
+        }
+      />
 
-        <p className="text-muted font-medium">
-          This page documents engineering systems I have designed and built to model real-world
-          workflows, data constraints, and operational requirements.
-          <br />
-          Each project emphasizes system design, data integrity, and clarity of tradeoffs, with
-          explicit assumptions and limitations documented throughout.
-        </p>
-      </div>
-
-      <section>
+      <section className="mx-auto w-full max-w-7xl space-y-5 p-10">
         <div className="space-y-4 p-8">
           <p className="font-bold">Resource Allocation System</p>
 

@@ -31,8 +31,8 @@ export default function TokenSanityCheck() {
           <Swatch label="Card" varName="--color-card" />
           <Swatch label="Border" varName="--color-border" />
           <Swatch label="Foreground" varName="--color-foreground" />
-          <Swatch label="Text Muted" varName="--color-text-muted" />
-          <Swatch label="Text Subtle" varName="--color-text-subtle" />
+          <Swatch label="Text Muted" varName="--color-muted" />
+          <Swatch label="Text Subtle" varName="--color-subtle" />
         </div>
       </section>
 
@@ -99,7 +99,7 @@ export default function TokenSanityCheck() {
         <h2 className="text-lg font-medium">Buttons and Focus</h2>
 
         <div className="flex flex-wrap gap-4">
-          <button className="ring-brand rounded-lg bg-cta px-4 py-2 text-cta-foreground transition">
+          <button className="ring-brand bg-cta text-cta-foreground rounded-lg px-4 py-2 transition">
             Primary CTA (tab to test focus)
           </button>
 
@@ -112,7 +112,7 @@ export default function TokenSanityCheck() {
           </button>
 
           <button
-            className="cursor-not-allowed rounded-lg bg-cta px-4 py-2 text-cta-foreground opacity-disabled"
+            className="bg-cta text-cta-foreground opacity-disabled cursor-not-allowed rounded-lg px-4 py-2"
             disabled
           >
             Disabled
@@ -205,7 +205,7 @@ export default function TokenSanityCheck() {
           <p className="text-muted">Divider patterns</p>
           <div className="space-y-3">
             <div className="micro-accent-bar w-40" />
-            <div className="h-px w-full bg-border" />
+            <div className="bg-border h-px w-full" />
             <div className="micro-accent-bar w-24" />
           </div>
         </div>

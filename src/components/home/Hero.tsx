@@ -37,7 +37,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-x-6 gap-y-4">
-              <PrimaryCTA link="/engineering" label="View Engineering Projects" />
+              <PrimaryCTA link="/engineering" label="View Projects" />
               <SecondaryCTA link="/research" label="Read Lab Notes" />
             </div>
 
