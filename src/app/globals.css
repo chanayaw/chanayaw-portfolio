@@ -172,3 +172,9 @@
     box-shadow: var(--shadow-glow);
   }
 }
+
+@layer base {
+  	.link {
+		@apply text-foreground hover:text-link transition-opacity;
+	}
+}

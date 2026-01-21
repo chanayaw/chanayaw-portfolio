@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { JetBrains_Mono, Lexend } from 'next/font/google';
 import './globals.css';
+import Header from '../components/nav/Header';
 
 const lexend = Lexend({
   variable: '--font-lexend',
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${lexend.variable} ${jetbrainsMono.variable} bg-background text-foreground overflow-x-hidden overflow-y-scroll antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
