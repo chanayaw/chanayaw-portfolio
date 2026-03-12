@@ -16,7 +16,7 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
   return (
     <motion.div
       key="mobile-menu"
-      className="fixed inset-0 z-50 h-screen w-screen bg-neutral-900/95 p-4 pt-5 text-right lg:hidden"
+      className="fixed inset-0 z-9999 h-screen w-screen bg-neutral-900/95 p-4 pt-5 text-right lg:hidden"
       initial={{ x: '100%', opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: '100%', opacity: 0 }}

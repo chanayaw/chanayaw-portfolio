@@ -1,11 +1,11 @@
 import Hero from '../components/home/Hero';
-import WhatMyWorkEntails from '../components/home/WhatMyWorkEntails';
+import FeaturedProjects from '../components/home/FeaturedProjects';
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-7xl space-y-10 px-10 py-10">
+    <main className="mx-auto w-full max-w-360 space-y-10 px-10 py-10">
       <Hero />
-      <WhatMyWorkEntails />
+      <FeaturedProjects />
     </main>
   );
 }
