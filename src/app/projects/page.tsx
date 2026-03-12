@@ -3,6 +3,7 @@ import { CategoryCard } from '@/src/components/projects/CategoryCard';
 import { FeaturedProjectCard } from '@/src/components/projects/FeaturedProjectCard';
 import { ProjectCard } from '@/src/components/projects/ProjectCard';
 import { SectionLabel } from '@/src/components/projects/SectionLabel';
+import PageHeader from '@/src/components/shared/PageHeader';
 
 export default function ProjectsPage() {
   const featuredProjects = projects.filter((project) => project.featured);
@@ -18,28 +19,12 @@ export default function ProjectsPage() {
 
   return (
     <main className="px-4 pb-24">
-      <section className="pt-20 md:pt-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <SectionLabel>Projects</SectionLabel>
-
-          <div className="max-w-4xl">
-            <h1 className="text-4xl leading-tight font-medium tracking-tight text-balance md:text-6xl">
-              Engineering systems, analytics platforms, and operational tools
-            </h1>
-
-            <p className="text-subtle mt-6 max-w-3xl text-base leading-relaxed md:text-lg">
-              A selection of projects demonstrating full-stack engineering, structured data systems,
-              analytics workflows, and applied problem solving across operational and health-related
-              contexts.
-            </p>
-
-            <p className="text-muted mt-4 max-w-3xl text-sm leading-relaxed md:text-base">
-              My work focuses on maintainable software, data-informed interfaces, and systems
-              designed to turn complex workflows into usable tools.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        eyebrow="Projects"
+        heading="Engineering systems, analytics platforms, and operational tools"
+        description="A selection of projects demonstrating full-stack engineering, structured data systems, analytics workflows, and applied problem solving across operational and health-related contexts."
+        supportingText="My work focuses on maintainable software, data-informed interfaces, and systems designed to turn complex workflows into usable tools."
+      />
 
       <section className="mt-16 md:mt-20">
         <div className="mx-auto max-w-7xl px-6">
