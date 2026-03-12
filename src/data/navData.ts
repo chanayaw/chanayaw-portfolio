@@ -7,19 +7,19 @@ import LinkedIn from '../assets/icons/linkedin.svg';
 // import X from '../assets/icons/twitter-x.svg';
 // import TikTok from '../assets/icons/tiktok.svg';
 
-export interface MenuItem {
+export type MenuItem = {
   label: string;
   href: string;
   active?: boolean;
   subLinks?: MenuItem[];
-}
+};
 
-export interface SocialIcon {
+export type SocialIcon = {
   label: string;
   href: string;
   active?: boolean;
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}
+};
 
 export const MenuItems: MenuItem[] = [
   { label: 'Home', href: '/', active: true },
