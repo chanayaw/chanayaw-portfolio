@@ -1,27 +1,51 @@
+import Link from 'next/link';
+
 interface ButtonProps {
   link: string;
   label: string;
-  status?: string;
+  status?: 'default' | 'disabled';
 }
 
-export const PrimaryCTA = ({ link, label, status }: ButtonProps) => (
-  <a
-    href={link}
-    className={
-      status !== 'disabled'
-        ? `shadow-card focus-visible:ring-brand bg-cta text-cta-foreground inline-flex max-w-60 items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium tracking-wide transition hover:brightness-110 md:text-base`
-        : `bg-cta text-cta-foreground opacity-disabled pointer-events-none cursor-not-allowed rounded-lg px-4 py-2`
-    }
-  >
-    {status === 'disabled' ? 'Coming Soon' : label}
-  </a>
-);
+const baseClasses =
+  'inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition md:text-base';
 
-export const SecondaryCTA = ({ link, label }: ButtonProps) => (
-  <a
-    href={link}
-    className="text-foreground hover:bg-surface focus-visible:ring-brand shadow-card border-border inline-flex max-w-60 items-center justify-center gap-2 rounded-lg border bg-transparent px-5 py-2.5 text-sm font-light tracking-wide transition md:text-base"
-  >
-    {label}
-  </a>
-);
+export const PrimaryCTA = ({ link, label, status = 'default' }: ButtonProps) => {
+  if (status === 'disabled') {
+    return (
+      <span
+        aria-disabled="true"
+        className={`${baseClasses} bg-cta text-cta-foreground cursor-not-allowed opacity-disabled`}
+      >
+        Coming Soon
+      </span>
+    );
+  }
+
+  return (
+    <Link
+      href={link}
+      className={`${baseClasses} ring-brand bg-cta text-cta-foreground shadow-card hover:brightness-105`}
+    >
+      {label}
+    </Link>
+  );
+};
+
+export const SecondaryCTA = ({ link, label }: ButtonProps) => {
+  return (
+    <Link
+      href={link}
+      className={`${baseClasses} ring-brand bg-card text-foreground border-default shadow-card border hover:bg-white/8`}
+    >
+      {label}
+    </Link>
+  );
+};
+
+export const PrimaryBtn = ({ link, label }: ButtonProps) => {
+  return (
+    <Link href={link} className="text-foreground hover:text-link text-sm font-medium transition">
+      {label} →
+    </Link>
+  );
+};

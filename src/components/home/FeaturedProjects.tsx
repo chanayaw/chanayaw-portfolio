@@ -1,62 +1,70 @@
 import { PrimaryCTA } from '../ui/Buttons';
-import { CardWithGlow } from '../ui/Cards';
+import { CardWithHover } from '../ui/Cards';
 import { ChipRegBorder } from '../ui/Chips';
+
+const featuredProjects = [
+  {
+    title: 'Women’s Health Data Dashboard',
+    description:
+      'SQL-driven analytics platform exploring trends in public women’s health datasets.',
+    stack: ['TypeScript', 'Next.js', 'PostgreSQL'],
+  },
+  {
+    title: 'Healthcare Operations Analytics',
+    description: 'Dashboard and data pipeline analyzing healthcare system metrics.',
+    stack: ['Node.js', 'SQL', 'React'],
+  },
+  {
+    title: 'Resource Allocation System',
+    description: 'Role-based scheduling system modeling operational workflows.',
+    stack: ['TypeScript', 'Next.js', 'PostgreSQL'],
+  },
+];
 
 const FeaturedProjects = () => {
   return (
-    <div className="mt-24 lg:mt-0">
-      <h2 className="mb-6 text-4xl font-medium tracking-widest uppercase">Featured Projects</h2>
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        <CardWithGlow>
-          <p className="text-foreground mb-2 text-lg font-medium">
-            Women&apos;s Health Data Dashboard
+    <section className="mt-24 md:mt-28">
+      <div className="space-y-8">
+        <div className="max-w-3xl space-y-3">
+          <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
+            Featured Work
           </p>
-          <p className="text-subtle font-light">
-            SQL-driven analytics platform exploring trends in public women&apos;s health datasets.
+          <h2 className="text-3xl font-medium tracking-tight text-balance md:text-5xl">
+            Systems, dashboards, and data-driven applications
+          </h2>
+          <p className="text-muted max-w-2xl text-base leading-relaxed md:text-lg">
+            A selection of projects demonstrating full-stack engineering, structured data systems,
+            and applied problem solving across operational and health-related contexts.
           </p>
-          <div className="text-subtle my-6 flex flex-wrap items-center gap-3 text-sm tracking-wide">
-            <ChipRegBorder>Typescript</ChipRegBorder>
-            <ChipRegBorder>Next.js</ChipRegBorder>
-            <ChipRegBorder>PostgreSQL</ChipRegBorder>
-          </div>
-          <div className="flex flex-row justify-end">
-            <PrimaryCTA link="/projects" label="View Project" status="disabled" />
-          </div>
-        </CardWithGlow>
+        </div>
 
-        <CardWithGlow>
-          <p className="text-foreground mb-2 text-lg font-medium">
-            Healthcare Operations Analytics
-          </p>
-          <p className="text-subtle font-light">
-            Dashboard and data pipeline analyzing healthcare system metrics.
-          </p>
-          <div className="text-subtle my-6 flex flex-wrap items-center gap-3 text-sm tracking-wide">
-            <ChipRegBorder>Node</ChipRegBorder>
-            <ChipRegBorder>SQL</ChipRegBorder>
-            <ChipRegBorder>React</ChipRegBorder>
-          </div>
-          <div className="flex flex-row justify-end">
-            <PrimaryCTA link="/projects" label="View Project" status="disabled" />
-          </div>
-        </CardWithGlow>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {featuredProjects.map((project) => (
+            <CardWithHover key={project.title}>
+              <div className="flex h-full flex-col">
+                <p className="text-foreground text-xl font-medium tracking-tight">
+                  {project.title}
+                </p>
 
-        <CardWithGlow>
-          <p className="text-foreground mb-2 text-lg font-medium">Resource Allocation System</p>
-          <p className="text-subtle font-light">
-            Role-based scheduling system modeling operational workflows.
-          </p>
-          <div className="text-subtle my-6 flex flex-wrap items-center gap-3 text-sm tracking-wide">
-            <ChipRegBorder>Typescript</ChipRegBorder>
-            <ChipRegBorder>Next.js</ChipRegBorder>
-            <ChipRegBorder>PostgreSQL</ChipRegBorder>
-          </div>
-          <div className="flex flex-row justify-end">
-            <PrimaryCTA link="/projects" label="View Project" status="disabled" />
-          </div>
-        </CardWithGlow>
+                <p className="text-subtle mt-3 text-sm leading-relaxed md:text-base">
+                  {project.description}
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <ChipRegBorder key={item}>{item}</ChipRegBorder>
+                  ))}
+                </div>
+
+                <div className="mt-8 flex justify-end">
+                  <PrimaryCTA link="/projects" label="View Project" status="disabled" />
+                </div>
+              </div>
+            </CardWithHover>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
