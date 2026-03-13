@@ -46,7 +46,7 @@ export const projects: Project[] = [
     category: 'Data & Analytics Systems',
     stack: ['TypeScript', 'Next.js', 'PostgreSQL', 'SQL'],
     featured: true,
-    caseStudyHref: '/projects/womens-health-data-dashboard',
+    caseStudyHref: '',
     repoHref: '',
   },
   {
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     category: 'Data & Analytics Systems',
     stack: ['Node.js', 'React', 'PostgreSQL', 'SQL'],
     featured: true,
-    caseStudyHref: '/projects/healthcare-operations-analytics-platform',
+    caseStudyHref: '',
     repoHref: '',
   },
   {
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     category: 'Operational Systems',
     stack: ['TypeScript', 'Next.js', 'PostgreSQL'],
     featured: true,
-    caseStudyHref: '/projects/resource-allocation-system',
+    caseStudyHref: '',
     repoHref: '',
   },
   {
@@ -78,7 +78,7 @@ export const projects: Project[] = [
       'A dashboard-oriented system for visualizing environmental sensor data, trend patterns, and reporting signals.',
     category: 'Data & Analytics Systems',
     stack: ['Next.js', 'TypeScript', 'PostgreSQL'],
-    caseStudyHref: '/projects/environmental-monitoring-system',
+    caseStudyHref: '',
     repoHref: '',
   },
   {

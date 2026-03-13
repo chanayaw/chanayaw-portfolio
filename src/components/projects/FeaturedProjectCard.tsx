@@ -21,12 +21,16 @@ export const FeaturedProjectCard = ({ project }: { project: Project }) => {
       </div>
 
       <div className="mt-8 flex flex-wrap justify-between gap-4">
-        <Link
-          href={project.caseStudyHref}
-          className="rounded-full border border-white/10 px-4 py-2 text-sm transition hover:bg-white/8"
-        >
-          View Case Study
-        </Link>
+        {project.caseStudyHref ? (
+          <Link
+            href={project.caseStudyHref}
+            className="rounded-full border border-white/10 px-4 py-2 text-sm transition hover:bg-white/8"
+          >
+            View Case Study
+          </Link>
+        ) : (
+          <p className="text-foreground text-sm font-medium">Case Study Coming Soon</p>
+        )}
 
         {project.repoHref ? (
           <Link

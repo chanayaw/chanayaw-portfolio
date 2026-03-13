@@ -19,7 +19,9 @@ export const ProjectCard = ({ project }: { project: Project }) => {
       <div className="mt-8 flex items-center justify-between">
         {project.caseStudyHref ? (
           <PrimaryBtn link={project.caseStudyHref} label="Case Study" />
-        ) : null}
+        ) : (
+          <p className="text-foreground text-sm font-medium">In Development</p>
+        )}
 
         {project.repoHref ? (
           <Link
