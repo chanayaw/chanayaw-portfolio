@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChipThinBorder, ChipRegBorder } from '@/src/components/ui/Chips';
-import { CardWithHover, GlassCard } from '@/src/components/ui/Cards';
+import { Card, GlassCard } from '@/src/components/ui/Cards';
 import { getCaseStudyBySlug } from '@/src/data/caseStudyData';
 
 type CaseStudyPageProps = {
@@ -100,23 +100,23 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       <section className="mt-16">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-2">
-          <CardWithHover>
+          <Card>
             <SectionInner
               eyebrow={caseStudy.problem.eyebrow}
               title={caseStudy.problem.title}
               body={caseStudy.problem.body}
               list={caseStudy.problem.list}
             />
-          </CardWithHover>
+          </Card>
 
-          <CardWithHover>
+          <Card>
             <SectionInner
               eyebrow={caseStudy.goals.eyebrow}
               title={caseStudy.goals.title}
               body={caseStudy.goals.body}
               list={caseStudy.goals.list}
             />
-          </CardWithHover>
+          </Card>
         </div>
       </section>
 
@@ -145,23 +145,23 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       <section className="mt-16">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-2">
-          <CardWithHover>
+          <Card>
             <SectionInner
               eyebrow={caseStudy.technology.eyebrow}
               title={caseStudy.technology.title}
               body={caseStudy.technology.body}
               list={caseStudy.technology.list}
             />
-          </CardWithHover>
+          </Card>
 
-          <CardWithHover>
+          <Card>
             <SectionInner
               eyebrow={caseStudy.features.eyebrow}
               title={caseStudy.features.title}
               body={caseStudy.features.body}
               list={caseStudy.features.list}
             />
-          </CardWithHover>
+          </Card>
         </div>
       </section>
 
@@ -174,9 +174,9 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
           <div className="mt-8 grid gap-6 lg:grid-cols-3">
             {caseStudy.technicalDecisions.decisions.map((decision) => (
-              <CardWithHover key={decision.title}>
+              <Card key={decision.title}>
                 <DecisionCard title={decision.title} body={decision.body} />
-              </CardWithHover>
+              </Card>
             ))}
           </div>
         </div>
@@ -184,36 +184,36 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       <section className="mt-16">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-2">
-          <CardWithHover>
+          <Card>
             <SectionInner
               eyebrow={caseStudy.constraints.eyebrow}
               title={caseStudy.constraints.title}
               body={caseStudy.constraints.body}
               list={caseStudy.constraints.list}
             />
-          </CardWithHover>
+          </Card>
 
-          <CardWithHover>
+          <Card>
             <SectionInner
               eyebrow={caseStudy.outcome.eyebrow}
               title={caseStudy.outcome.title}
               body={caseStudy.outcome.body}
               list={caseStudy.outcome.list}
             />
-          </CardWithHover>
+          </Card>
         </div>
       </section>
 
       <section className="mt-16">
         <div className="mx-auto max-w-7xl px-6">
-          <CardWithHover>
+          <Card>
             <SectionInner
               eyebrow={caseStudy.nextSteps.eyebrow}
               title={caseStudy.nextSteps.title}
               body={caseStudy.nextSteps.body}
               list={caseStudy.nextSteps.list}
             />
-          </CardWithHover>
+          </Card>
         </div>
       </section>
     </main>
