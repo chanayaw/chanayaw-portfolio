@@ -1,4 +1,4 @@
-export const CardWithHover = ({ children }: { children: React.ReactNode }) => {
+export const Card = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="bg-card border-default shadow-card hover:shadow-pop rounded-3xl border p-6 transition duration-300">
       {children}

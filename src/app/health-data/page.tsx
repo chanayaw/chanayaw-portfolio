@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import PageHeader from '@/src/components/shared/PageHeader';
-import { CardWithHover } from '@/src/components/ui/Cards';
+import { Card, CardWithGlow } from '@/src/components/ui/Cards';
 import { ChipThinBorder } from '@/src/components/ui/Chips';
 import { PrimaryCTA, PrimaryBtn } from '@/src/components/ui/Buttons';
 import {
@@ -60,14 +60,14 @@ export default function HealthDataPage() {
 
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {challenges.map((challenge) => (
-              <CardWithHover key={challenge.title}>
+              <Card key={challenge.title}>
                 <h3 className="text-foreground text-lg font-medium tracking-tight">
                   {challenge.title}
                 </h3>
                 <p className="text-subtle mt-3 text-sm leading-relaxed md:text-base">
                   {challenge.description}
                 </p>
-              </CardWithHover>
+              </Card>
             ))}
           </div>
         </div>
@@ -82,14 +82,14 @@ export default function HealthDataPage() {
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {systemPatterns.map((pattern) => (
-              <CardWithHover key={pattern.title}>
+              <Card key={pattern.title}>
                 <h3 className="text-foreground text-xl font-medium tracking-tight">
                   {pattern.title}
                 </h3>
                 <p className="text-subtle mt-3 text-sm leading-relaxed md:text-base">
                   {pattern.description}
                 </p>
-              </CardWithHover>
+              </Card>
             ))}
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function HealthDataPage() {
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {focusAreas.map((area) => (
-              <CardWithHover key={area.title}>
+              <Card key={area.title}>
                 <h3 className="text-foreground text-xl font-medium tracking-tight">{area.title}</h3>
                 <p className="text-subtle mt-3 text-sm leading-relaxed md:text-base">
                   {area.description}
@@ -115,7 +115,7 @@ export default function HealthDataPage() {
                     <ChipThinBorder key={tag}>{tag}</ChipThinBorder>
                   ))}
                 </div>
-              </CardWithHover>
+              </Card>
             ))}
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function HealthDataPage() {
 
           <div className="mt-8 grid gap-6 lg:grid-cols-3">
             {relatedProjects.map((project) => (
-              <CardWithHover key={project.title}>
+              <Card key={project.title}>
                 <div className="flex h-full flex-col">
                   <h3 className="text-foreground text-xl font-medium tracking-tight">
                     {project.title}
@@ -150,7 +150,7 @@ export default function HealthDataPage() {
                     <PrimaryBtn link={project.href} label="View Case Study" />
                   </div>
                 </div>
-              </CardWithHover>
+              </Card>
             ))}
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function HealthDataPage() {
 
       <section className="mt-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="bg-card border-default shadow-card rounded-3xl border p-8 md:p-10">
+          <CardWithGlow>
             <div className="max-w-3xl">
               <SectionLabel>Next Step</SectionLabel>
               <h2 className="mt-3 text-3xl font-medium tracking-tight text-balance md:text-4xl">
@@ -209,7 +209,7 @@ export default function HealthDataPage() {
                 </Link>
               </div>
             </div>
-          </div>
+          </CardWithGlow>
         </div>
       </section>
     </main>

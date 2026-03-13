@@ -4,6 +4,7 @@ import { FeaturedProjectCard } from '@/src/components/projects/FeaturedProjectCa
 import { ProjectCard } from '@/src/components/projects/ProjectCard';
 import { SectionLabel } from '@/src/components/projects/SectionLabel';
 import PageHeader from '@/src/components/shared/PageHeader';
+import { CardWithGlow } from '@/src/components/ui/Cards';
 
 export default function ProjectsPage() {
   const featuredProjects = projects.filter((project) => project.featured);
@@ -85,7 +86,7 @@ export default function ProjectsPage() {
 
       <section className="mt-24 md:mt-28">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="rounded-3xl border border-white/10 bg-white/4 p-8 md:p-10">
+          <CardWithGlow>
             <SectionLabel>Engineering Approach</SectionLabel>
 
             <div className="grid gap-8 lg:grid-cols-2">
@@ -132,7 +133,7 @@ export default function ProjectsPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </CardWithGlow>
         </div>
       </section>
     </main>

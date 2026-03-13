@@ -1,5 +1,5 @@
 import { PrimaryCTA } from '../ui/Buttons';
-import { CardWithHover } from '../ui/Cards';
+import { Card } from '../ui/Cards';
 import { ChipRegBorder } from '../ui/Chips';
 
 const featuredProjects = [
@@ -40,7 +40,7 @@ const FeaturedProjects = () => {
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           {featuredProjects.map((project) => (
-            <CardWithHover key={project.title}>
+            <Card key={project.title}>
               <div className="flex h-full flex-col">
                 <p className="text-foreground text-xl font-medium tracking-tight">
                   {project.title}
@@ -60,7 +60,7 @@ const FeaturedProjects = () => {
                   <PrimaryCTA link="/projects" label="View Project" status="disabled" />
                 </div>
               </div>
-            </CardWithHover>
+            </Card>
           ))}
         </div>
       </div>
