@@ -300,13 +300,13 @@ export const caseStudies: CaseStudy[] = [
     summary:
       'A mobile-first event companion app designed to support vendor discovery, event navigation, and reusable UI patterns for future event experiences.',
     category: 'Full-Stack Applications',
-    status: 'In Progress',
+    status: 'Production',
     stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
     backHref: '/projects',
 
     meta: [
       { label: 'Role', value: 'Sole Developer' },
-      { label: 'Status', value: 'In Progress' },
+      { label: 'Status', value: 'Production' },
       { label: 'Focus', value: 'Event Experience' },
       { label: 'Type', value: 'Mobile-First Application' },
     ],
