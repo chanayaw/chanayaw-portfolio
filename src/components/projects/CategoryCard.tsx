@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { type ProjectCategory } from '@/src/data/projectData';
+import { type ProjectCategoryCard } from '@/src/data/projectData';
 
-export const CategoryCard = ({ title, description, href }: ProjectCategory) => {
+export const CategoryCard = ({ title, description, href }: ProjectCategoryCard) => {
   return (
     <Link
       href={href}

@@ -15,7 +15,7 @@ const PageHeader = ({
 }: PageHeaderProps) => {
   return (
     <section className="pt-20 md:pt-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div>
         <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
           {eyebrow}
         </p>

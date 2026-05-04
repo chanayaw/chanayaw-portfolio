@@ -1,85 +1,77 @@
-export type ProjectCategory = {
-  title: string;
+export type ProjectCategory = 'Product Systems' | 'Operational Tools' | 'Full-Stack Applications';
+
+export type ProjectCategoryCard = {
+  title: ProjectCategory;
   description: string;
   href: string;
 };
+
+export type ProjectStatus = 'Built' | 'In Progress' | 'Planned';
 
 export type Project = {
   slug: string;
   title: string;
   summary: string;
-  category: 'Data & Analytics Systems' | 'Operational Systems' | 'Full-Stack Applications';
+  category: 'Product Systems' | 'Operational Tools' | 'Full-Stack Applications';
   stack: string[];
+  status: ProjectStatus;
   featured?: boolean;
-  caseStudyHref: string;
+  caseStudyHref?: string;
   repoHref?: string;
   demoHref?: string;
 };
 
-export const categories: ProjectCategory[] = [
+export const categories: ProjectCategoryCard[] = [
   {
-    title: 'Data & Analytics Systems',
+    title: 'Product Systems',
     description:
-      'Dashboards, SQL-driven reporting, data pipelines, and systems designed to turn structured data into usable insight.',
-    href: '#data-analytics-systems',
+      'Applications designed around users, workflows, decision points, and real-world product needs.',
+    href: '#product-systems',
   },
   {
-    title: 'Operational Systems',
+    title: 'Operational Tools',
     description:
-      'Internal tools, scheduling platforms, and workflow systems built to support coordination and decision-making.',
-    href: '#operational-systems',
+      'Internal tools, scheduling flows, coordination systems, and workflow support for real operations.',
+    href: '#operational-tools',
   },
   {
     title: 'Full-Stack Applications',
     description:
-      'End-to-end web applications that combine user-facing interfaces, APIs, and structured backend logic.',
+      'End-to-end web applications combining user interfaces, backend logic, APIs, and structured persistence.',
     href: '#full-stack-applications',
   },
 ];
 
 export const projects: Project[] = [
   {
-    slug: 'womens-health-data-dashboard',
-    title: 'Women’s Health Data Dashboard',
+    slug: 'careflow-health-tracker',
+    title: 'CareFlow Health Tracker',
     summary:
-      'A health data exploration platform using structured datasets, analytics queries, and interactive visualizations to examine trends in women’s health outcomes.',
-    category: 'Data & Analytics Systems',
-    stack: ['TypeScript', 'Next.js', 'PostgreSQL', 'SQL'],
+      'A personal health tracking system for logging symptoms, medications, appointments, notes, and health events over time.',
+    category: 'Product Systems',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+    status: 'Planned',
     featured: true,
-    caseStudyHref: '',
-    repoHref: '',
   },
   {
-    slug: 'healthcare-operations-analytics-platform',
-    title: 'Healthcare Operations Analytics Platform',
+    slug: 'clinic-resource-coordination-system',
+    title: 'Clinic Resource Coordination System',
     summary:
-      'An analytics system modeling operational healthcare metrics through ETL workflows, structured reporting, and dashboard interfaces.',
-    category: 'Data & Analytics Systems',
-    stack: ['Node.js', 'React', 'PostgreSQL', 'SQL'],
+      'A role-based scheduling and resource coordination tool for managing appointment flow, staff availability, rooms, and operational conflicts.',
+    category: 'Operational Tools',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+    status: 'Planned',
     featured: true,
-    caseStudyHref: '',
-    repoHref: '',
   },
   {
-    slug: 'resource-allocation-system',
-    title: 'Resource Allocation System',
+    slug: 'patient-education-library',
+    title: 'Patient Education Library',
     summary:
-      'A role-based scheduling and coordination platform designed to model real-world operational workflows and support resource planning.',
-    category: 'Operational Systems',
-    stack: ['TypeScript', 'Next.js', 'PostgreSQL'],
+      'A searchable content management tool for organizing patient-facing resources by topic, reading level, format, and care context.',
+    category: 'Product Systems',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+    status: 'Planned',
     featured: true,
-    caseStudyHref: '',
-    repoHref: '',
-  },
-  {
-    slug: 'environmental-monitoring-system',
-    title: 'Environmental Monitoring System',
-    summary:
-      'A dashboard-oriented system for visualizing environmental sensor data, trend patterns, and reporting signals.',
-    category: 'Data & Analytics Systems',
-    stack: ['Next.js', 'TypeScript', 'PostgreSQL'],
-    caseStudyHref: '',
-    repoHref: '',
   },
   {
     slug: 'periodic-tables-reservation-system',
@@ -88,6 +80,7 @@ export const projects: Project[] = [
       'A full-stack reservation management application with structured workflows, CRUD operations, and role-based user flows.',
     category: 'Full-Stack Applications',
     stack: ['React', 'Express', 'PostgreSQL', 'Knex'],
+    status: 'Built',
     caseStudyHref: '/projects/periodic-tables-reservation-system',
     repoHref: '',
   },
@@ -98,6 +91,7 @@ export const projects: Project[] = [
       'A production feature built to improve add-on visibility and checkout usability within an existing ticketing ecosystem.',
     category: 'Full-Stack Applications',
     stack: ['React', 'TypeScript', 'Tailwind CSS'],
+    status: 'Built',
     caseStudyHref: '/projects/amp-ticket-add-on-flow',
   },
   {
@@ -107,6 +101,7 @@ export const projects: Project[] = [
       'A mobile-first event companion app built to support wayfinding, vendor discovery, and reusable event-focused UI patterns.',
     category: 'Full-Stack Applications',
     stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
+    status: 'Built',
     caseStudyHref: '/projects/art-of-wine-companion-app',
   },
 ];
