@@ -19,11 +19,16 @@ export type CaseStudyArchitectureStep = {
   label: string;
 };
 
+export type CaseStudyCategory = 'Product Systems' | 'Operational Tools' | 'Full-Stack Applications';
+
+export type CaseStudyStatus = 'Built' | 'In Progress' | 'Planned' | 'Production';
+
 export type CaseStudy = {
   slug: string;
   title: string;
   summary: string;
-  category: 'Data & Analytics Systems' | 'Operational Systems' | 'Full-Stack Applications';
+  category: CaseStudyCategory;
+  status: CaseStudyStatus;
   stack: string[];
   backHref: string;
   repoHref?: string;
@@ -57,473 +62,14 @@ export type CaseStudy = {
 };
 
 export const caseStudies: CaseStudy[] = [
-  // WOMEN'S HEALTH DATA DASHBOARD
-  {
-    slug: 'womens-health-data-dashboard',
-    title: "Women's Health Data Dashboard",
-    summary:
-      "A data-driven analytics platform for exploring trends in public women's health datasets through structured ingestion, SQL queries, and interactive dashboard views.",
-    category: 'Data & Analytics Systems',
-    stack: ['TypeScript', 'Next.js', 'PostgreSQL', 'SQL'],
-    backHref: '/projects',
-    repoHref: '',
-
-    meta: [
-      { label: 'Role', value: 'Solo Engineer' },
-      { label: 'Status', value: 'In Progress' },
-      { label: 'Focus', value: 'Health Data Systems' },
-      { label: 'Type', value: 'Analytics Dashboard' },
-    ],
-
-    overview: {
-      eyebrow: 'Overview',
-      title: 'What this project is',
-      body: 'This project explores how public health datasets can be transformed into a structured analytics workflow. It combines ingestion, normalization, SQL querying, and dashboard presentation to make healthcare-related trends easier to inspect.',
-    },
-
-    problem: {
-      eyebrow: 'Problem',
-      title: 'Why this project exists',
-      body: 'Public datasets often arrive in raw formats that are difficult to query, compare, or interpret directly. The goal was to build a system that could make that data more usable without overstating what the data can actually support.',
-    },
-
-    goals: {
-      eyebrow: 'Goals',
-      title: 'Project goals',
-      list: [
-        'Normalize selected health dataset fields into a structured schema',
-        'Build a dashboard interface for querying trends',
-        'Document assumptions and data limitations clearly',
-        'Keep the workflow reproducible and maintainable',
-      ],
-    },
-
-    system: {
-      eyebrow: 'System',
-      title: 'System architecture',
-      body: 'The project separates ingestion, storage, query logic, and presentation so the workflow remains easier to debug, extend, and reason about.',
-      architecture: [
-        { label: 'Raw dataset' },
-        { label: 'Ingestion script' },
-        { label: 'Validation / normalization' },
-        { label: 'PostgreSQL' },
-        { label: 'API routes' },
-        { label: 'Dashboard UI' },
-      ],
-    },
-
-    technology: {
-      eyebrow: 'Stack',
-      title: 'Technology used',
-      list: ['TypeScript', 'Next.js', 'Node.js', 'PostgreSQL', 'SQL', 'Tailwind CSS'],
-    },
-
-    features: {
-      eyebrow: 'Features',
-      title: 'Key capabilities',
-      list: [
-        'Dataset ingestion and transformation',
-        'Structured relational schema',
-        'Aggregate SQL queries for trend analysis',
-        'Filterable dashboard views',
-        'Documentation of assumptions and limitations',
-      ],
-    },
-
-    technicalDecisions: {
-      eyebrow: 'Technical Decisions',
-      title: 'Important implementation choices',
-      decisions: [
-        {
-          title: 'Why PostgreSQL',
-          body: 'PostgreSQL made sense for structured relational queries, aggregation, and extensibility around normalized health records.',
-        },
-        {
-          title: 'Why Next.js',
-          body: 'Next.js allowed the dashboard UI and API routes to live in one codebase, keeping the project simpler while it evolves.',
-        },
-        {
-          title: 'Why explicit documentation',
-          body: 'Health datasets often contain incomplete or inconsistent fields, so documenting assumptions was necessary to keep the analysis honest and reproducible.',
-        },
-      ],
-    },
-
-    constraints: {
-      eyebrow: 'Constraints',
-      title: 'Challenges and limitations',
-      body: 'A central challenge was deciding how much normalization to perform without over-interpreting ambiguous source fields. To handle this, raw values were preserved where needed and transformation assumptions were documented explicitly.',
-    },
-
-    outcome: {
-      eyebrow: 'Outcome',
-      title: 'What this project demonstrates',
-      body: 'The current version establishes a maintainable ingestion-to-dashboard pattern for analytics projects. It demonstrates structured data modeling, systems thinking, and responsible handling of imperfect datasets.',
-    },
-
-    nextSteps: {
-      eyebrow: 'Next Steps',
-      title: 'Future improvements',
-      list: [
-        'Add comparative filtering across conditions and regions',
-        'Expand documentation for schema and query design',
-        'Add more datasets for broader trend exploration',
-        'Refine dashboard views and exportable summaries',
-      ],
-    },
-  },
-  // HEALTHCARE OPERATIONS ANALYTICS PLATFORM
-  {
-    slug: 'healthcare-operations-analytics-platform',
-    title: 'Healthcare Operations Analytics Platform',
-    summary:
-      'A dashboard and reporting system designed to model operational healthcare metrics through structured data flows, SQL-based analysis, and role-aware analytics views.',
-    category: 'Data & Analytics Systems',
-    stack: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'SQL'],
-    backHref: '/projects',
-    repoHref: '',
-
-    meta: [
-      { label: 'Role', value: 'Solo Engineer' },
-      { label: 'Status', value: 'Planned / Rebuild' },
-      { label: 'Focus', value: 'Healthcare Operations' },
-      { label: 'Type', value: 'Analytics Platform' },
-    ],
-
-    overview: {
-      eyebrow: 'Overview',
-      title: 'What this project is',
-      body: 'This project models how operational healthcare data can be transformed into a usable analytics system. It focuses on reporting workflows, structured metrics, and dashboard views that support visibility into scheduling, volume, throughput, and service performance.',
-    },
-
-    problem: {
-      eyebrow: 'Problem',
-      title: 'Why this project exists',
-      body: 'Operational healthcare data is often spread across disconnected systems, making it difficult to understand service patterns and workflow bottlenecks. The goal of this project was to design a system that could centralize selected operational signals and surface them through clear reporting interfaces.',
-    },
-
-    goals: {
-      eyebrow: 'Goals',
-      title: 'Project goals',
-      list: [
-        'Model healthcare operations data in a structured relational schema',
-        'Create SQL-driven reporting views for common operational metrics',
-        'Build dashboard interfaces that make system performance easier to interpret',
-        'Demonstrate a maintainable pattern for analytics workflows and reporting systems',
-      ],
-    },
-
-    system: {
-      eyebrow: 'System',
-      title: 'System architecture',
-      body: 'The platform separates data ingestion, storage, aggregation, and presentation so operational metrics can be analyzed without tightly coupling the reporting layer to the raw source structure.',
-      architecture: [
-        { label: 'Operational source data' },
-        { label: 'Ingestion / transformation layer' },
-        { label: 'Validation / metric mapping' },
-        { label: 'PostgreSQL' },
-        { label: 'Reporting queries' },
-        { label: 'Dashboard UI' },
-      ],
-    },
-
-    technology: {
-      eyebrow: 'Stack',
-      title: 'Technology used',
-      list: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'SQL', 'Tailwind CSS'],
-    },
-
-    features: {
-      eyebrow: 'Features',
-      title: 'Key capabilities',
-      list: [
-        'Structured operational metrics modeling',
-        'SQL-based aggregation for reporting views',
-        'Dashboard summaries for service and workflow performance',
-        'Role-aware reporting interface patterns',
-        'Clear separation between source data and analytics logic',
-      ],
-    },
-
-    technicalDecisions: {
-      eyebrow: 'Technical Decisions',
-      title: 'Important implementation choices',
-      decisions: [
-        {
-          title: 'Why a relational data model',
-          body: 'Healthcare operations metrics often depend on clear relationships between entities like appointments, providers, services, and locations, making a relational schema a strong fit.',
-        },
-        {
-          title: 'Why SQL-driven analytics',
-          body: 'SQL made it possible to express grouped metrics, trend summaries, and reporting views directly and transparently without adding unnecessary processing complexity.',
-        },
-        {
-          title: 'Why separate metric logic from presentation',
-          body: 'Keeping transformation and reporting logic distinct from the UI makes the system easier to maintain, validate, and extend as reporting needs change.',
-        },
-      ],
-    },
-
-    constraints: {
-      eyebrow: 'Constraints',
-      title: 'Challenges and limitations',
-      body: 'A major challenge in operational reporting is deciding which metrics are meaningful without overcomplicating the system. This project intentionally focuses on a narrower set of modeled workflows so the architecture remains understandable and extensible.',
-    },
-
-    outcome: {
-      eyebrow: 'Outcome',
-      title: 'What this project demonstrates',
-      body: 'This project demonstrates how backend data modeling, SQL reporting, and frontend dashboard design can work together to create usable operational analytics systems in healthcare-adjacent contexts.',
-    },
-
-    nextSteps: {
-      eyebrow: 'Next Steps',
-      title: 'Future improvements',
-      list: [
-        'Expand metric coverage for scheduling and throughput analysis',
-        'Add comparative reporting views across services or locations',
-        'Introduce exportable reporting summaries',
-        'Refine architecture documentation and dashboard interaction patterns',
-      ],
-    },
-  },
-  // ENVIRONMENTAL MONITORING SYSTEM
-  {
-    slug: 'environmental-monitoring-system',
-    title: 'Environmental Monitoring System',
-    summary:
-      'A dashboard-oriented monitoring system for structuring, visualizing, and interpreting environmental sensor data across time-based reporting views.',
-    category: 'Data & Analytics Systems',
-    stack: ['TypeScript', 'Next.js', 'PostgreSQL', 'SQL'],
-    backHref: '/projects',
-    repoHref: '',
-
-    meta: [
-      { label: 'Role', value: 'Solo Engineer' },
-      { label: 'Status', value: 'Rebuild' },
-      { label: 'Focus', value: 'Monitoring & Reporting' },
-      { label: 'Type', value: 'Analytics Dashboard' },
-    ],
-
-    overview: {
-      eyebrow: 'Overview',
-      title: 'What this project is',
-      body: 'This project explores how environmental sensor data can be modeled and presented through a dashboard system. It focuses on time-series visibility, trend reporting, and structured presentation of monitoring data for practical interpretation.',
-    },
-
-    problem: {
-      eyebrow: 'Problem',
-      title: 'Why this project exists',
-      body: 'Raw monitoring data is often noisy, repetitive, and difficult to interpret without a reporting layer. The goal of this project was to transform incoming environmental signals into a cleaner, queryable system that supports trend visibility and threshold awareness.',
-    },
-
-    goals: {
-      eyebrow: 'Goals',
-      title: 'Project goals',
-      list: [
-        'Structure environmental readings in a queryable database schema',
-        'Create dashboard views for trend inspection and reporting',
-        'Support threshold-based interpretation through clear visual patterns',
-        'Demonstrate maintainable handling of time-based monitoring data',
-      ],
-    },
-
-    system: {
-      eyebrow: 'System',
-      title: 'System architecture',
-      body: 'The system organizes incoming readings into a structured data layer, then exposes analytics and trend views through a dashboard interface designed for readability and quick interpretation.',
-      architecture: [
-        { label: 'Sensor / source data' },
-        { label: 'Ingestion pipeline' },
-        { label: 'Normalization / threshold mapping' },
-        { label: 'PostgreSQL' },
-        { label: 'Analytics queries' },
-        { label: 'Dashboard UI' },
-      ],
-    },
-
-    technology: {
-      eyebrow: 'Stack',
-      title: 'Technology used',
-      list: ['TypeScript', 'Next.js', 'Node.js', 'PostgreSQL', 'SQL', 'Tailwind CSS'],
-    },
-
-    features: {
-      eyebrow: 'Features',
-      title: 'Key capabilities',
-      list: [
-        'Time-based data ingestion and storage',
-        'Trend visualization for environmental signals',
-        'Threshold-aware reporting patterns',
-        'Dashboard summaries for recent and historical views',
-        'Structured query layer for aggregated analysis',
-      ],
-    },
-
-    technicalDecisions: {
-      eyebrow: 'Technical Decisions',
-      title: 'Important implementation choices',
-      decisions: [
-        {
-          title: 'Why PostgreSQL for monitoring data',
-          body: 'A relational approach made it easier to structure readings, timestamps, and reporting relationships while still supporting aggregation and trend analysis.',
-        },
-        {
-          title: 'Why dashboard-first presentation',
-          body: 'Monitoring systems are most useful when raw readings are translated into understandable summaries, so the project emphasizes visualization and interpretation rather than raw log output alone.',
-        },
-        {
-          title: 'Why threshold logic is separated',
-          body: 'Separating threshold logic from display components keeps alerting or emphasis logic easier to update without rewriting the UI layer.',
-        },
-      ],
-    },
-
-    constraints: {
-      eyebrow: 'Constraints',
-      title: 'Challenges and limitations',
-      body: 'Monitoring systems can become visually noisy if every reading is treated with equal emphasis. A key challenge here was designing reporting patterns that highlight meaningful variation without overwhelming the interface.',
-    },
-
-    outcome: {
-      eyebrow: 'Outcome',
-      title: 'What this project demonstrates',
-      body: 'This project demonstrates practical skills in time-based data modeling, dashboard-oriented reporting, and translating raw monitoring signals into a more usable system.',
-    },
-
-    nextSteps: {
-      eyebrow: 'Next Steps',
-      title: 'Future improvements',
-      list: [
-        'Add richer filtering across time windows and sensor groups',
-        'Refine threshold visualization and alert states',
-        'Expand query optimization for larger datasets',
-        'Add architecture diagrams and deeper system documentation',
-      ],
-    },
-  },
-  // RESOURCE ALLOCATION SYSTEM
-  {
-    slug: 'resource-allocation-system',
-    title: 'Resource Allocation System',
-    summary:
-      'A role-based scheduling and coordination platform designed to model operational workflows, manage constraints, and improve visibility into resource planning.',
-    category: 'Operational Systems',
-    stack: ['TypeScript', 'Next.js', 'PostgreSQL'],
-    backHref: '/projects',
-    repoHref: '',
-
-    meta: [
-      { label: 'Role', value: 'Solo Engineer' },
-      { label: 'Status', value: 'In Progress' },
-      { label: 'Focus', value: 'Workflow Coordination' },
-      { label: 'Type', value: 'Operational System' },
-    ],
-
-    overview: {
-      eyebrow: 'Overview',
-      title: 'What this project is',
-      body: 'This project models how scheduling and resource coordination can be handled through a structured system instead of ad hoc manual processes. It focuses on role-based workflows, allocation visibility, and database-backed scheduling logic.',
-    },
-
-    problem: {
-      eyebrow: 'Problem',
-      title: 'Why this project exists',
-      body: 'Resource planning often becomes difficult when assignments, timing, and availability are managed across scattered tools or informal processes. The goal of this project was to design a system that creates clearer workflow structure around allocation and scheduling decisions.',
-    },
-
-    goals: {
-      eyebrow: 'Goals',
-      title: 'Project goals',
-      list: [
-        'Model allocation and scheduling logic in a structured database schema',
-        'Support role-based workflows for managing assignments',
-        'Reduce ambiguity around availability and planning decisions',
-        'Create a maintainable full-stack pattern for operational systems',
-      ],
-    },
-
-    system: {
-      eyebrow: 'System',
-      title: 'System architecture',
-      body: 'The system separates scheduling logic, stored records, and user-facing interfaces so allocation workflows can remain consistent and easier to reason about as complexity grows.',
-      architecture: [
-        { label: 'User input / assignments' },
-        { label: 'Validation rules' },
-        { label: 'Scheduling logic' },
-        { label: 'PostgreSQL' },
-        { label: 'API routes' },
-        { label: 'Planning interface' },
-      ],
-    },
-
-    technology: {
-      eyebrow: 'Stack',
-      title: 'Technology used',
-      list: ['TypeScript', 'Next.js', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
-    },
-
-    features: {
-      eyebrow: 'Features',
-      title: 'Key capabilities',
-      list: [
-        'Role-based scheduling flows',
-        'Structured assignment and availability records',
-        'Conflict-aware operational logic',
-        'Database-backed planning interface',
-        'Usable views for managing workflow coordination',
-      ],
-    },
-
-    technicalDecisions: {
-      eyebrow: 'Technical Decisions',
-      title: 'Important implementation choices',
-      decisions: [
-        {
-          title: 'Why role-based workflows',
-          body: 'Resource systems often depend on different levels of responsibility and visibility, so role-based views help keep decision-making and data access aligned.',
-        },
-        {
-          title: 'Why a relational model',
-          body: 'Scheduling systems involve structured relationships between people, roles, assignments, and time windows, making relational data modeling a strong fit.',
-        },
-        {
-          title: 'Why explicit validation rules',
-          body: 'Scheduling conflicts and ambiguous assignments are easier to manage when validation rules are handled intentionally instead of relying on UI assumptions alone.',
-        },
-      ],
-    },
-
-    constraints: {
-      eyebrow: 'Constraints',
-      title: 'Challenges and limitations',
-      body: 'Operational systems can become complex quickly as edge cases around availability, conflicts, and reassignment increase. This project focuses on a narrower workflow model first so the architecture can stay clear and extensible.',
-    },
-
-    outcome: {
-      eyebrow: 'Outcome',
-      title: 'What this project demonstrates',
-      body: 'This project demonstrates systems thinking, relational data modeling, and the design of full-stack tools that support real-world workflow coordination rather than isolated interface interactions.',
-    },
-
-    nextSteps: {
-      eyebrow: 'Next Steps',
-      title: 'Future improvements',
-      list: [
-        'Expand conflict-handling logic for more edge cases',
-        'Add timeline and calendar-oriented planning views',
-        'Improve auditability for allocation changes',
-        'Refine documentation around scheduling rules and constraints',
-      ],
-    },
-  },
-  // PERIODIC TABLES RESERVATION SYSTEM
+  // PERIODIC TABLES
   {
     slug: 'periodic-tables-reservation-system',
     title: 'Periodic Tables Reservation System',
     summary:
       'A full-stack reservation management application built to support structured booking workflows, table coordination, and operational visibility for restaurant service.',
     category: 'Full-Stack Applications',
+    status: 'Built',
     stack: ['React', 'Express.js', 'PostgreSQL', 'Knex.js'],
     backHref: '/projects',
     repoHref: '',
@@ -531,7 +77,7 @@ export const caseStudies: CaseStudy[] = [
 
     meta: [
       { label: 'Role', value: 'Solo Engineer' },
-      { label: 'Status', value: 'Completed / Rebuild' },
+      { label: 'Status', value: 'Built / Rebuild Planned' },
       { label: 'Focus', value: 'Reservations & Workflow' },
       { label: 'Type', value: 'Full-Stack Application' },
     ],
@@ -633,13 +179,14 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
   },
-  // AMP TICKETS ADD ON FLOW
+  // AMP TICKETS
   {
     slug: 'amp-ticket-add-on-flow',
     title: 'AMP Ticket Add-On Flow',
     summary:
       'A production feature designed to improve add-on visibility and checkout usability within an existing ticketing ecosystem.',
     category: 'Full-Stack Applications',
+    status: 'Production',
     stack: ['React', 'TypeScript', 'Tailwind CSS'],
     backHref: '/projects',
 
@@ -746,13 +293,14 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
   },
-  // ART OF WINE COMPANION APP
+  // AOW
   {
     slug: 'art-of-wine-companion-app',
     title: 'Art of Wine Companion App',
     summary:
       'A mobile-first event companion app designed to support vendor discovery, event navigation, and reusable UI patterns for future event experiences.',
     category: 'Full-Stack Applications',
+    status: 'In Progress',
     stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
     backHref: '/projects',
 

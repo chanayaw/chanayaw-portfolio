@@ -19,11 +19,11 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   }
 
   return (
-    <main className="pb-24">
+    <main className="mx-auto w-full max-w-360 space-y-10 px-10 pb-24">
       <section className="pt-20 md:pt-28">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
-            Case Study
+            {caseStudy.status === 'Planned' ? 'Project Brief' : 'Case Study'}
           </p>
 
           <div className="mt-4 max-w-4xl">
@@ -38,6 +38,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <ChipRegBorder>{caseStudy.category}</ChipRegBorder>
+            <ChipRegBorder>{caseStudy.status}</ChipRegBorder>
             {caseStudy.stack.map((item) => (
               <ChipThinBorder key={item}>{item}</ChipThinBorder>
             ))}
@@ -77,7 +78,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <GlassCard>
             <div className="grid gap-6 md:grid-cols-4">
               {caseStudy.meta.map((item) => (
@@ -89,7 +90,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <Section
             eyebrow={caseStudy.overview.eyebrow}
             title={caseStudy.overview.title}
@@ -99,7 +100,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2">
           <Card>
             <SectionInner
               eyebrow={caseStudy.problem.eyebrow}
@@ -121,7 +122,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <Section
             eyebrow={caseStudy.system.eyebrow}
             title={caseStudy.system.title}
@@ -144,7 +145,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2">
           <Card>
             <SectionInner
               eyebrow={caseStudy.technology.eyebrow}
@@ -166,7 +167,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <Section
             eyebrow={caseStudy.technicalDecisions.eyebrow}
             title={caseStudy.technicalDecisions.title}
@@ -183,7 +184,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2">
           <Card>
             <SectionInner
               eyebrow={caseStudy.constraints.eyebrow}
@@ -205,7 +206,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <Card>
             <SectionInner
               eyebrow={caseStudy.nextSteps.eyebrow}
