@@ -4,7 +4,6 @@ import LinkedIn from '../assets/icons/linkedin.svg';
 // import YouTube from '../assets/icons/youtube.svg';
 // import Instagram from '../assets/icons/instagram.svg';
 // import Threads from '../assets/icons/threads.svg';
-// import X from '../assets/icons/twitter-x.svg';
 // import TikTok from '../assets/icons/tiktok.svg';
 
 export type MenuItem = {
@@ -39,7 +38,6 @@ export const SocialIcons: SocialIcon[] = [
   // { label: 'YouTube', href: 'https://youtube.com', icon: YouTube }, // coming soon
   // { label: 'Instagram', href: 'https://instagram.com/chanayaw', icon: Instagram },
   // { label: 'Threads', href: 'https://threads.com/chanayaw', icon: Threads },
-  // { label: 'X', href: 'https://x.com', icon: X }, // coming soon
   // {
   //   label: 'TikTok',
   //   href: 'https://www.tiktok.com/@chanaya.w',
