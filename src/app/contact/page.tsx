@@ -12,26 +12,29 @@ export default function ContactPage() {
   const [state, handleSubmit] = useForm('xwvrbwvq');
 
   return (
-    <main className="pb-24">
+    <main className="mx-auto w-full max-w-360 space-y-10 px-10 pb-24">
       <PageHeader
         eyebrow="Contact"
         heading="Get in touch"
         description={
           <>
             I&apos;m open to roles, collaborations, and thoughtful conversations related to software
-            engineering, data systems, analytics workflows, and health technology.
+            engineering, product-oriented systems, operational tools, and health technology.
           </>
         }
         supportingText={
           <>
             Use the form below for professional inquiries, project opportunities, or technical
-            conversations. I review messages carefully and respond where there is a strong fit.
+            conversations.{' '}
+            <span className="block">
+              I review messages carefully and respond where there is a strong fit.
+            </span>
           </>
         }
       />
 
       <section className="mt-16 md:mt-20">
-        <div className="mx-auto md:grid w-full max-w-7xl gap-8 px-6 space-y-6 lg:space-y-0 lg:grid-cols-12">
+        <div className="mx-auto w-full gap-8 space-y-6 md:grid lg:grid-cols-12 lg:space-y-0">
           <div className="space-y-6 lg:col-span-4">
             <GlassCard>
               <div className="space-y-5">
@@ -43,7 +46,7 @@ export default function ContactPage() {
                   <div className="mt-4 flex flex-wrap gap-2">
                     <ChipRegBorder>Software Roles</ChipRegBorder>
                     <ChipRegBorder>HealthTech</ChipRegBorder>
-                    <ChipRegBorder>Data Systems</ChipRegBorder>
+                    <ChipRegBorder>Product-Oriented Systems</ChipRegBorder>
                     <ChipRegBorder>Collaboration</ChipRegBorder>
                   </div>
                 </div>
@@ -54,9 +57,9 @@ export default function ContactPage() {
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     <ChipThinBorder>Full-Stack Engineering</ChipThinBorder>
-                    <ChipThinBorder>Analytics Workflows</ChipThinBorder>
+                    <ChipThinBorder>Product-Oriented Development</ChipThinBorder>
                     <ChipThinBorder>Operational Tools</ChipThinBorder>
-                    <ChipThinBorder>Health Data Systems</ChipThinBorder>
+                    <ChipThinBorder>Digital Health Tools</ChipThinBorder>
                   </div>
                 </div>
 
@@ -66,7 +69,7 @@ export default function ContactPage() {
                   </p>
                   <p className="text-muted mt-3 text-sm leading-relaxed">
                     I&apos;m most interested in opportunities and conversations that align with
-                    software engineering, data-informed systems, and the growing intersection of
+                    software engineering, product-oriented systems, and the growing intersection of
                     technology and healthcare.
                   </p>
                 </div>
@@ -94,18 +97,18 @@ export default function ContactPage() {
                     <p className="text-foreground text-lg font-medium">Message received</p>
 
                     <p className="text-muted mt-3 text-sm leading-relaxed">
-                      Thank you for reaching out. Your message has been successfully submitted. I
-                      review inquiries carefully and respond where there is a strong fit or relevant
-                      conversation.
+                      Thank you for reaching out. Your message has been submitted successfully. I
+                      review professional inquiries carefully and respond where there is a clear fit
+                      or relevant conversation.
                     </p>
 
                     <Link
                       href="/projects"
-                      className="ring-brand bg-cta text-cta-foreground shadow-card inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition hover:brightness-105 mt-10"
+                      className="ring-brand bg-cta text-cta-foreground shadow-card mt-10 inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition hover:brightness-105"
                     >
                       Explore Projects
                     </Link>
-                    <div className='flex flex-row justify-center mt-6'>
+                    <div className="mt-6 flex flex-row justify-center">
                       <SocialLinks icons={SocialIcons} />
                     </div>
                   </div>
@@ -115,6 +118,7 @@ export default function ContactPage() {
                   <div className="grid gap-6 md:grid-cols-2">
                     <Field label="Name" htmlFor="name">
                       <input
+                        required
                         type="text"
                         name="name"
                         id="name"
@@ -122,11 +126,12 @@ export default function ContactPage() {
                         className="ring-brand border-default bg-surface text-foreground placeholder:text-subtle h-12 rounded-xl border px-4"
                         placeholder="Your name"
                       />
-                      <ValidationError prefix="text" field="text" errors={state.errors} />
+                      <ValidationError prefix="name" field="name" errors={state.errors} />
                     </Field>
 
                     <Field label="Email" htmlFor="email">
                       <input
+                        required
                         type="email"
                         name="email"
                         id="email"
@@ -155,11 +160,16 @@ export default function ContactPage() {
                         className="ring-brand border-default bg-surface text-foreground placeholder:text-subtle h-12 rounded-xl border px-4"
                         placeholder="Company, team, or organization"
                       />
-                      <ValidationError prefix="text" field="text" errors={state.errors} />
+                      <ValidationError
+                        prefix="organization"
+                        field="organization-affiliation"
+                        errors={state.errors}
+                      />
                     </Field>
 
                     <Field label="Reason for Contact" htmlFor="reason">
                       <select
+                        required
                         name="reason"
                         id="reason"
                         aria-label="Reason for contact"
@@ -172,23 +182,25 @@ export default function ContactPage() {
                         </option>
                         <option value="employment">Employment Opportunity</option>
                         <option value="collaboration">Collaboration</option>
-                        <option value="health-tech">HealthTech or Data Systems Inquiry</option>
+                        <option value="health-tech">HealthTech Inquiry</option>
+                        <option value="product-systems">Product or Systems Inquiry</option>
                         <option value="technical">Technical Question</option>
                         <option value="other">Other</option>
                       </select>
-                      <ValidationError prefix="select" field="select" errors={state.errors} />
+                      <ValidationError prefix="reason" field="reason" errors={state.errors} />
                     </Field>
                   </div>
 
                   <Field label="Message" htmlFor="message">
                     <textarea
+                      required
                       name="message"
                       id="message"
                       rows={8}
                       className="ring-brand border-default bg-surface text-foreground placeholder:text-subtle min-h-40 w-full rounded-xl border px-4 py-3"
                       placeholder="Tell me a bit about your inquiry, role, project, or reason for reaching out."
                     />
-                    <ValidationError prefix="textarea" field="textarea" errors={state.errors} />
+                    <ValidationError prefix="message" field="message" errors={state.errors} />
                   </Field>
 
                   <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-4">
