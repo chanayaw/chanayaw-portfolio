@@ -5,27 +5,27 @@ import { PrimaryCTA, SecondaryCTA } from '@/src/components/ui/Buttons';
 
 export default function AboutPage() {
   return (
-    <main className="pb-24">
+    <main className="mx-auto w-full max-w-360 space-y-10 px-10 pb-24">
       <PageHeader
         eyebrow="About"
-        heading="A software engineer focused on systems, structured data, and health technology"
+        heading="A Digital Health Technologist focused on systems, applications, and product-oriented software"
         description={
           <>
-            I build full-stack applications, analytics workflows, and operational systems designed
-            to turn complex processes and data into usable software.
+            I build full-stack applications, internal tools, and operational systems designed to
+            turn complex workflows into usable software.
           </>
         }
         supportingText={
           <>
-            My work increasingly centers on the intersection of software engineering, data systems,
-            and health-related information design, with a growing focus on health technology and
-            women&apos;s health data workflows.
+            My work sits at the intersection of software engineering, system design, and health
+            technology, with a growing focus on building practical tools that support real-world
+            use.
           </>
         }
       />
 
       <section className="mt-16 md:mt-20">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <div className="grid gap-6 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <div className="max-w-3xl space-y-5">
@@ -39,23 +39,28 @@ export default function AboutPage() {
                     My background is in full-stack software engineering, with primary experience
                     building applications in TypeScript, React, Next.js, Node.js, and SQL-backed
                     systems. I&apos;m especially interested in software that supports real-world
-                    operations, whether that means dashboards, internal tools, structured workflows,
-                    or public-facing systems.
+                    operations, whether that means internal tools, structured workflows, product
+                    features, or public-facing systems.
                   </p>
 
                   <p>
-                    Across my work, I tend to gravitate toward projects that require both technical
-                    clarity and system design thinking: modeling relationships in data, structuring
-                    maintainable codebases, and building interfaces that make complicated processes
-                    easier to navigate.
+                    Most recently, I served as the sole full-stack developer at Walton Arts Center
+                    and Walmart AMP, where I designed, built, and maintained production applications
+                    used by staff and the public. That experience strengthened how I think about
+                    technical ownership, usability, operational reliability, and building within
+                    real constraints.
                   </p>
 
                   <p>
-                    More recently, I&apos;ve been exploring how these same skills apply to health
-                    data systems, analytics workflows, and health technology. That includes
-                    independent work around women&apos;s health datasets, documentation practices,
-                    and the design of software that helps make complex information more
-                    interpretable and usable.
+                    Across my work, I gravitate toward projects that require both technical clarity
+                    and product thinking: structuring maintainable codebases, designing workflows,
+                    and building interfaces that make complicated processes easier to navigate.
+                  </p>
+
+                  <p>
+                    I&apos;m now building toward digital health technology, with an interest in how
+                    software can support care workflows, patient-facing tools, health operations,
+                    and clearer access to complex information.
                   </p>
                 </div>
               </div>
@@ -69,7 +74,7 @@ export default function AboutPage() {
                       Current Direction
                     </p>
                     <p className="text-muted mt-3 text-sm leading-relaxed">
-                      Software engineering, data systems, analytics workflows, and health
+                      Software engineering, product-oriented systems, operational tools, and health
                       technology.
                     </p>
                   </div>
@@ -80,8 +85,8 @@ export default function AboutPage() {
                     </p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       <ChipThinBorder>Full-Stack Systems</ChipThinBorder>
-                      <ChipThinBorder>Structured Data</ChipThinBorder>
-                      <ChipThinBorder>Analytics Workflows</ChipThinBorder>
+                      <ChipThinBorder>System Design</ChipThinBorder>
+                      <ChipThinBorder>Product-Oriented Development</ChipThinBorder>
                       <ChipThinBorder>API Design</ChipThinBorder>
                       <ChipThinBorder>Operational Tools</ChipThinBorder>
                     </div>
@@ -92,8 +97,8 @@ export default function AboutPage() {
                       Target Roles
                     </p>
                     <p className="text-muted mt-3 text-sm leading-relaxed">
-                      Software Engineer, Full-Stack Engineer, Analytics Engineer, and
-                      HealthTech-focused roles.
+                      Software Engineer, Full-Stack Engineer, HealthTech Software Engineer,
+                      Associate Product Manager, and digital health roles.
                     </p>
                   </div>
                 </div>
@@ -104,7 +109,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-20">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <div className="max-w-3xl space-y-4">
             <SectionLabel>How I Work</SectionLabel>
             <h2 className="text-3xl font-medium tracking-tight text-balance md:text-4xl">
@@ -127,8 +132,8 @@ export default function AboutPage() {
 
             <Card>
               <AboutPrincipleCard
-                title="Structured data matters"
-                body="I’m especially drawn to projects where schemas, relationships, queries, and reporting logic shape how information becomes usable."
+                title="Product thinking matters"
+                body="I'm drawn to projects where user needs, workflow constraints, and technical decisions all shape how the system should work."
               />
             </Card>
 
@@ -150,7 +155,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-20">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <div className="grid gap-6 lg:grid-cols-2">
             <Card>
               <div className="space-y-4">
@@ -161,22 +166,19 @@ export default function AboutPage() {
 
                 <div className="text-muted space-y-4 text-base leading-relaxed">
                   <p>
-                    My long-term direction sits at the intersection of software engineering, data
-                    systems, and health technology. I&apos;m particularly interested in building
-                    analytics platforms, structured data workflows, and research-supporting tools
-                    that make complex health-related information more interpretable and
-                    operationally useful. A growing focus of my work is women&apos;s health data,
-                    including systems that help surface patterns, disparities, and operational
-                    insights in ways that support clearer decision-making.
+                    My long-term direction sits at the intersection of software engineering,
+                    product-oriented systems, and health technology. I&apos;m particularly
+                    interested in building tools that support care workflows, patient-facing
+                    experiences, operational coordination, and clearer access to complex
+                    health-related information.
                   </p>
 
                   <p>
                     Alongside my engineering work, I will be pursuing a Bachelor&apos;s degree in
                     Health Services Management, followed by graduate study in Biomedical
-                    Informatics. These programs support my goal of working at the technical
-                    intersection of healthcare systems, data infrastructure, and software
-                    engineering as I continue building toward becoming a Women&apos;s Health Data
-                    and Equity Technologist.
+                    Informatics. These programs support my goal of working at the intersection of
+                    healthcare systems, digital products, and software engineering as I continue
+                    building toward becoming a Digital Health Technologist.
                   </p>
                 </div>
               </div>
@@ -201,9 +203,9 @@ export default function AboutPage() {
                 </div>
 
                 <p className="text-muted text-base leading-relaxed">
-                  I primarily work with modern web technologies and structured data systems.
+                  I primarily work with modern web technologies for full-stack applications.
                   I&apos;m especially interested in projects where frontend interfaces, backend
-                  logic, and data modeling all need to work together coherently.
+                  logic, data modeling, and workflow design all need to work together coherently.
                 </p>
               </div>
             </Card>
@@ -212,7 +214,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-20">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <div className="max-w-3xl space-y-4">
             <SectionLabel>What This Site Is For</SectionLabel>
             <h2 className="text-3xl font-medium tracking-tight text-balance md:text-4xl">
@@ -220,9 +222,9 @@ export default function AboutPage() {
             </h2>
             <p className="text-muted text-base leading-relaxed md:text-lg">
               This site is where I document selected work, project systems, and the direction
-              I&apos;m building toward. It includes engineering projects, analytics-oriented
-              systems, health-data-adjacent work, and project documentation that reflects how I
-              think through software problems.
+              I&apos;m building toward. It includes full-stack applications, operational tools,
+              product-oriented systems, and case studies that reflect how I think through software
+              problems.
             </p>
           </div>
 
@@ -230,21 +232,21 @@ export default function AboutPage() {
             <Card>
               <MiniBlock
                 title="Projects"
-                body="Full-stack systems, operational tools, analytics dashboards, and case studies."
+                body="Full-stack applications, operational tools, product systems, and selected case studies."
               />
             </Card>
 
             <Card>
               <MiniBlock
-                title="Health Data"
-                body="Technical exploration of health data systems, workflows, and structured information design."
+                title="Digital Health Direction"
+                body="A growing focus on health technology, care workflows, patient-facing tools, and healthcare systems."
               />
             </Card>
 
             <Card>
               <MiniBlock
                 title="Case Studies"
-                body="Detailed breakdowns of architecture, decisions, constraints, and implementation choices."
+                body="Detailed breakdowns of architecture, product decisions, constraints, and implementation choices."
               />
             </Card>
           </div>
@@ -252,7 +254,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-20">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="">
           <CardWithGlow>
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div className="max-w-2xl space-y-3">
@@ -261,14 +263,14 @@ export default function AboutPage() {
                   Explore the work
                 </h2>
                 <p className="text-muted text-base leading-relaxed">
-                  The best place to start is the Projects page, followed by the health-data-focused
-                  work and case studies that support my current direction.
+                  The best place to start is the Projects page, followed by the case studies that
+                  show how I approach systems, workflows, and product-oriented software.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-4">
                 <PrimaryCTA link="/projects" label="View Projects" />
-                <SecondaryCTA link="/health-data" label="Health Data Work" />
+                <SecondaryCTA link="/contact" label="Contact Me" />
               </div>
             </div>
           </CardWithGlow>
