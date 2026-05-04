@@ -4,19 +4,8 @@ import { ChipRegBorder } from '../ui/Chips';
 
 const featuredProjects = [
   {
-    title: 'Women’s Health Data Dashboard',
-    description:
-      'SQL-driven analytics platform exploring trends in public women’s health datasets.',
-    stack: ['TypeScript', 'Next.js', 'PostgreSQL'],
-  },
-  {
-    title: 'Healthcare Operations Analytics',
-    description: 'Dashboard and data pipeline analyzing healthcare system metrics.',
-    stack: ['Node.js', 'SQL', 'React'],
-  },
-  {
     title: 'Resource Allocation System',
-    description: 'Role-based scheduling system modeling operational workflows.',
+    description: 'Role-based scheduling and workflow system for operational coordination.',
     stack: ['TypeScript', 'Next.js', 'PostgreSQL'],
   },
 ];
@@ -30,11 +19,11 @@ const FeaturedProjects = () => {
             Featured Work
           </p>
           <h2 className="text-3xl font-medium tracking-tight text-balance md:text-5xl">
-            Systems, dashboards, and data-driven applications
+            Systems, applications, and operational tools
           </h2>
           <p className="text-muted max-w-2xl text-base leading-relaxed md:text-lg">
-            A selection of projects demonstrating full-stack engineering, structured data systems,
-            and applied problem solving across operational and health-related contexts.
+            A selection of work demonstrating full-stack engineering, system design, and applied
+            problem solving across real-world and health-related contexts.
           </p>
         </div>
 

@@ -28,16 +28,6 @@ export const MenuItems: MenuItem[] = [
     href: '/projects',
     active: true,
   },
-  {
-    label: 'Health Data',
-    href: '/health-data',
-    active: true,
-  },
-  // {
-  //   label: 'Writing',
-  //   href: 'writing',
-  //   active: false,
-  // },
   { label: 'About', href: '/about', active: true },
   { label: 'Contact', href: '/contact', active: true },
 ];
