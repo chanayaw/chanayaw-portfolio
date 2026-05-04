@@ -16,7 +16,7 @@ export default function Hero() {
             </p>
 
             <h1 className="max-w-4xl text-4xl leading-tight font-medium tracking-tight text-balance md:text-6xl md:leading-[1.05] lg:text-7xl">
-              Building data-driven systems for healthcare and real-world operations
+              Building systems, applications, and tools for real-world operations
             </h1>
 
             <div className="text-muted mt-6 max-w-3xl space-y-4 text-base leading-relaxed font-light md:text-lg">
