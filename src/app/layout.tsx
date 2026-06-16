@@ -1,19 +1,27 @@
 import type { Metadata } from 'next';
-import { JetBrains_Mono, Lexend } from 'next/font/google';
+import { Sora, Manrope, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '../components/nav/Header';
 import Footer from '../components/nav/Footer';
 
-const lexend = Lexend({
-  variable: '--font-lexend',
+const sora = Sora({
+  variable: '--font-sora',
+
   subsets: ['latin'],
-  weight: 'variable',
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
+const manrope = Manrope({
+  variable: '--font-manrope',
+
   subsets: ['latin'],
-  weight: ['400'],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: '--font-ibm-plex-mono',
+
+  subsets: ['latin'],
+
+  weight: ['400', '500', '600'],
 });
 
 export const metadata: Metadata = {
@@ -22,13 +30,13 @@ export const metadata: Metadata = {
     template: '%s | Chanaya W',
   },
   description:
-    "Software Engineer building research driven systems for women's health equity. Engineering, lab notes, and research translation.",
+    "Software developer and Health Services Management student building toward biomedical informatics, digital health product development, and women's health equity.",
   metadataBase: new URL('https://chanayaw.com'),
   openGraph: {
     title: 'Chanaya W',
     description: "Software Engineer building research driven systems for women's health equity.",
     url: 'https://chanayaw.com',
-    siteName: 'Chanaya W Portfolio',
+    siteName: 'Chanaya W | Software Developer + Digital Health Product Builder',
     images: [
       {
         url: '/og-default.png',
@@ -61,7 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lexend.variable} ${jetbrainsMono.variable} bg-background text-foreground overflow-x-hidden overflow-y-scroll antialiased`}
+        className={`${sora.variable} ${manrope.variable} ${ibmPlexMono.variable} bg-background text-foreground overflow-x-hidden overflow-y-scroll antialiased`}
       >
         <Header />
         {children}
