@@ -2,118 +2,241 @@
 
 /* ============================================================
    Chanaya W — Global Design Tokens
-   Dark-only
-   Direction: refined systems UI + editorial softness
-   Near-black · frost · blush rose · soft violet · warm gold
+   Light-first + optional dark mode
+   Direction: modern feminine digital health academia
+   Soft Pearl · Ink Navy · Rose Berry · Digital Teal · Blush Pink
 ============================================================ */
 
 @theme {
   /* ----------------------------------------------------------
-     Core neutrals (foundation)
+     Font families
   ---------------------------------------------------------- */
-  --color-background: #09090b; /* near-black */
-  --color-surface: #101014; /* base elevated surface */
-  --color-surface-elevated: #14141a; /* slightly higher layer */
-  --color-card: rgba(255, 255, 255, 0.04); /* soft glass card */
-  --color-glass: rgba(255, 255, 255, 0.05); /* translucent panel */
-
-  --color-border: rgba(255, 255, 255, 0.1); /* default hairline */
-  --color-border-strong: rgba(255, 255, 255, 0.16); /* emphasized border */
-  --color-glass-border: rgba(255, 255, 255, 0.12); /* frosted panel border */
-
-  --color-foreground: #f5f3f7; /* primary text */
-  --color-muted: rgba(245, 243, 247, 0.78); /* supporting text */
-  --color-subtle: rgba(245, 243, 247, 0.58); /* metadata */
+  --font-heading: 'Sora';
+  --font-sans: 'Manrope';
+  --font-mono: 'IBM Plex Mono';
 
   /* ----------------------------------------------------------
-     Brand / interface accents
+     Radius
   ---------------------------------------------------------- */
-  --color-primary: #e8bfd0; /* blush rose */
-  --color-secondary: #bba8ff; /* soft violet */
-  --color-highlight: #f3d7a6; /* warm gold */
-
-  --color-accent-soft: rgba(232, 191, 208, 0.16);
-  --color-accent-strong: #e8bfd0;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-2xl: 2rem;
 
   /* ----------------------------------------------------------
-     Editorial layer (annotation / margin-note energy)
+     Brand colors — light mode defaults
   ---------------------------------------------------------- */
-  --color-poetic: #cdb9d9;
-  --color-poetic-soft: rgba(205, 185, 217, 0.78);
+  --color-background: #faf7f4; /* Soft Pearl */
+  --color-foreground: #17202a; /* Ink Navy */
+
+  --color-surface: #ffffff;
+  --color-surface-soft: #f6edf1; /* soft blush surface */
+  --color-surface-blue: #eef6f7; /* cool health-tech surface */
+  --color-surface-elevated: #ffffff;
+
+  --color-card: rgba(255, 255, 255, 0.78);
+  --color-glass: rgba(255, 255, 255, 0.62);
+
+  --color-border: rgba(23, 32, 42, 0.12);
+  --color-border-strong: rgba(23, 32, 42, 0.2);
+  --color-glass-border: rgba(23, 32, 42, 0.12);
+
+  --color-muted: #6b7280; /* Slate Gray */
+  --color-subtle: rgba(107, 114, 128, 0.76);
+
+  /* ----------------------------------------------------------
+     Brand accents
+  ---------------------------------------------------------- */
+  --color-primary: #17202a; /* Ink Navy */
+  --color-secondary: #3e8c8c; /* Digital Teal */
+
+  --color-accent: #b84f74; /* Rose Berry */
+  --color-accent-soft: #f3c7d6; /* Blush Pink */
+  --color-accent-muted: #f6edf1;
+
+  --color-evergreen: #1f3a2e; /* Deep Evergreen */
+  --color-mist: #dce8ea; /* Mist Blue */
 
   /* ----------------------------------------------------------
      Semantic mappings
   ---------------------------------------------------------- */
-  --color-link: var(--color-primary);
-  --color-cta: var(--color-primary);
-  --color-cta-foreground: #111114;
+  --color-link: var(--color-accent);
+  --color-cta: var(--color-accent);
+  --color-cta-foreground: #ffffff;
 
-  --color-success: #9fc7b8;
-  --color-warning: var(--color-highlight);
-  --color-error: #d69090;
+  --color-success: #3e8c8c;
+  --color-warning: #c49a4a;
+  --color-error: #b84f74;
 
   /* ----------------------------------------------------------
      Chips and tags
   ---------------------------------------------------------- */
-  --color-chip-bg: rgba(255, 255, 255, 0.04);
-  --color-chip-text: rgba(245, 243, 247, 0.82);
+  --color-chip-bg: rgba(184, 79, 116, 0.08);
+  --color-chip-text: #17202a;
+  --color-chip-border: rgba(184, 79, 116, 0.22);
+
+  --color-tech-chip-bg: rgba(62, 140, 140, 0.1);
+  --color-tech-chip-text: #17202a;
+  --color-tech-chip-border: rgba(62, 140, 140, 0.24);
 
   /* ----------------------------------------------------------
      Shadows and depth
   ---------------------------------------------------------- */
-  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.22);
-  --shadow-pop: 0 14px 44px rgba(0, 0, 0, 0.34);
-  --shadow-glow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 0 30px rgba(232, 191, 208, 0.08);
+  --shadow-card: 0 18px 50px rgba(23, 32, 42, 0.08);
+  --shadow-pop: 0 24px 70px rgba(23, 32, 42, 0.12);
+  --shadow-glow:
+    0 0 0 1px rgba(23, 32, 42, 0.04),
+    0 18px 60px rgba(184, 79, 116, 0.12);
 
   /* ----------------------------------------------------------
      Focus rings
   ---------------------------------------------------------- */
-  --ring-brand: 0 0 0 3px rgba(232, 191, 208, 0.42);
-  --ring-secondary: 0 0 0 3px rgba(187, 168, 255, 0.36);
+  --ring-brand: 0 0 0 3px rgba(184, 79, 116, 0.28);
+  --ring-secondary: 0 0 0 3px rgba(62, 140, 140, 0.28);
 
   /* ----------------------------------------------------------
      Data visualization
   ---------------------------------------------------------- */
-  --color-chart-1: #e8bfd0;
-  --color-chart-2: #9fc2ff;
-  --color-chart-hi: #f3d7a6;
-  --color-chart-grid: rgba(255, 255, 255, 0.08);
-  --color-chart-axis: rgba(245, 243, 247, 0.55);
+  --color-chart-1: #b84f74; /* Rose Berry */
+  --color-chart-2: #3e8c8c; /* Digital Teal */
+  --color-chart-3: #dce8ea; /* Mist Blue */
+  --color-chart-hi: #c49a4a; /* Signal Gold */
+  --color-chart-grid: rgba(23, 32, 42, 0.08);
+  --color-chart-axis: rgba(23, 32, 42, 0.48);
 
   /* ----------------------------------------------------------
-     Gradients (restrained)
+     Gradients
   ---------------------------------------------------------- */
 
-  /* Ambient hero background */
+  /* Light ambient hero background */
   --gradient-hero:
-    radial-gradient(1200px 600px at 18% 18%, rgba(232, 191, 208, 0.1), transparent 60%),
-    radial-gradient(1000px 500px at 82% 34%, rgba(187, 168, 255, 0.08), transparent 55%),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+    radial-gradient(900px 520px at 12% 12%, rgba(243, 199, 214, 0.55), transparent 62%),
+    radial-gradient(760px 460px at 86% 22%, rgba(220, 232, 234, 0.7), transparent 58%),
+    radial-gradient(700px 420px at 60% 90%, rgba(62, 140, 140, 0.12), transparent 60%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.72), rgba(250, 247, 244, 1));
 
   /* Micro-accent */
   --gradient-accent: linear-gradient(
     90deg,
-    rgba(232, 191, 208, 0),
-    rgba(232, 191, 208, 0.65),
-    rgba(187, 168, 255, 0.42),
-    rgba(187, 168, 255, 0)
+    rgba(184, 79, 116, 0),
+    rgba(184, 79, 116, 0.72),
+    rgba(62, 140, 140, 0.62),
+    rgba(62, 140, 140, 0)
   );
 
-  /* Editorial wash */
-  --gradient-poetic-wash:
-    linear-gradient(135deg, rgba(205, 185, 217, 0.1), rgba(232, 191, 208, 0.04)),
-    rgba(255, 255, 255, 0.02);
+  /* Soft callout wash */
+  --gradient-soft-wash:
+    linear-gradient(135deg, rgba(243, 199, 214, 0.42), rgba(220, 232, 234, 0.5)),
+    rgba(255, 255, 255, 0.72);
 
   /* ----------------------------------------------------------
      Interaction helpers
   ---------------------------------------------------------- */
   --opacity-disabled: 0.42;
+}
 
-  /* ----------------------------------------------------------
-     Font families
-  ---------------------------------------------------------- */
-  --font-sans: 'Lexend';
-  --font-mono: 'JetBrains Mono';
+/* ============================================================
+   Dark mode overrides
+   Add .dark to html/body/root wrapper
+============================================================ */
+
+.dark {
+  --color-background: #101418; /* Deep Charcoal */
+  --color-foreground: #faf7f4;
+
+  --color-surface: #171c22;
+  --color-surface-soft: #201923;
+  --color-surface-blue: #15272a;
+  --color-surface-elevated: #1d232b;
+
+  --color-card: rgba(255, 255, 255, 0.045);
+  --color-glass: rgba(255, 255, 255, 0.06);
+
+  --color-border: rgba(250, 247, 244, 0.12);
+  --color-border-strong: rgba(250, 247, 244, 0.2);
+  --color-glass-border: rgba(250, 247, 244, 0.14);
+
+  --color-muted: #a3aab5;
+  --color-subtle: rgba(163, 170, 181, 0.78);
+
+  --color-primary: #faf7f4;
+  --color-secondary: #7ec4c4;
+
+  --color-accent: #f3a7c0;
+  --color-accent-soft: #3a202b;
+  --color-accent-muted: rgba(243, 167, 192, 0.12);
+
+  --color-evergreen: #1f3a2e;
+  --color-mist: #23353a;
+
+  --color-link: var(--color-accent);
+  --color-cta: var(--color-accent);
+  --color-cta-foreground: #101418;
+
+  --color-chip-bg: rgba(243, 167, 192, 0.1);
+  --color-chip-text: #faf7f4;
+  --color-chip-border: rgba(243, 167, 192, 0.24);
+
+  --color-tech-chip-bg: rgba(126, 196, 196, 0.1);
+  --color-tech-chip-text: #faf7f4;
+  --color-tech-chip-border: rgba(126, 196, 196, 0.24);
+
+  --shadow-card: 0 18px 50px rgba(0, 0, 0, 0.24);
+  --shadow-pop: 0 24px 70px rgba(0, 0, 0, 0.34);
+  --shadow-glow:
+    0 0 0 1px rgba(250, 247, 244, 0.04),
+    0 18px 60px rgba(243, 167, 192, 0.12);
+
+  --ring-brand: 0 0 0 3px rgba(243, 167, 192, 0.34);
+  --ring-secondary: 0 0 0 3px rgba(126, 196, 196, 0.3);
+
+  --color-chart-1: #f3a7c0;
+  --color-chart-2: #7ec4c4;
+  --color-chart-3: #23353a;
+  --color-chart-hi: #d8b566;
+  --color-chart-grid: rgba(250, 247, 244, 0.08);
+  --color-chart-axis: rgba(250, 247, 244, 0.52);
+
+  --gradient-hero:
+    radial-gradient(900px 520px at 12% 12%, rgba(243, 167, 192, 0.16), transparent 62%),
+    radial-gradient(760px 460px at 86% 22%, rgba(126, 196, 196, 0.14), transparent 58%),
+    radial-gradient(700px 420px at 60% 90%, rgba(184, 79, 116, 0.1), transparent 60%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(16, 20, 24, 1));
+
+  --gradient-soft-wash:
+    linear-gradient(135deg, rgba(243, 167, 192, 0.12), rgba(126, 196, 196, 0.1)),
+    rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================================
+   Base
+============================================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: rgba(184, 79, 116, 0.24);
+    color: var(--color-foreground);
+  }
+
+  .dark ::selection {
+    background: rgba(243, 167, 192, 0.3);
+    color: var(--color-foreground);
+  }
+
+  .link {
+    @apply text-foreground hover:text-link transition-colors;
+  }
 }
 
 /* ============================================================
@@ -143,8 +266,8 @@
     background-image: var(--gradient-hero);
   }
 
-  .poetic-wash {
-    background: var(--gradient-poetic-wash);
+  .soft-wash {
+    background: var(--gradient-soft-wash);
   }
 
   .glass-panel {
@@ -153,19 +276,26 @@
     backdrop-filter: blur(16px);
   }
 
-  /* Micro accent bar */
   .micro-accent-bar {
     height: 1px;
     background-image: var(--gradient-accent);
   }
 
-  /* Optional token shortcuts */
+  /* Token shortcuts */
   .bg-background {
     background-color: var(--color-background);
   }
 
   .bg-surface {
     background-color: var(--color-surface);
+  }
+
+  .bg-surface-soft {
+    background-color: var(--color-surface-soft);
+  }
+
+  .bg-surface-blue {
+    background-color: var(--color-surface-blue);
   }
 
   .bg-surface-elevated {
@@ -196,6 +326,22 @@
     color: var(--color-link);
   }
 
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .text-evergreen {
+    color: var(--color-evergreen);
+  }
+
   .border-default {
     border-color: var(--color-border);
   }
@@ -220,12 +366,43 @@
     box-shadow: var(--shadow-glow);
   }
 
+  /* Typography helpers */
+  .font-heading {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+
+  .font-body {
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
+
+  .font-mono-brand {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  /* Data/grid background */
+  .data-grid {
+    background-image:
+      linear-gradient(to right, rgba(62, 140, 140, 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(62, 140, 140, 0.12) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .dark .data-grid {
+    background-image:
+      linear-gradient(to right, rgba(126, 196, 196, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(126, 196, 196, 0.1) 1px, transparent 1px);
+  }
+
+  .data-grid-fade {
+    mask-image: linear-gradient(to right, black, transparent 80%);
+  }
+
   /* Ambient background FX */
   .fx-gradient {
     background:
-      radial-gradient(60% 100% at 10% 10%, var(--color-primary), transparent 80%),
+      radial-gradient(60% 100% at 10% 10%, var(--color-accent), transparent 80%),
       radial-gradient(70% 100% at 90% 20%, var(--color-secondary), transparent 80%),
-      radial-gradient(50% 100% at 50% 90%, var(--color-highlight), transparent 80%);
+      radial-gradient(50% 100% at 50% 90%, var(--color-mist), transparent 80%);
   }
 
   .fx-blur {
@@ -235,16 +412,5 @@
 
   .fx-blend-screen {
     mix-blend-mode: screen;
-  }
-}
-
-@layer base {
-  ::selection {
-    background: rgba(232, 191, 208, 0.28);
-    color: var(--color-foreground);
-  }
-
-  .link {
-    @apply text-foreground hover:text-link transition-opacity;
   }
 }
