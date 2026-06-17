@@ -1,7 +1,7 @@
 export const StackBadge = ({ label }: { label: string }) => {
   return (
-    <span className="text-subtle rounded-full border border-white/10 px-3 py-1 text-xs tracking-wide">
+    <span className="border-tech-chip-border bg-tech-chip-bg text-tech-chip-text rounded-full border px-3 py-1 text-xs font-medium tracking-wide">
       {label}
     </span>
   );
-}
+};

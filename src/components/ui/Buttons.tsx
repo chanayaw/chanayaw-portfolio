@@ -7,14 +7,14 @@ interface ButtonProps {
 }
 
 const baseClasses =
-  'inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition md:text-base';
+  'inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide transition md:text-base';
 
 export const PrimaryCTA = ({ link, label, status = 'default' }: ButtonProps) => {
   if (status === 'disabled') {
     return (
       <span
         aria-disabled="true"
-        className={`${baseClasses} bg-cta text-cta-foreground cursor-not-allowed opacity-disabled`}
+        className={`${baseClasses} bg-cta text-cta-foreground opacity-disabled cursor-not-allowed`}
       >
         Coming Soon
       </span>
@@ -24,7 +24,7 @@ export const PrimaryCTA = ({ link, label, status = 'default' }: ButtonProps) => 
   return (
     <Link
       href={link}
-      className={`${baseClasses} ring-brand bg-cta text-cta-foreground shadow-card hover:brightness-105`}
+      className={`${baseClasses} ring-brand bg-cta text-cta-foreground shadow-card hover:shadow-pop hover:brightness-105`}
     >
       {label}
     </Link>
@@ -35,7 +35,7 @@ export const SecondaryCTA = ({ link, label }: ButtonProps) => {
   return (
     <Link
       href={link}
-      className={`${baseClasses} ring-brand bg-card text-foreground border-default shadow-card border hover:bg-white/8`}
+      className={`${baseClasses} ring-brand border-default bg-surface text-foreground hover:bg-surface-soft hover:border-strong shadow-card border`}
     >
       {label}
     </Link>
@@ -44,7 +44,7 @@ export const SecondaryCTA = ({ link, label }: ButtonProps) => {
 
 export const PrimaryBtn = ({ link, label }: ButtonProps) => {
   return (
-    <Link href={link} className="text-foreground hover:text-link text-sm font-medium transition">
+    <Link href={link} className="text-link text-sm font-semibold transition hover:underline">
       {label} →
     </Link>
   );

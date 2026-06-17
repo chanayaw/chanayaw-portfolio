@@ -1,4 +1,8 @@
-export type ProjectCategory = 'Product Systems' | 'Operational Tools' | 'Full-Stack Applications';
+export type ProjectCategory =
+  | 'Digital Health Products'
+  | 'Clinical + Operational Systems'
+  | 'Software Engineering Projects'
+  | 'Research + Data Explorations';
 
 export type ProjectCategoryCard = {
   title: ProjectCategory;
@@ -12,7 +16,7 @@ export type Project = {
   slug: string;
   title: string;
   summary: string;
-  category: 'Product Systems' | 'Operational Tools' | 'Full-Stack Applications';
+  category: ProjectCategory;
   stack: string[];
   status: ProjectStatus;
   featured?: boolean;
@@ -21,26 +25,32 @@ export type Project = {
   demoHref?: string;
 };
 
-export const categories: ProjectCategoryCard[] = [
+export const categories = [
   {
-    title: 'Product Systems',
+    title: 'Digital Health Products',
     description:
-      'Applications designed around users, workflows, decision points, and real-world product needs.',
-    href: '#product-systems',
+      'Patient-centered tools, trackers, dashboards, and educational platforms connected to care experiences and health workflows.',
+    href: '#digital-health-products',
   },
   {
-    title: 'Operational Tools',
+    title: 'Clinical + Operational Systems',
     description:
-      'Internal tools, scheduling flows, coordination systems, and workflow support for real operations.',
-    href: '#operational-tools',
+      'Systems that support coordination, workflows, scheduling, resources, and real-world operations.',
+    href: '#clinical-operational-systems',
   },
   {
-    title: 'Full-Stack Applications',
+    title: 'Software Engineering Projects',
     description:
-      'End-to-end web applications combining user interfaces, backend logic, APIs, and structured persistence.',
-    href: '#full-stack-applications',
+      'Full-stack applications, APIs, interfaces, and technical foundations that show engineering ability.',
+    href: '#software-engineering-projects',
   },
-];
+  {
+    title: 'Research + Data Explorations',
+    description:
+      'Data-informed concepts, dashboards, and field notes connected to health systems, equity, and informatics.',
+    href: '#research-data-explorations',
+  },
+] satisfies ProjectCategoryCard[];
 
 export const projects: Project[] = [
   {
@@ -48,7 +58,7 @@ export const projects: Project[] = [
     title: 'CareFlow Health Tracker',
     summary:
       'A personal health tracking system for logging symptoms, medications, appointments, notes, and health events over time.',
-    category: 'Product Systems',
+    category: 'Digital Health Products',
     stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     status: 'Planned',
     featured: true,
@@ -58,7 +68,7 @@ export const projects: Project[] = [
     title: 'Clinic Resource Coordination System',
     summary:
       'A role-based scheduling and resource coordination tool for managing appointment flow, staff availability, rooms, and operational conflicts.',
-    category: 'Operational Tools',
+    category: 'Clinical + Operational Systems',
     stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     status: 'Planned',
     featured: true,
@@ -68,7 +78,7 @@ export const projects: Project[] = [
     title: 'Patient Education Library',
     summary:
       'A searchable content management tool for organizing patient-facing resources by topic, reading level, format, and care context.',
-    category: 'Product Systems',
+    category: 'Digital Health Products',
     stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     status: 'Planned',
     featured: true,
@@ -78,7 +88,7 @@ export const projects: Project[] = [
     title: 'Periodic Tables Reservation System',
     summary:
       'A full-stack reservation management application with structured workflows, CRUD operations, and role-based user flows.',
-    category: 'Full-Stack Applications',
+    category: 'Software Engineering Projects',
     stack: ['React', 'Express', 'PostgreSQL', 'Knex'],
     status: 'Built',
     caseStudyHref: '/projects/periodic-tables-reservation-system',
@@ -89,7 +99,7 @@ export const projects: Project[] = [
     title: 'AMP Ticket Add-On Flow',
     summary:
       'A production feature built to improve add-on visibility and checkout usability within an existing ticketing ecosystem.',
-    category: 'Full-Stack Applications',
+    category: 'Software Engineering Projects',
     stack: ['React', 'TypeScript', 'Tailwind CSS'],
     status: 'Built',
     caseStudyHref: '/projects/amp-ticket-add-on-flow',
@@ -99,7 +109,7 @@ export const projects: Project[] = [
     title: 'Art of Wine Companion App',
     summary:
       'A mobile-first event companion app built to support wayfinding, vendor discovery, and reusable event-focused UI patterns.',
-    category: 'Full-Stack Applications',
+    category: 'Software Engineering Projects',
     stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
     status: 'Built',
     caseStudyHref: '/projects/art-of-wine-companion-app',

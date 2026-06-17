@@ -1,25 +1,26 @@
 'use client';
 
+import Link from 'next/link';
+import { useForm, ValidationError } from '@formspree/react';
 import SocialLinks from '@/src/components/nav/SocialLinks';
 import PageHeader from '@/src/components/shared/PageHeader';
 import { GlassCard, Card } from '@/src/components/ui/Cards';
 import { ChipThinBorder, ChipRegBorder } from '@/src/components/ui/Chips';
 import { SocialIcons } from '@/src/data/navData';
-import { useForm, ValidationError } from '@formspree/react';
-import Link from 'next/link';
 
 export default function ContactPage() {
   const [state, handleSubmit] = useForm('xwvrbwvq');
 
   return (
-    <main className="mx-auto w-full max-w-360 space-y-10 px-10 pb-24">
+    <main className="mx-auto w-full max-w-360 space-y-10 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="Contact"
         heading="Get in touch"
         description={
           <>
-            I&apos;m open to roles, collaborations, and thoughtful conversations related to software
-            engineering, product-oriented systems, operational tools, and health technology.
+            I’m open to software roles, digital health opportunities, product-oriented engineering
+            work, research-aligned collaborations, and thoughtful conversations across health tech,
+            biomedical informatics, and women’s health equity.
           </>
         }
         supportingText={
@@ -39,38 +40,37 @@ export default function ContactPage() {
             <GlassCard>
               <div className="space-y-5">
                 <div>
-                  <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
-                    Best For
-                  </p>
+                  <SectionLabel>Best For</SectionLabel>
 
                   <div className="mt-4 flex flex-wrap gap-2">
                     <ChipRegBorder>Software Roles</ChipRegBorder>
-                    <ChipRegBorder>HealthTech</ChipRegBorder>
-                    <ChipRegBorder>Product-Oriented Systems</ChipRegBorder>
-                    <ChipRegBorder>Collaboration</ChipRegBorder>
+                    <ChipRegBorder>Digital Health</ChipRegBorder>
+                    <ChipRegBorder>Product-Oriented Engineering</ChipRegBorder>
+                    <ChipRegBorder>Health Tech Collaboration</ChipRegBorder>
+                    <ChipRegBorder>Research-Aligned Conversations</ChipRegBorder>
                   </div>
                 </div>
 
                 <div>
-                  <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
-                    Current Interest Areas
-                  </p>
+                  <SectionLabel>Current Interest Areas</SectionLabel>
+
                   <div className="mt-4 flex flex-wrap gap-2">
                     <ChipThinBorder>Full-Stack Engineering</ChipThinBorder>
-                    <ChipThinBorder>Product-Oriented Development</ChipThinBorder>
-                    <ChipThinBorder>Operational Tools</ChipThinBorder>
-                    <ChipThinBorder>Digital Health Tools</ChipThinBorder>
+                    <ChipThinBorder>Digital Health Products</ChipThinBorder>
+                    <ChipThinBorder>Biomedical Informatics</ChipThinBorder>
+                    <ChipThinBorder>Clinical Decision Support</ChipThinBorder>
+                    <ChipThinBorder>Women’s Health Equity</ChipThinBorder>
+                    <ChipThinBorder>Health Systems</ChipThinBorder>
                   </div>
                 </div>
 
                 <div>
-                  <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
-                    Notes
-                  </p>
+                  <SectionLabel>Notes</SectionLabel>
+
                   <p className="text-muted mt-3 text-sm leading-relaxed">
-                    I&apos;m most interested in opportunities and conversations that align with
-                    software engineering, product-oriented systems, and the growing intersection of
-                    technology and healthcare.
+                    I’m most interested in opportunities and conversations that align with software
+                    engineering, digital health products, healthcare systems, product thinking, and
+                    women’s health equity.
                   </p>
                 </div>
               </div>
@@ -78,9 +78,8 @@ export default function ContactPage() {
 
             <Card>
               <div className="space-y-3">
-                <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
-                  Response Expectations
-                </p>
+                <SectionLabel>Response Expectations</SectionLabel>
+
                 <p className="text-muted text-sm leading-relaxed">
                   I may not be able to respond to every inquiry, but I do review messages
                   thoughtfully and prioritize relevant professional outreach.
@@ -94,7 +93,9 @@ export default function ContactPage() {
               {state.succeeded ? (
                 <div className="flex flex-col items-center justify-center space-y-4 py-16 text-center">
                   <div className="border-default bg-surface shadow-glow max-w-md rounded-2xl border px-8 py-10">
-                    <p className="text-foreground text-lg font-medium">Message received</p>
+                    <p className="font-heading text-foreground text-lg font-semibold">
+                      Message received
+                    </p>
 
                     <p className="text-muted mt-3 text-sm leading-relaxed">
                       Thank you for reaching out. Your message has been submitted successfully. I
@@ -104,10 +105,11 @@ export default function ContactPage() {
 
                     <Link
                       href="/projects"
-                      className="ring-brand bg-cta text-cta-foreground shadow-card mt-10 inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition hover:brightness-105"
+                      className="ring-brand bg-cta text-cta-foreground shadow-card mt-10 inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide transition hover:brightness-105"
                     >
                       Explore Projects
                     </Link>
+
                     <div className="mt-6 flex flex-row justify-center">
                       <SocialLinks icons={SocialIcons} />
                     </div>
@@ -123,7 +125,7 @@ export default function ContactPage() {
                         name="name"
                         id="name"
                         autoComplete="name"
-                        className="ring-brand border-default bg-surface text-foreground placeholder:text-subtle h-12 rounded-xl border px-4"
+                        className="ring-brand border-default bg-surface text-foreground placeholder:text-subtle h-12 w-full rounded-xl border px-4"
                         placeholder="Your name"
                       />
                       <ValidationError prefix="name" field="name" errors={state.errors} />
@@ -136,7 +138,7 @@ export default function ContactPage() {
                         name="email"
                         id="email"
                         autoComplete="email"
-                        className="ring-brand border-default bg-surface text-foreground placeholder:text-subtle h-12 rounded-xl border px-4"
+                        className="ring-brand border-default bg-surface text-foreground placeholder:text-subtle h-12 w-full rounded-xl border px-4"
                         placeholder="you@example.com"
                       />
                       <ValidationError prefix="email" field="email" errors={state.errors} />
@@ -148,7 +150,7 @@ export default function ContactPage() {
                       label={
                         <>
                           Organization or Affiliation{' '}
-                          <span className="text-poetic-soft">(optional)</span>
+                          <span className="text-subtle">(optional)</span>
                         </>
                       }
                       htmlFor="organization-affiliation"
@@ -157,7 +159,7 @@ export default function ContactPage() {
                         type="text"
                         name="organization-affiliation"
                         id="organization-affiliation"
-                        className="ring-brand border-default bg-surface text-foreground placeholder:text-subtle h-12 rounded-xl border px-4"
+                        className="ring-brand border-default bg-surface text-foreground placeholder:text-subtle h-12 w-full rounded-xl border px-4"
                         placeholder="Company, team, or organization"
                       />
                       <ValidationError
@@ -174,7 +176,7 @@ export default function ContactPage() {
                         id="reason"
                         aria-label="Reason for contact"
                         title="Reason for contact"
-                        className="ring-brand border-default bg-surface text-foreground h-12 rounded-xl border pl-4"
+                        className="ring-brand border-default bg-surface text-foreground h-12 w-full rounded-xl border px-4"
                         defaultValue=""
                       >
                         <option value="" disabled>
@@ -182,8 +184,10 @@ export default function ContactPage() {
                         </option>
                         <option value="employment">Employment Opportunity</option>
                         <option value="collaboration">Collaboration</option>
-                        <option value="health-tech">HealthTech Inquiry</option>
+                        <option value="digital-health">Digital Health Inquiry</option>
+                        <option value="health-tech">Health Tech Inquiry</option>
                         <option value="product-systems">Product or Systems Inquiry</option>
+                        <option value="research">Research-Aligned Conversation</option>
                         <option value="technical">Technical Question</option>
                         <option value="other">Other</option>
                       </select>
@@ -203,14 +207,18 @@ export default function ContactPage() {
                     <ValidationError prefix="message" field="message" errors={state.errors} />
                   </Field>
 
-                  <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-4">
+                  <div className="border-default flex flex-wrap items-center justify-between gap-4 border-t pt-4">
                     <p className="text-subtle max-w-xl text-sm leading-relaxed">
                       For professional outreach, it helps to include the role, team, company,
                       project context, or the kind of collaboration you have in mind.
                     </p>
 
                     <button
-                      className={`${state.submitting ? 'bg-cta text-cta-foreground opacity-disabled cursor-not-allowed' : 'ring-brand bg-cta text-cta-foreground shadow-card hover:brightness-105'} inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition md:text-base`}
+                      className={`${
+                        state.submitting
+                          ? 'bg-cta text-cta-foreground opacity-disabled cursor-not-allowed'
+                          : 'ring-brand bg-cta text-cta-foreground shadow-card hover:brightness-105'
+                      } inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide transition md:text-base`}
                       type="submit"
                       disabled={state.submitting}
                     >
@@ -227,6 +235,14 @@ export default function ContactPage() {
   );
 }
 
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
+      {children}
+    </p>
+  );
+}
+
 function Field({
   label,
   htmlFor,
@@ -238,7 +254,7 @@ function Field({
 }) {
   return (
     <div className="flex flex-col">
-      <label htmlFor={htmlFor} className="text-foreground text-sm font-medium">
+      <label htmlFor={htmlFor} className="text-foreground text-sm font-semibold">
         {label}
       </label>
       <div className="mt-2">{children}</div>

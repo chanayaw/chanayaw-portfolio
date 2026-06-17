@@ -5,11 +5,14 @@ export const CategoryCard = ({ title, description, href }: ProjectCategoryCard) 
   return (
     <Link
       href={href}
-      className="group rounded-3xl border border-white/10 bg-white/4 p-6 transition duration-300 hover:bg-white/6"
+      className="group border-default bg-card hover:bg-surface-soft shadow-card hover:shadow-pop flex h-full flex-col justify-between rounded-3xl border p-6 transition duration-300 hover:-translate-y-1"
     >
-      <h3 className="text-lg font-medium tracking-tight">{title}</h3>
-      <p className="text-muted mt-3 text-sm leading-relaxed">{description}</p>
-      <span className="text-poetic-soft mt-5 inline-block text-sm tracking-wide">
+      <div>
+        <h3 className="font-heading text-lg font-semibold tracking-tight">{title}</h3>
+        <p className="text-muted mt-3 text-sm leading-relaxed">{description}</p>
+      </div>
+
+      <span className="text-accent mt-5 inline-block text-sm font-semibold tracking-wide transition group-hover:translate-x-1">
         Explore category →
       </span>
     </Link>

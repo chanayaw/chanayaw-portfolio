@@ -6,21 +6,17 @@ import Footer from '../components/nav/Footer';
 
 const sora = Sora({
   variable: '--font-sora',
-
   subsets: ['latin'],
 });
 
 const manrope = Manrope({
   variable: '--font-manrope',
-
   subsets: ['latin'],
 });
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: '--font-ibm-plex-mono',
-
   subsets: ['latin'],
-
   weight: ['400', '500', '600'],
 });
 
