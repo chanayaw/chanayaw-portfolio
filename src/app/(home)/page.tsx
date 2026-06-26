@@ -15,12 +15,13 @@ export default function HomePage() {
           <SectionLabel>Featured Work</SectionLabel>
 
           <h2 className="font-heading text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-            Digital health products, care systems, and applied software projects
+            Health-tech projects, care systems, and advocacy-centered digital tools
           </h2>
 
           <p className="text-muted max-w-2xl text-base leading-relaxed md:text-lg">
-            A selection of work demonstrating full-stack engineering, product thinking, systems
-            design, and applied problem solving across real-world and health-related contexts.
+            A selection of health-tech software projects, digital health product concepts, and
+            systems-focused work connected to patient education, care navigation, health data, and
+            women&apos;s health equity.
           </p>
         </div>
 

@@ -15,12 +15,13 @@ export default function ContactPage() {
     <main className="mx-auto w-full max-w-360 space-y-10 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="Contact"
-        heading="Get in touch"
+        heading="Let’s connect around health-tech software, digital health, and women’s health equity"
         description={
           <>
-            I’m open to software roles, digital health opportunities, product-oriented engineering
-            work, research-aligned collaborations, and thoughtful conversations across health tech,
-            biomedical informatics, and women’s health equity.
+            I’m open to health information roles, digital health opportunities, health-tech software
+            work, product-oriented engineering, research-aligned collaborations, and thoughtful
+            conversations across biomedical informatics, patient education, care navigation, and
+            women’s health equity.
           </>
         }
         supportingText={
@@ -43,10 +44,13 @@ export default function ContactPage() {
                   <SectionLabel>Best For</SectionLabel>
 
                   <div className="mt-4 flex flex-wrap gap-2">
-                    <ChipRegBorder>Software Roles</ChipRegBorder>
+                    <ChipRegBorder>Health Information Roles</ChipRegBorder>
                     <ChipRegBorder>Digital Health</ChipRegBorder>
-                    <ChipRegBorder>Product-Oriented Engineering</ChipRegBorder>
-                    <ChipRegBorder>Health Tech Collaboration</ChipRegBorder>
+                    <ChipRegBorder>Health-Tech Software</ChipRegBorder>
+                    <ChipRegBorder>Patient Education Tools</ChipRegBorder>
+                    <ChipRegBorder>Care Navigation</ChipRegBorder>
+                    <ChipRegBorder>Health Data</ChipRegBorder>
+                    <ChipRegBorder>Women&apos;s Health Equity</ChipRegBorder>
                     <ChipRegBorder>Research-Aligned Conversations</ChipRegBorder>
                   </div>
                 </div>
@@ -55,12 +59,13 @@ export default function ContactPage() {
                   <SectionLabel>Current Interest Areas</SectionLabel>
 
                   <div className="mt-4 flex flex-wrap gap-2">
-                    <ChipThinBorder>Full-Stack Engineering</ChipThinBorder>
-                    <ChipThinBorder>Digital Health Products</ChipThinBorder>
                     <ChipThinBorder>Biomedical Informatics</ChipThinBorder>
-                    <ChipThinBorder>Clinical Decision Support</ChipThinBorder>
-                    <ChipThinBorder>Women’s Health Equity</ChipThinBorder>
-                    <ChipThinBorder>Health Systems</ChipThinBorder>
+                    <ChipThinBorder>Health Information Management</ChipThinBorder>
+                    <ChipThinBorder>Data Analytics</ChipThinBorder>
+                    <ChipThinBorder>EHR Workflows</ChipThinBorder>
+                    <ChipThinBorder>Clinical Decision Support Concepts</ChipThinBorder>
+                    <ChipThinBorder>Patient-Centered Tools</ChipThinBorder>
+                    <ChipThinBorder>Whole-Body Women&apos;s Health</ChipThinBorder>
                   </div>
                 </div>
 

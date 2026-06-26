@@ -2,7 +2,8 @@ export type ProjectCategory =
   | 'Digital Health Products'
   | 'Clinical + Operational Systems'
   | 'Software Engineering Projects'
-  | 'Research + Data Explorations';
+  | 'Research + Data Explorations'
+  | 'Technical Proof / Software Engineering Archive';
 
 export type ProjectCategoryCard = {
   title: ProjectCategory;
@@ -29,25 +30,25 @@ export const categories = [
   {
     title: 'Digital Health Products',
     description:
-      'Patient-centered tools, trackers, dashboards, and educational platforms connected to care experiences and health workflows.',
+      'Patient-centered tools, trackers, dashboards, and education platforms connected to health information, care experiences, and digital health workflows.',
     href: '#digital-health-products',
   },
   {
     title: 'Clinical + Operational Systems',
     description:
-      'Systems that support coordination, workflows, scheduling, resources, and real-world operations.',
+      'Systems that support care coordination, workflows, scheduling, resources, and operational clarity in health-related settings.',
     href: '#clinical-operational-systems',
   },
   {
     title: 'Software Engineering Projects',
     description:
-      'Full-stack applications, APIs, interfaces, and technical foundations that show engineering ability.',
+      'Full-stack applications, APIs, interfaces, and technical foundations that demonstrate engineering ability for future health-tech work.',
     href: '#software-engineering-projects',
   },
   {
     title: 'Research + Data Explorations',
     description:
-      'Data-informed concepts, dashboards, and field notes connected to health systems, equity, and informatics.',
+      "Data-informed concepts, dashboards, advocacy notes, and field explorations connected to health systems, women's health equity, and informatics.",
     href: '#research-data-explorations',
   },
 ] satisfies ProjectCategoryCard[];
@@ -57,7 +58,7 @@ export const projects: Project[] = [
     slug: 'careflow-health-tracker',
     title: 'CareFlow Health Tracker',
     summary:
-      'A personal health tracking system for logging symptoms, medications, appointments, notes, and health events over time.',
+      'A patient-centered health tracking concept for organizing symptoms, medications, appointments, notes, labs, and health events over time.',
     category: 'Digital Health Products',
     stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     status: 'Planned',
@@ -67,7 +68,7 @@ export const projects: Project[] = [
     slug: 'clinic-resource-coordination-system',
     title: 'Clinic Resource Coordination System',
     summary:
-      'A role-based scheduling and resource coordination tool for managing appointment flow, staff availability, rooms, and operational conflicts.',
+      'A care operations concept for managing appointment flow, staff availability, rooms, resources, and operational conflicts in health-related settings.',
     category: 'Clinical + Operational Systems',
     stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     status: 'Planned',
@@ -77,7 +78,7 @@ export const projects: Project[] = [
     slug: 'patient-education-library',
     title: 'Patient Education Library',
     summary:
-      'A searchable content management tool for organizing patient-facing resources by topic, reading level, format, and care context.',
+      'A searchable patient education library for organizing health resources by topic, reading level, format, care context, and patient need.',
     category: 'Digital Health Products',
     stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     status: 'Planned',
@@ -87,8 +88,8 @@ export const projects: Project[] = [
     slug: 'periodic-tables-reservation-system',
     title: 'Periodic Tables Reservation System',
     summary:
-      'A full-stack reservation management application with structured workflows, CRUD operations, and role-based user flows.',
-    category: 'Software Engineering Projects',
+      'A full-stack reservation management application demonstrating CRUD workflows, role-based user flows, relational data modeling, and operational system design.',
+    category: 'Technical Proof / Software Engineering Archive',
     stack: ['React', 'Express', 'PostgreSQL', 'Knex'],
     status: 'Built',
     caseStudyHref: '/projects/periodic-tables-reservation-system',
@@ -98,8 +99,8 @@ export const projects: Project[] = [
     slug: 'amp-ticket-add-on-flow',
     title: 'AMP Ticket Add-On Flow',
     summary:
-      'A production feature built to improve add-on visibility and checkout usability within an existing ticketing ecosystem.',
-    category: 'Software Engineering Projects',
+      'A production feature demonstrating user flow improvement, interface refinement, and operational support within a high-demand digital service environment.',
+    category: 'Technical Proof / Software Engineering Archive',
     stack: ['React', 'TypeScript', 'Tailwind CSS'],
     status: 'Built',
     caseStudyHref: '/projects/amp-ticket-add-on-flow',
@@ -108,8 +109,8 @@ export const projects: Project[] = [
     slug: 'art-of-wine-companion-app',
     title: 'Art of Wine Companion App',
     summary:
-      'A mobile-first event companion app built to support wayfinding, vendor discovery, and reusable event-focused UI patterns.',
-    category: 'Software Engineering Projects',
+      'A mobile-first event companion application demonstrating wayfinding, structured content, vendor discovery, reusable UI patterns, and full-stack product development.',
+    category: 'Technical Proof / Software Engineering Archive',
     stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
     status: 'Built',
     caseStudyHref: '/projects/art-of-wine-companion-app',
