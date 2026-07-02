@@ -6,40 +6,95 @@ import { PrimaryCTA, SecondaryCTA } from '@/src/components/ui/Buttons';
 
 const noteCategories = [
   {
-    title: 'Digital Health Technology',
+    title: 'Patient-Centered Digital Health',
     description:
-      'Notes on digital health tools, patient-centered product concepts, care workflows, and technology that supports clearer health information.',
-    tags: ['Digital Health', 'Product Thinking', 'Care Tools'],
+      'Notes on digital health tools, patient-facing systems, health apps, portals, trackers, and product ideas that make care easier to understand, navigate, and act on.',
+    tags: [
+      'Digital Health',
+      'Patient-Centered Care',
+      'Health Tech',
+      'Patient Tools',
+      'Care Navigation',
+      'Product Thinking',
+    ],
   },
   {
-    title: 'Biomedical Informatics',
+    title: 'Biomedical & Clinical Informatics',
     description:
-      'Reflections on health data, clinical workflows, decision support, interoperability, EHR systems, and informatics concepts.',
-    tags: ['Health Data', 'Workflows', 'Decision Support'],
+      'Notes on biomedical informatics, clinical workflows, EHR systems, health information exchange, clinical decision support concepts, and the role of data in healthcare delivery.',
+    tags: [
+      'Biomedical Informatics',
+      'Clinical Informatics',
+      'EHR',
+      'FHIR',
+      'Clinical Decision Support',
+      'Health Systems',
+    ],
   },
   {
     title: "Women's Health Equity Advocacy",
     description:
-      'Research-informed writing on underrepresented women, health disparities, patient dismissal, delayed diagnosis, care gaps, patient education, and systems that shape unequal outcomes.',
-    tags: ['Equity Advocacy', 'Disparities', 'Care Gaps'],
+      "Notes on health disparities, patient dismissal, medical bias, care access, whole-body women's health, and advocacy for underserved women who are often unheard or diagnosed late.",
+    tags: [
+      "Women's Health Equity",
+      'Advocacy',
+      'Health Disparities',
+      'Patient Dismissal',
+      'Medical Bias',
+      'Underserved Women',
+    ],
   },
   {
-    title: 'Health Data + Analytics',
+    title: 'Health Data, Analytics & Dashboards',
     description:
-      'Field notes on health information management, data analytics, structured records, dashboards, and data-informed decision-making.',
-    tags: ['Health Data', 'Analytics', 'HIM'],
+      'Notes on healthcare data analytics, dashboards, metrics, data storytelling, public health datasets, quality measures, and how data can reveal care gaps and inequities.',
+    tags: [
+      'Health Data',
+      'Healthcare Analytics',
+      'Dashboards',
+      'Data Storytelling',
+      'Quality Measures',
+      'Care Gaps',
+    ],
   },
   {
-    title: 'Technical Foundations for Health Tech',
+    title: 'Early Detection & Precision Health',
     description:
-      'Technical reflections on forms, accessibility, APIs, databases, workflows, documentation, and full-stack foundations through a health-tech lens.',
-    tags: ['Engineering', 'Systems', 'APIs'],
+      'Notes on delayed diagnosis, screening gaps, risk factors, patient-reported symptoms, precision health, and systems that can help women be heard and evaluated earlier.',
+    tags: [
+      'Early Detection',
+      'Delayed Diagnosis',
+      'Precision Health',
+      'Screening Gaps',
+      'Risk Stratification',
+      'Patient-Reported Symptoms',
+    ],
+  },
+  {
+    title: 'Technical Foundations for Digital Health',
+    description:
+      'Notes on the technical skills behind digital health work, including software development, APIs, databases, accessibility, data workflows, documentation, and system design.',
+    tags: [
+      'Software Development',
+      'APIs',
+      'Databases',
+      'Accessibility',
+      'System Design',
+      'Technical Foundations',
+    ],
   },
   {
     title: 'Academic Becoming',
     description:
-      'Notes from Health Services Management studies, certificate coursework, research questions, and preparation for future biomedical informatics work.',
-    tags: ['School', 'Study Notes', 'Research'],
+      'Notes from the journey through Health Services Management, health information, data analytics, biomedical informatics preparation, research habits, and student development.',
+    tags: [
+      'Health Services Management',
+      'Student Journey',
+      'Academic Writing',
+      'Research Skills',
+      'Study Systems',
+      'Biomedical Informatics Prep',
+    ],
   },
 ];
 
@@ -47,25 +102,25 @@ const plannedNotes = [
   {
     title: "Why I'm Starting The Informatics Diary",
     description:
-      "A first essay introducing this archive, my direction, and why I'm writing about digital health technology, women's health advocacy, informatics, and health systems.",
+      "A first essay introducing this archive, my direction, and why I'm writing about digital health technology, women's health equity, informatics, and health systems.",
     status: 'Planned',
   },
   {
-    title: "Why My Focus Is Women's Health Equity Advocacy",
+    title: "Why Women's Health Equity Advocacy Is My Foundation",
     description:
-      'A field note on focusing my advocacy around underrepresented and voiceless women, health disparities, patient dismissal, delayed diagnosis, care access, and systems that require more attention.',
+      'A field note on centering underserved women, patient dismissal, delayed diagnosis, care access, and the systems that require more attention.',
     status: 'Planned',
   },
   {
-    title: 'Health Services Management Is My Foundation, Not My Final Stop',
+    title: 'Why Health Services Management Is My Starting Point',
     description:
       'A reflection on how healthcare operations, health information, data analytics, and systems thinking connect to digital health technology and informatics.',
     status: 'Planned',
   },
   {
-    title: 'What I Mean by Digital Health Technology',
+    title: 'What Digital Health Technology Means to Me',
     description:
-      'A field note defining the kinds of health-tech tools, data systems, patient education platforms, care navigation concepts, and informatics-aligned products I want to build.',
+      'A field note defining the digital health tools, data systems, patient education platforms, care navigation concepts, and informatics-aligned products I want to build.',
     status: 'Planned',
   },
 ];
@@ -75,18 +130,17 @@ export default function FieldNotesPage() {
     <main className="mx-auto w-full max-w-360 space-y-10 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="The Informatics Diary"
-        heading="Field notes on digital health technology, biomedical informatics, women's health equity advocacy, health data, patient education, care navigation, and health systems."
+        heading="Field notes on women’s health equity, informatics, digital health, and patient-centered care."
         description={
           <>
             This is where I document what I&apos;m studying, building, questioning, and researching
-            as I become a Digital Health Technologist and women&apos;s health equity advocate.
+            as a Health Services Management student and Digital Health Technologist in training.
           </>
         }
         supportingText={
           <>
-            Some notes will be technical. Some will focus on women&apos;s health equity advocacy,
-            health disparities, patient education, care navigation, and whole-body health concerns
-            affecting underrepresented women.
+            The Informatics Diary is my field-note archive for connecting advocacy, research, health
+            data, informatics, and patient-centered digital tools.
           </>
         }
         actions={
@@ -102,15 +156,14 @@ export default function FieldNotesPage() {
           <SectionLabel>Writing Direction</SectionLabel>
 
           <h2 className="font-heading text-3xl font-semibold tracking-tight text-balance md:text-4xl">
-            A field-note archive for the systems I&apos;m studying, the questions I&apos;m asking,
-            and the tools I want to build
+            A field-note archive for the questions, systems, and tools shaping my work
           </h2>
 
           <p className="text-muted text-base leading-relaxed md:text-lg">
             The Informatics Diary is where I connect technical learning, health systems study,
             research questions, and women&apos;s health equity advocacy. Some entries will stand
-            alone as equity advocacy or research reflections. Others will explore how digital health
-            technology, health data, patient education, and care navigation tools might help address
+            alone as equity and advocacy reflections. Others will explore how digital health
+            technology, health data, patient education, and care navigation tools can help address
             real gaps in healthcare.
           </p>
 
@@ -205,14 +258,11 @@ export default function FieldNotesPage() {
               <SectionLabel>Connected Work</SectionLabel>
 
               <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
-                Equity advocacy, research, health-tech projects, and academic questions belong
-                together
+                Advocacy, research, projects, and academic questions belong together
               </h2>
 
               <p className="text-muted text-base leading-relaxed">
-                The field notes will connect back to projects, case studies, school notes, research
-                questions, and advocacy work as I continue building toward digital health
-                technology, biomedical informatics, and women&apos;s health equity advocacy.
+                The field notes will connect back to projects, case studies, school notes, research questions, and advocacy work as I continue building toward digital health technology, biomedical informatics, and women&apos;s health equity advocacy.
               </p>
             </div>
 

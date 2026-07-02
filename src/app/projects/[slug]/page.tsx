@@ -19,84 +19,79 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   }
 
   return (
-    <main className="mx-auto w-full max-w-360 space-y-10 px-10 pb-24">
+    <main className="mx-auto w-full max-w-360 space-y-10 px-6 pb-24 md:px-10">
       <section className="pt-20 md:pt-28">
-        <div className="">
-          <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
-            {caseStudy.status === 'Planned' ? 'Project Brief' : 'Case Study'}
+        <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
+          {caseStudy.status === 'Planned' ? 'Project Brief' : 'Case Study'}
+        </p>
+
+        <div className="mt-4 max-w-4xl">
+          <h1 className="text-4xl leading-tight font-medium tracking-tight text-balance md:text-6xl">
+            {caseStudy.title}
+          </h1>
+
+          <p className="text-subtle mt-6 max-w-3xl text-base leading-relaxed md:text-lg">
+            {caseStudy.summary}
           </p>
+        </div>
 
-          <div className="mt-4 max-w-4xl">
-            <h1 className="text-4xl leading-tight font-medium tracking-tight text-balance md:text-6xl">
-              {caseStudy.title}
-            </h1>
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <ChipRegBorder>{caseStudy.category}</ChipRegBorder>
+          <ChipRegBorder>{caseStudy.status}</ChipRegBorder>
 
-            <p className="text-subtle mt-6 max-w-3xl text-base leading-relaxed md:text-lg">
-              {caseStudy.summary}
-            </p>
-          </div>
+          {caseStudy.stack.map((item) => (
+            <ChipThinBorder key={item}>{item}</ChipThinBorder>
+          ))}
+        </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <ChipRegBorder>{caseStudy.category}</ChipRegBorder>
-            <ChipRegBorder>{caseStudy.status}</ChipRegBorder>
-            {caseStudy.stack.map((item) => (
-              <ChipThinBorder key={item}>{item}</ChipThinBorder>
-            ))}
-          </div>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link
+            href={caseStudy.backHref}
+            className="text-foreground hover:text-link text-sm font-medium transition"
+          >
+            ← Back to Projects
+          </Link>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          {caseStudy.repoHref ? (
             <Link
-              href={caseStudy.backHref}
+              href={caseStudy.repoHref}
+              target="_blank"
+              rel="noreferrer"
               className="text-foreground hover:text-link text-sm font-medium transition"
             >
-              ← Back to Projects
+              Repository →
             </Link>
+          ) : null}
 
-            {caseStudy.repoHref ? (
-              <Link
-                href={caseStudy.repoHref}
-                target="_blank"
-                rel="noreferrer"
-                className="text-foreground hover:text-link text-sm font-medium transition"
-              >
-                Repository →
-              </Link>
-            ) : null}
+          {caseStudy.demoHref ? (
+            <Link
+              href={caseStudy.demoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-link text-sm font-medium transition"
+            >
+              Live Demo ↗
+            </Link>
+          ) : null}
+        </div>
+      </section>
 
-            {caseStudy.demoHref ? (
-              <Link
-                href={caseStudy.demoHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-link text-sm font-medium transition"
-              >
-                Live Demo ↗
-              </Link>
-            ) : null}
+      <section className="mt-16">
+        <GlassCard>
+          <div className="grid gap-6 md:grid-cols-4">
+            {caseStudy.meta.map((item) => (
+              <MetaItem key={item.label} label={item.label} value={item.value} />
+            ))}
           </div>
-        </div>
+        </GlassCard>
       </section>
 
       <section className="mt-16">
-        <div className="">
-          <GlassCard>
-            <div className="grid gap-6 md:grid-cols-4">
-              {caseStudy.meta.map((item) => (
-                <MetaItem key={item.label} label={item.label} value={item.value} />
-              ))}
-            </div>
-          </GlassCard>
-        </div>
-      </section>
-
-      <section className="mt-16">
-        <div className="">
-          <Section
-            eyebrow={caseStudy.overview.eyebrow}
-            title={caseStudy.overview.title}
-            body={caseStudy.overview.body}
-          />
-        </div>
+        <Section
+          eyebrow={caseStudy.overview.eyebrow}
+          title={caseStudy.overview.title}
+          body={caseStudy.overview.body}
+        />
       </section>
 
       <section className="mt-16">
@@ -121,25 +116,50 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         </div>
       </section>
 
-      <section className="mt-16">
-        <div className="">
-          <Section
-            eyebrow={caseStudy.system.eyebrow}
-            title={caseStudy.system.title}
-            body={caseStudy.system.body}
-          />
+      {caseStudy.equityLens ? (
+        <section className="mt-16">
+          <Card>
+            <SectionInner
+              eyebrow={caseStudy.equityLens.eyebrow}
+              title={caseStudy.equityLens.title}
+              body={caseStudy.equityLens.body}
+              list={caseStudy.equityLens.list}
+            />
+          </Card>
+        </section>
+      ) : null}
 
-          <div className="bg-card border-default shadow-card mt-8 rounded-3xl border p-8">
-            <div className="space-y-4 text-center">
-              {caseStudy.system.architecture.map((step, index) => (
-                <div key={step.label}>
-                  <p className="text-foreground text-lg font-medium">{step.label}</p>
-                  {index < caseStudy.system.architecture.length - 1 ? (
-                    <p className="text-poetic-soft text-sm">↓</p>
-                  ) : null}
-                </div>
-              ))}
-            </div>
+      {caseStudy.researchBasis ? (
+        <section className="mt-16">
+          <Card>
+            <SectionInner
+              eyebrow={caseStudy.researchBasis.eyebrow}
+              title={caseStudy.researchBasis.title}
+              body={caseStudy.researchBasis.body}
+              list={caseStudy.researchBasis.list}
+            />
+          </Card>
+        </section>
+      ) : null}
+
+      <section className="mt-16">
+        <Section
+          eyebrow={caseStudy.system.eyebrow}
+          title={caseStudy.system.title}
+          body={caseStudy.system.body}
+        />
+
+        <div className="bg-card border-default shadow-card mt-8 rounded-3xl border p-8">
+          <div className="space-y-4 text-center">
+            {caseStudy.system.architecture.map((step, index) => (
+              <div key={step.label}>
+                <p className="text-foreground text-lg font-medium">{step.label}</p>
+
+                {index < caseStudy.system.architecture.length - 1 ? (
+                  <p className="text-poetic-soft text-sm">↓</p>
+                ) : null}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -167,19 +187,17 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="">
-          <Section
-            eyebrow={caseStudy.technicalDecisions.eyebrow}
-            title={caseStudy.technicalDecisions.title}
-          />
+        <Section
+          eyebrow={caseStudy.technicalDecisions.eyebrow}
+          title={caseStudy.technicalDecisions.title}
+        />
 
-          <div className="mt-8 grid gap-6 lg:grid-cols-3">
-            {caseStudy.technicalDecisions.decisions.map((decision) => (
-              <Card key={decision.title}>
-                <DecisionCard title={decision.title} body={decision.body} />
-              </Card>
-            ))}
-          </div>
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
+          {caseStudy.technicalDecisions.decisions.map((decision) => (
+            <Card key={decision.title}>
+              <DecisionCard title={decision.title} body={decision.body} />
+            </Card>
+          ))}
         </div>
       </section>
 
@@ -206,16 +224,14 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <section className="mt-16">
-        <div className="">
-          <Card>
-            <SectionInner
-              eyebrow={caseStudy.nextSteps.eyebrow}
-              title={caseStudy.nextSteps.title}
-              body={caseStudy.nextSteps.body}
-              list={caseStudy.nextSteps.list}
-            />
-          </Card>
-        </div>
+        <Card>
+          <SectionInner
+            eyebrow={caseStudy.nextSteps.eyebrow}
+            title={caseStudy.nextSteps.title}
+            body={caseStudy.nextSteps.body}
+            list={caseStudy.nextSteps.list}
+          />
+        </Card>
       </section>
     </main>
   );
@@ -235,6 +251,7 @@ function Section({ eyebrow, title, body }: { eyebrow: string; title: string; bod
     <div className="max-w-3xl">
       <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">{eyebrow}</p>
       <h2 className="mt-3 text-3xl font-medium tracking-tight text-balance">{title}</h2>
+
       {body ? <p className="text-muted mt-4 text-base leading-relaxed">{body}</p> : null}
     </div>
   );
@@ -255,7 +272,9 @@ function SectionInner({
     <div>
       <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">{eyebrow}</p>
       <h3 className="mt-3 text-2xl font-medium tracking-tight">{title}</h3>
+
       {body ? <p className="text-muted mt-4 text-base leading-relaxed">{body}</p> : null}
+
       {list ? (
         <ul className="text-muted mt-4 space-y-3 text-base leading-relaxed">
           {list.map((item) => (

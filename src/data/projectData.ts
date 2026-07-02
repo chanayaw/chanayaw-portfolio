@@ -1,9 +1,9 @@
 export type ProjectCategory =
-  | 'Digital Health Products'
-  | 'Clinical + Operational Systems'
-  | 'Software Engineering Projects'
-  | 'Research + Data Explorations'
-  | 'Technical Proof / Software Engineering Archive';
+  | 'Patient-Centered Digital Health Tools'
+  | 'Care Navigation & Healthcare Workflow Systems'
+  | 'Health Data, Research & Equity Explorations'
+  | 'Patient Education & Advocacy Resources'
+  | 'Selected Software Engineering Work';
 
 export type ProjectCategoryCard = {
   title: ProjectCategory;
@@ -28,68 +28,104 @@ export type Project = {
 
 export const categories = [
   {
-    title: 'Digital Health Products',
+    title: 'Patient-Centered Digital Health Tools',
     description:
-      'Patient-centered tools, trackers, dashboards, and education platforms connected to health information, care experiences, and digital health workflows.',
+      'Tools, trackers, education platforms, and digital experiences that help patients organize health information, understand next steps, and navigate care with more clarity.',
     href: '#digital-health-products',
   },
   {
-    title: 'Clinical + Operational Systems',
+    title: 'Care Navigation & Healthcare Workflow Systems',
     description:
-      'Systems that support care coordination, workflows, scheduling, resources, and operational clarity in health-related settings.',
+      'Systems and workflow concepts that support care coordination, referrals, follow-up, scheduling, resource use, and clearer movement through healthcare experiences.',
     href: '#clinical-operational-systems',
   },
   {
-    title: 'Software Engineering Projects',
+    title: 'Health Data, Research & Equity Explorations',
     description:
-      'Full-stack applications, APIs, interfaces, and technical foundations that demonstrate engineering ability for future health-tech work.',
+      'Dashboards, data-informed concepts, research notes, and field explorations connected to women’s health equity, delayed diagnosis, early detection, and care gaps.',
     href: '#software-engineering-projects',
   },
   {
-    title: 'Research + Data Explorations',
+    title: 'Patient Education & Advocacy Resources',
     description:
-      "Data-informed concepts, dashboards, advocacy notes, and field explorations connected to health systems, women's health equity, and informatics.",
+      'Research-informed guides, explainers, templates, and workshop materials that help underserved women understand their health, prepare for care, and advocate for clearer answers.',
     href: '#research-data-explorations',
   },
 ] satisfies ProjectCategoryCard[];
 
 export const projects: Project[] = [
+  // {
+  //   slug: '',
+  //   title: "",
+  //   summary: "",
+  //   category: '',
+  //   stack: [''],
+  //   status: 'Planned',
+  // },
   {
-    slug: 'careflow-health-tracker',
-    title: 'CareFlow Health Tracker',
+    slug: 'careflow-symptom-timeline',
+    title: 'CareFlow Symptom Timeline',
     summary:
-      'A patient-centered health tracking concept for organizing symptoms, medications, appointments, notes, labs, and health events over time.',
-    category: 'Digital Health Products',
-    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+      'A patient-centered symptom timeline and care navigation concept for organizing symptoms, appointments, medications, labs, referrals, notes, and health events over time. Designed around delayed diagnosis, early detection, and clearer patient-provider communication.',
+    category: 'Patient-Centered Digital Health Tools',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Recharts'],
     status: 'Planned',
     featured: true,
   },
   {
-    slug: 'clinic-resource-coordination-system',
-    title: 'Clinic Resource Coordination System',
+    slug: 'care-access-workflow-system',
+    title: 'Care Access Workflow System',
     summary:
-      'A care operations concept for managing appointment flow, staff availability, rooms, resources, and operational conflicts in health-related settings.',
-    category: 'Clinical + Operational Systems',
-    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+      'A healthcare operations and care access workflow concept for coordinating appointment flow, staff availability, rooms, resources, and operational conflicts, with attention to how system delays affect patient access, follow-up, and continuity of care.',
+    category: 'Care Navigation & Healthcare Workflow Systems',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'MDX', 'Zustand'],
     status: 'Planned',
     featured: true,
   },
   {
-    slug: 'patient-education-library',
-    title: 'Patient Education Library',
+    slug: 'patient-education-advocacy-library',
+    title: 'Patient Education & Advocacy Library',
     summary:
-      'A searchable patient education library for organizing health resources by topic, reading level, format, care context, and patient need.',
-    category: 'Digital Health Products',
-    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+      'A searchable patient education and health literacy library organized by topic, reading level, format, care context, and patient need. Focused on helping underserved women understand symptoms, care options, follow-up steps, and advocacy questions.',
+    category: 'Patient Education & Advocacy Resources',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'MDX', 'Tailwind CSS'],
     status: 'Planned',
     featured: true,
+  },
+  {
+    slug: 'womens-health-equity-data-story',
+    title: "Women's Health Equity Data Story",
+    summary:
+      "A research and data storytelling project exploring women's health disparities, delayed diagnosis, early detection gaps, and care access barriers through public data, research notes, visual summaries, and plain-language interpretation.",
+    category: 'Health Data, Research & Equity Explorations',
+    stack: ['Python', 'Pandas', 'Jupyter Notebook', 'Power BI', 'Public Health Data'],
+    status: 'Planned',
+  },
+  {
+    slug: 'early-detection-care-gap-dashboard',
+    title: 'Early Detection Care Gap Dashboard',
+    summary:
+      'A healthcare analytics dashboard concept focused on screening gaps, follow-up delays, referral completion, and early detection opportunities for underserved women and overlooked patient populations.',
+    category: 'Health Data, Research & Equity Explorations',
+    stack: ['SQL', 'Python', 'Pandas', 'Power BI', 'Healthcare Quality Measures'],
+    status: 'Planned',
+  },
+
+  {
+    slug: 'patient-dismissal-research-tracker',
+    title: 'Patient Dismissal Research Tracker',
+    summary:
+      'A research-informed tracker concept for collecting, organizing, and visualizing patient-reported experiences related to dismissal, delayed diagnosis, unclear communication, and barriers to follow-up care.',
+    category: 'Patient Education & Advocacy Resources',
+    stack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Survey Data', 'Recharts'],
+    status: 'Planned',
   },
   {
     slug: 'periodic-tables-reservation-system',
     title: 'Periodic Tables Reservation System',
     summary:
       'A full-stack reservation management application demonstrating CRUD workflows, role-based user flows, relational data modeling, and operational system design.',
-    category: 'Technical Proof / Software Engineering Archive',
+    category: 'Selected Software Engineering Work',
     stack: ['React', 'Express', 'PostgreSQL', 'Knex'],
     status: 'Built',
     caseStudyHref: '/projects/periodic-tables-reservation-system',
@@ -100,7 +136,7 @@ export const projects: Project[] = [
     title: 'AMP Ticket Add-On Flow',
     summary:
       'A production feature demonstrating user flow improvement, interface refinement, and operational support within a high-demand digital service environment.',
-    category: 'Technical Proof / Software Engineering Archive',
+    category: 'Selected Software Engineering Work',
     stack: ['React', 'TypeScript', 'Tailwind CSS'],
     status: 'Built',
     caseStudyHref: '/projects/amp-ticket-add-on-flow',
@@ -110,7 +146,7 @@ export const projects: Project[] = [
     title: 'Art of Wine Companion App',
     summary:
       'A mobile-first event companion application demonstrating wayfinding, structured content, vendor discovery, reusable UI patterns, and full-stack product development.',
-    category: 'Technical Proof / Software Engineering Archive',
+    category: 'Selected Software Engineering Work',
     stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
     status: 'Built',
     caseStudyHref: '/projects/art-of-wine-companion-app',

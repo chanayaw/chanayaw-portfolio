@@ -15,19 +15,19 @@ export default function ContactPage() {
     <main className="mx-auto w-full max-w-360 space-y-10 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="Contact"
-        heading="Let’s connect around health-tech software, digital health, and women’s health equity"
+        heading="Let's connect around women's health equity, digital health, and patient-centered tools"
         description={
           <>
-            I’m open to health information roles, digital health opportunities, health-tech software
-            work, product-oriented engineering, research-aligned collaborations, and thoughtful
-            conversations across biomedical informatics, patient education, care navigation, and
-            women’s health equity.
+            I&apos;m open to opportunities and conversations across Women&apos;s Health Equity
+            Advocacy & Informatics, health information, digital health, healthcare data analytics,
+            patient education, care navigation, research-aligned work, and advocacy-centered digital
+            tools.
           </>
         }
         supportingText={
           <>
-            Use the form below for professional inquiries, project opportunities, or technical
-            conversations.{' '}
+            Use the form below for professional inquiries, project opportunities, speaking or
+            workshop conversations, research-aligned collaborations, or thoughtful outreach.{' '}
             <span className="block">
               I review messages carefully and respond where there is a strong fit.
             </span>
@@ -44,14 +44,14 @@ export default function ContactPage() {
                   <SectionLabel>Best For</SectionLabel>
 
                   <div className="mt-4 flex flex-wrap gap-2">
-                    <ChipRegBorder>Health Information Roles</ChipRegBorder>
+                    <ChipRegBorder>Women&apos;s Health Equity Advocacy</ChipRegBorder>
                     <ChipRegBorder>Digital Health</ChipRegBorder>
-                    <ChipRegBorder>Health-Tech Software</ChipRegBorder>
+                    <ChipRegBorder>Health Information Roles</ChipRegBorder>
+                    <ChipRegBorder>Healthcare Data Analytics</ChipRegBorder>
                     <ChipRegBorder>Patient Education Tools</ChipRegBorder>
                     <ChipRegBorder>Care Navigation</ChipRegBorder>
-                    <ChipRegBorder>Health Data</ChipRegBorder>
-                    <ChipRegBorder>Women&apos;s Health Equity</ChipRegBorder>
                     <ChipRegBorder>Research-Aligned Conversations</ChipRegBorder>
+                    <ChipRegBorder>Speaking & Workshops</ChipRegBorder>
                   </div>
                 </div>
 
@@ -63,6 +63,9 @@ export default function ContactPage() {
                     <ChipThinBorder>Health Information Management</ChipThinBorder>
                     <ChipThinBorder>Data Analytics</ChipThinBorder>
                     <ChipThinBorder>EHR Workflows</ChipThinBorder>
+                    <ChipThinBorder>Early Detection</ChipThinBorder>
+                    <ChipThinBorder>Delayed Diagnosis</ChipThinBorder>
+                    <ChipThinBorder>Precision Health</ChipThinBorder>
                     <ChipThinBorder>Clinical Decision Support Concepts</ChipThinBorder>
                     <ChipThinBorder>Patient-Centered Tools</ChipThinBorder>
                     <ChipThinBorder>Whole-Body Women&apos;s Health</ChipThinBorder>
@@ -73,9 +76,10 @@ export default function ContactPage() {
                   <SectionLabel>Notes</SectionLabel>
 
                   <p className="text-muted mt-3 text-sm leading-relaxed">
-                    I’m most interested in opportunities and conversations that align with software
-                    engineering, digital health products, healthcare systems, product thinking, and
-                    women’s health equity.
+                    I&apos;m most interested in opportunities and conversations that align with
+                    women&apos;s health equity, digital health, healthcare data, patient education,
+                    care navigation, biomedical informatics, research translation, and
+                    patient-centered tools.
                   </p>
                 </div>
               </div>
@@ -103,16 +107,14 @@ export default function ContactPage() {
                     </p>
 
                     <p className="text-muted mt-3 text-sm leading-relaxed">
-                      Thank you for reaching out. Your message has been submitted successfully. I
-                      review professional inquiries carefully and respond where there is a clear fit
-                      or relevant conversation.
+                      Thank you for reaching out. Your message has been submitted successfully. I review professional, advocacy, research-aligned, and project inquiries carefully and respond where there is a clear fit or relevant conversation.
                     </p>
 
                     <Link
                       href="/projects"
                       className="ring-brand bg-cta text-cta-foreground shadow-card mt-10 inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide transition hover:brightness-105"
                     >
-                      Explore Projects
+                      View Projects
                     </Link>
 
                     <div className="mt-6 flex flex-row justify-center">
@@ -189,9 +191,15 @@ export default function ContactPage() {
                         </option>
                         <option value="employment">Employment Opportunity</option>
                         <option value="collaboration">Collaboration</option>
+                        <option value="advocacy">Advocacy Inquiry</option>
+                        <option value="speaking-workshop">Speaking or Workshop Inquiry</option>
                         <option value="digital-health">Digital Health Inquiry</option>
-                        <option value="health-tech">Health Tech Inquiry</option>
-                        <option value="product-systems">Product or Systems Inquiry</option>
+                        <option value="health-data-informatics">
+                          Health Data or Informatics Inquiry
+                        </option>
+                        <option value="patient-education">
+                          Patient Education or Care Navigation
+                        </option>
                         <option value="research">Research-Aligned Conversation</option>
                         <option value="technical">Technical Question</option>
                         <option value="other">Other</option>
@@ -214,8 +222,8 @@ export default function ContactPage() {
 
                   <div className="border-default flex flex-wrap items-center justify-between gap-4 border-t pt-4">
                     <p className="text-subtle max-w-xl text-sm leading-relaxed">
-                      For professional outreach, it helps to include the role, team, company,
-                      project context, or the kind of collaboration you have in mind.
+                      For professional outreach, it helps to include the role, organization, project
+                      context, audience, topic, or kind of collaboration you have in mind.
                     </p>
 
                     <button

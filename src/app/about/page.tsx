@@ -8,19 +8,20 @@ export default function AboutPage() {
     <main className="mx-auto w-full max-w-360 space-y-10 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="About"
-        heading="A software developer building toward digital health technology, biomedical informatics, and women's health equity advocacy"
+        heading="Building toward Women's Health Equity Advocacy & Informatics"
         description={
           <>
-            I&apos;m Chanaya W, a software developer and Health Services Management student focused
-            on health-tech software, health data, patient education, care navigation, biomedical
-            informatics, and research-informed advocacy for underrepresented women.
+            I&apos;m Chanaya W, a software developer, Health Services Management student, and
+            Digital Health Technologist in training focused on health data, biomedical informatics,
+            early detection, delayed diagnosis, patient education, care navigation, and
+            patient-centered digital tools.
           </>
         }
         supportingText={
           <>
-            My work has two lanes that often overlap but can also stand on their own: digital health
-            technology and women&apos;s health equity advocacy. The advocacy and research fuel the
-            digital products I want to build, not the other way around.
+            My advocacy is not separate from my professional path. It is the reason I&apos;m moving
+            into digital health and biomedical informatics. The advocacy and research fuel the
+            technology, not the other way around.
           </>
         }
       />
@@ -32,16 +33,16 @@ export default function AboutPage() {
               <SectionLabel>Background</SectionLabel>
 
               <h2 className="font-heading text-3xl font-semibold tracking-tight text-balance md:text-4xl">
-                Software engineering, health systems, and advocacy-centered product direction
+                Health systems, digital health, and advocacy-centered informatics
               </h2>
 
               <div className="text-muted space-y-4 text-base leading-relaxed md:text-lg">
                 <p>
                   My background is in full-stack software engineering, with experience building
                   applications in TypeScript, React, Next.js, Node.js, and SQL-backed systems.
-                  I&apos;m especially interested in health-tech software that supports patient
-                  education, care navigation, health data organization, clinical workflow concepts,
-                  and clearer access to complex health information.
+                  I&apos;m now applying that foundation toward healthcare data, biomedical
+                  informatics, patient education, care navigation, early detection, delayed
+                  diagnosis, and patient-centered digital health tools.
                 </p>
 
                 <p>
@@ -53,17 +54,17 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  I&apos;m now building toward Digital Health Technologist work, with an interest in
-                  biomedical informatics, health information systems, clinical decision support
-                  concepts, health data, and patient-centered digital tools.
+                  My long-term direction is Women&apos;s Health Equity Advocacy & Informatics, with
+                  a focus on helping underserved women be heard earlier, diagnosed sooner, and cared
+                  for more precisely through data, research, digital health systems, and
+                  patient-centered tools.
                 </p>
 
                 <p>
-                  Alongside the technical direction, I write and think deeply about women&apos;s
-                  health advocacy and women&apos;s health equity. I&apos;m especially interested in
-                  underrepresented women who are dismissed, diagnosed late, or left without clear
-                  information, and in whole-body women&apos;s health concerns beyond reproductive
-                  care alone.
+                  I&apos;m especially interested in underrepresented women who are dismissed,
+                  diagnosed late, undertreated, or left without clear information. My work centers
+                  whole-body women&apos;s health, including reproductive, endocrine, metabolic,
+                  cardiovascular, autoimmune, chronic illness, and mental health concerns.
                 </p>
               </div>
             </div>
@@ -74,29 +75,31 @@ export default function AboutPage() {
               <div className="space-y-5">
                 <InfoBlock
                   label="Current Direction"
-                  body="Digital health technology, health-tech software, health data, patient education, care navigation, and women's health equity advocacy."
+                  body="Women's Health Equity Advocacy & Informatics, early detection, delayed diagnosis, precision health, health data, patient education, care navigation, and patient-centered digital tools."
                 />
 
                 <div>
                   <SectionLabel>Core Strengths</SectionLabel>
                   <div className="mt-3 flex flex-wrap gap-2">
-                    <ChipThinBorder>Full-Stack Health-Tech Systems</ChipThinBorder>
+                    <ChipThinBorder>Women&apos;s Health Equity Advocacy</ChipThinBorder>
                     <ChipThinBorder>Health Data Workflows</ChipThinBorder>
                     <ChipThinBorder>Patient-Centered Product Thinking</ChipThinBorder>
-                    <ChipThinBorder>API Design</ChipThinBorder>
                     <ChipThinBorder>Care Navigation Tools</ChipThinBorder>
+                    <ChipThinBorder>Research Translation</ChipThinBorder>
                     <ChipThinBorder>Accessibility</ChipThinBorder>
+                    <ChipThinBorder>Full-Stack Development</ChipThinBorder>
+                    <ChipThinBorder>API Design</ChipThinBorder>
                   </div>
                 </div>
 
                 <InfoBlock
                   label="Target Roles"
-                  body="Health Information, Medical Records, Release of Information, EHR workflow, HealthTech software, digital health, health data, product-oriented engineering, and informatics-aligned roles."
+                  body="Healthcare data analytics, health information, medical records, release of information, EHR workflows, clinical informatics, biomedical informatics, digital health product work, patient education, care navigation, health equity, implementation, and healthcare systems improvement."
                 />
 
                 <InfoBlock
                   label="Education"
-                  body="I'm pursuing a BS in Health Services Management at UMGC with confirmed certificate pathways in Health Information Management & Data Analytics and Data Analytics. This academic path supports my long-term direction in digital health technology, biomedical informatics, health data, healthcare operations, and women's health equity advocacy."
+                  body="I'm pursuing a BS in Health Services Management at UMGC with confirmed certificate pathways in Health Information Management & Data Analytics and Data Analytics. This academic path supports my long-term direction in biomedical informatics, healthcare data analytics, digital health, healthcare operations, and women's health equity advocacy."
                 />
               </div>
             </GlassCard>
@@ -109,13 +112,14 @@ export default function AboutPage() {
           <SectionLabel>How I Work</SectionLabel>
 
           <h2 className="font-heading text-3xl font-semibold tracking-tight text-balance md:text-4xl">
-            My approach to technical work
+            How I approach digital health work
           </h2>
 
           <p className="text-muted text-base leading-relaxed md:text-lg">
-            I care about maintainable systems, clear architecture, and software that supports actual
-            use rather than just visual polish. The goal is not just to make something functional,
-            but to make it understandable, resilient, and extensible.
+            I care about systems that are understandable, usable, and grounded in real needs.
+            Whether I&apos;m thinking through a workflow, a digital tool, a dataset, or an advocacy
+            resource, I want the work to make complex healthcare experiences easier to understand,
+            navigate, and improve.
           </p>
         </div>
 
@@ -123,28 +127,28 @@ export default function AboutPage() {
           <Card>
             <AboutPrincipleCard
               title="Systems-first thinking"
-              body="I like breaking problems into clear layers: data, logic, interfaces, and workflow. That makes systems easier to reason about and evolve."
+              body="I like breaking problems into clear layers: people, workflows, data, tools, and constraints. That makes systems easier to understand and improve."
             />
           </Card>
 
           <Card>
             <AboutPrincipleCard
-              title="Product clarity"
-              body="I'm drawn to projects where user needs, workflow constraints, and technical decisions all shape how the system should work."
+              title="Patient-centered clarity"
+              body="I'm drawn to work that helps people understand their health information, next steps, options, and care experiences more clearly."
             />
           </Card>
 
           <Card>
             <AboutPrincipleCard
-              title="Clarity over cleverness"
-              body="I prefer explicit decisions, readable code, and documented tradeoffs over unnecessary complexity or abstraction."
+              title="Research-informed building"
+              body="I want advocacy, research, and health data to shape the tools, resources, and systems I build, not the other way around."
             />
           </Card>
 
           <Card>
             <AboutPrincipleCard
               title="Usefulness is the standard"
-              body="Whether the user is internal or public-facing, I care about software that supports real tasks, real decisions, and real constraints."
+              body="Whether the user is a patient, care team, student, or organization, I care about work that supports real decisions, real workflows, and real constraints."
             />
           </Card>
         </div>
@@ -162,17 +166,16 @@ export default function AboutPage() {
 
               <div className="text-muted space-y-4 text-base leading-relaxed">
                 <p>
-                  My long-term direction sits at the intersection of software engineering, digital
-                  health product development, biomedical informatics, and women&apos;s health
-                  equity. I&apos;m particularly interested in building tools that support care
-                  workflows, patient-facing experiences, operational coordination, and clearer
-                  access to complex health-related information.
+                  My long-term direction is Women&apos;s Health Equity Advocacy & Informatics,
+                  focused on early detection, delayed diagnosis, precision health, health data,
+                  patient education, care navigation, and patient-centered digital tools.
                 </p>
 
                 <p>
-                  Alongside my engineering work, I&apos;m pursuing a BS in Health Services
-                  Management at UMGC. This supports my goal of working at the intersection of
-                  healthcare systems, digital products, software engineering, and informatics.
+                  I&apos;m pursuing a BS in Health Services Management at UMGC with certificate
+                  pathways in Health Information Management & Data Analytics and Data Analytics.
+                  This supports my goal of working at the intersection of healthcare systems,
+                  biomedical informatics, digital health, advocacy, and healthcare data analytics.
                 </p>
               </div>
             </div>
@@ -193,14 +196,20 @@ export default function AboutPage() {
                 <ChipRegBorder>Node.js</ChipRegBorder>
                 <ChipRegBorder>SQL</ChipRegBorder>
                 <ChipRegBorder>PostgreSQL</ChipRegBorder>
+                <ChipRegBorder>Python</ChipRegBorder>
+                <ChipRegBorder>Pandas</ChipRegBorder>
+                <ChipRegBorder>Power BI</ChipRegBorder>
                 <ChipRegBorder>Tailwind CSS</ChipRegBorder>
                 <ChipRegBorder>API Design</ChipRegBorder>
+                <ChipRegBorder>Data Visualization</ChipRegBorder>
               </div>
 
               <p className="text-muted text-base leading-relaxed">
-                I primarily work with modern web technologies for full-stack applications. I&apos;m
-                especially interested in projects where frontend interfaces, backend logic, data
-                modeling, and workflow design all need to work together coherently.
+                I work with modern web technologies for full-stack applications and I&apos;m
+                expanding deeper into healthcare data analytics, dashboards, research translation,
+                and informatics-aligned workflows. I&apos;m especially interested in projects where
+                interfaces, data models, health information, and care experiences need to work
+                together clearly.
               </p>
             </div>
           </Card>
@@ -212,13 +221,14 @@ export default function AboutPage() {
           <SectionLabel>What This Site Is For</SectionLabel>
 
           <h2 className="font-heading text-3xl font-semibold tracking-tight text-balance md:text-4xl">
-            A portfolio of applied software, digital health direction, and product thinking
+            A portfolio for digital health, advocacy, data, and patient-centered tools
           </h2>
 
           <p className="text-muted text-base leading-relaxed md:text-lg">
-            This site is where I document selected work, project systems, and the direction I&apos;m
-            building toward. It includes full-stack applications, operational tools, digital health
-            product concepts, and case studies that reflect how I think through software problems.
+            This site is where I document selected projects, field notes, case studies, and the
+            direction I&apos;m building toward. It includes digital health concepts, health data
+            explorations, patient education resources, advocacy-centered tools, and selected
+            software work that reflects how I think through systems and care experiences.
           </p>
         </div>
 
@@ -226,21 +236,21 @@ export default function AboutPage() {
           <Card>
             <MiniBlock
               title="Projects"
-              body="Full-stack applications, digital health product concepts, operational tools, and selected case studies."
+              body="Digital health concepts, care systems, health data explorations, patient education resources, and selected software work."
             />
           </Card>
 
           <Card>
             <MiniBlock
               title="Field Notes"
-              body="Writing and reflections through The Informatics Diary on digital health, software, data, and health systems."
+              body="Writing through The Informatics Diary on women's health equity, informatics, digital health, health data, and patient-centered care."
             />
           </Card>
 
           <Card>
             <MiniBlock
               title="Case Studies"
-              body="Detailed breakdowns of architecture, product decisions, constraints, and implementation choices."
+              body="Breakdowns of project decisions, workflows, constraints, technical choices, and how systems can support clearer care."
             />
           </Card>
         </div>
@@ -257,8 +267,7 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-muted text-base leading-relaxed">
-                The best place to start is the Projects page, followed by the case studies and field
-                notes that show how I approach systems, workflows, and health-tech product work.
+                The best place to start is the Projects page, followed by the field notes and case studies that show how I approach digital health, care workflows, health data, advocacy, and patient-centered tools.
               </p>
             </div>
 

@@ -15,13 +15,14 @@ export default function HomePage() {
           <SectionLabel>Featured Work</SectionLabel>
 
           <h2 className="font-heading text-3xl font-semibold tracking-tight text-balance md:text-5xl">
-            Health-tech projects, care systems, and advocacy-centered digital tools
+            Digital health tools, care systems, and health equity projects
           </h2>
 
           <p className="text-muted max-w-2xl text-base leading-relaxed md:text-lg">
-            A selection of health-tech software projects, digital health product concepts, and
-            systems-focused work connected to patient education, care navigation, health data, and
-            women&apos;s health equity.
+            A selection of digital health concepts, health data explorations, care navigation
+            systems, technical case studies, and research-informed work connected to early
+            detection, delayed diagnosis, patient education, healthcare workflows, and Women&apos;s
+            Health Equity Advocacy & Informatics.
           </p>
         </div>
 
@@ -38,12 +39,11 @@ export default function HomePage() {
             <SectionLabel>The Informatics Diary</SectionLabel>
 
             <h2 className="font-heading text-3xl font-semibold tracking-tight text-balance md:text-4xl">
-              Field notes on digital health, software, data, and women’s health equity
+              Field notes on women&apos;s health equity, informatics, digital health, and patient-centered care
             </h2>
 
             <p className="text-muted text-base leading-relaxed md:text-lg">
-              Essays and field notes on digital health products, biomedical informatics, women’s
-              health equity, software, data, and health systems.
+              Essays and field notes on advocacy, research, health data, informatics, care systems, and patient-centered digital health.
             </p>
           </div>
 

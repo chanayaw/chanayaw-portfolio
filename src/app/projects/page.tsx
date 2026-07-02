@@ -9,33 +9,33 @@ import { CardWithGlow } from '@/src/components/ui/Cards';
 export default function ProjectsPage() {
   const featuredProjects = projects.filter((project) => project.featured);
 
-  const digitalHealthProducts = projects.filter(
-    (project) => project.category === 'Digital Health Products',
+  const patientCenteredDigitalHealthTools = projects.filter(
+    (project) => project.category === 'Patient-Centered Digital Health Tools',
   );
 
-  const clinicalOperationalSystems = projects.filter(
-    (project) => project.category === 'Clinical + Operational Systems',
+  const careNavigationHealthcareWorkflowSystem = projects.filter(
+    (project) => project.category === 'Care Navigation & Healthcare Workflow Systems',
   );
 
-  const softwareEngineeringProjects = projects.filter(
-    (project) => project.category === 'Software Engineering Projects',
+  const healthDataResearchEquityExplorations = projects.filter(
+    (project) => project.category === 'Health Data, Research & Equity Explorations',
   );
 
-  const researchDataExplorations = projects.filter(
-    (project) => project.category === 'Research + Data Explorations',
+  const patientEducationAdvocacyResources = projects.filter(
+    (project) => project.category === 'Patient Education & Advocacy Resources',
   );
 
-  const technicalProofSoftwareEngineeringArchive = projects.filter(
-    (project) => project.category === 'Technical Proof / Software Engineering Archive',
+  const selectedSoftwarreEngineeringWork = projects.filter(
+    (project) => project.category === 'Selected Software Engineering Work',
   );
 
   return (
     <main className="mx-auto w-full max-w-360 space-y-10 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="Projects"
-        heading="Digital health products, care systems, and health-tech software projects"
-        description="A selection of projects and concepts showing how I approach health-tech software, digital health product thinking, healthcare workflows, health data, and real-world systems."
-        supportingText="My work focuses on maintainable health-tech software, usable interfaces, data-informed systems, patient-centered tools, and research-informed ideas connected to digital health and women's health equity."
+        heading="Digital health concepts, care systems, and patient-centered tools"
+        description="A portfolio of projects and case studies exploring how health data, digital health technology, patient education, care navigation, and informatics concepts can support Women's Health Equity Advocacy, early detection, delayed diagnosis, and clearer care."
+        supportingText="My work focuses on usable systems, research-informed product thinking, structured health information, accessible interfaces, and digital tools that help make complex healthcare experiences easier to understand, navigate, and improve."
       />
 
       <section className="mt-16 md:mt-20">
@@ -58,60 +58,60 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {digitalHealthProducts.length > 0 ? (
+      {patientCenteredDigitalHealthTools.length > 0 ? (
         <section id="digital-health-products" className="pt-24">
-          <SectionLabel>Digital Health Products</SectionLabel>
+          <SectionLabel>Patient-Centered Digital Health Tools</SectionLabel>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {digitalHealthProducts.map((project) => (
+            {patientCenteredDigitalHealthTools.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
         </section>
       ) : null}
 
-      {clinicalOperationalSystems.length > 0 ? (
+      {careNavigationHealthcareWorkflowSystem.length > 0 ? (
         <section id="clinical-operational-systems" className="pt-24">
-          <SectionLabel>Clinical + Operational Systems</SectionLabel>
+          <SectionLabel>Care Navigation & Healthcare Workflow Systems</SectionLabel>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {clinicalOperationalSystems.map((project) => (
+            {careNavigationHealthcareWorkflowSystem.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
         </section>
       ) : null}
 
-      {softwareEngineeringProjects.length > 0 ? (
+      {healthDataResearchEquityExplorations.length > 0 ? (
         <section id="software-engineering-projects" className="pt-24">
-          <SectionLabel>Software Engineering Projects</SectionLabel>
+          <SectionLabel>Health Data, Research & Equity Explorations</SectionLabel>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {softwareEngineeringProjects.map((project) => (
+            {healthDataResearchEquityExplorations.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
         </section>
       ) : null}
 
-      {researchDataExplorations.length > 0 ? (
+      {patientEducationAdvocacyResources.length > 0 ? (
         <section id="research-data-explorations" className="pt-24">
-          <SectionLabel>Research + Data Explorations</SectionLabel>
+          <SectionLabel>Patient Education & Advocacy Resources</SectionLabel>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {researchDataExplorations.map((project) => (
+            {patientEducationAdvocacyResources.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
         </section>
       ) : null}
 
-      {technicalProofSoftwareEngineeringArchive.length > 0 ? (
+      {selectedSoftwarreEngineeringWork.length > 0 ? (
         <section id="research-data-explorations" className="pt-24">
-          <SectionLabel>Technical Proof / Software Engineering Archive</SectionLabel>
+          <SectionLabel>Selected Software Engineering Work</SectionLabel>
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {technicalProofSoftwareEngineeringArchive.map((project) => (
+            {selectedSoftwarreEngineeringWork.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
@@ -120,20 +120,19 @@ export default function ProjectsPage() {
 
       <section className="mt-24 md:mt-28">
         <CardWithGlow>
-          <SectionLabel>Engineering Approach</SectionLabel>
+          <SectionLabel>Health Systems Approach</SectionLabel>
 
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
               <h2 className="font-heading text-2xl font-semibold tracking-tight">
-                How I approach health-tech technical work
+                How I Approach Digital Health Work
               </h2>
 
               <p className="text-muted mt-4 text-sm leading-relaxed md:text-base">
-                My projects focus on building maintainable systems that combine clear architecture,
-                backend logic, health data awareness, and user-facing interfaces. I care about
-                translating real-world health information and workflow needs into usable tools,
-                documenting decisions, and designing software that can grow beyond the first
-                version.
+                My work combines systems thinking, product clarity, technical ownership, and
+                patient-centered design. Whether I&apos;m building a tool, mapping a care workflow,
+                or exploring a data-informed concept, I focus on making complex healthcare
+                experiences easier to understand, navigate, and improve.
               </p>
             </div>
 
@@ -154,8 +153,8 @@ export default function ProjectsPage() {
               />
 
               <ApproachCard
-                title="Usable health-tech software"
-                body="Interfaces and workflows designed to support real users, health information needs, and practical decision-making."
+                title="Patient-centered usability"
+                body="Interfaces, workflows, and resources designed around real users, health information needs, and practical decision-making."
               />
             </div>
           </div>
