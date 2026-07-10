@@ -27,7 +27,6 @@ const webpackSvgrOptions = {
 const turbopackSvgrOptions = {
   icon: true,
   svgProps: {
-    fill: 'currentColor',
     focusable: 'false',
     'aria-hidden': 'true',
   },
@@ -35,16 +34,12 @@ const turbopackSvgrOptions = {
   svgoConfig: {
     plugins: [
       {
-        name: 'removeDimensions',
-        active: true,
-        params: {},
+        name: 'removeViewBox',
+        active: false,
       },
       {
-        name: 'removeAttrs',
+        name: 'removeDimensions',
         active: true,
-        params: {
-          attrs: '(fill|stroke)',
-        },
       },
     ],
   },
