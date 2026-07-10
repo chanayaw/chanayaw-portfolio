@@ -27,7 +27,7 @@ export default function TokenSanityCheck() {
           ['Foreground', '--color-foreground'],
           ['Surface', '--color-surface'],
           ['Surface Soft', '--color-surface-soft'],
-          ['Surface Blue', '--color-surface-blue'],
+          ['Surface Teal Wash', '--color-surface-blue'],
           ['Surface Elevated', '--color-surface-elevated'],
           ['Card', '--color-card'],
           ['Glass', '--color-glass'],
@@ -40,15 +40,16 @@ export default function TokenSanityCheck() {
       },
       {
         title: 'Brand Accents',
-        description: 'Pink, teal, evergreen, and signal accents for the Chanaya W system.',
+        description:
+          'Rose, plum, lavender, and teal accents for the Chanaya W academic and professional system.',
         tokens: [
-          ['Primary / Ink', '--color-primary'],
-          ['Digital Teal', '--color-secondary'],
-          ['Rose Berry', '--color-accent'],
-          ['Blush Pink', '--color-accent-soft'],
-          ['Accent Muted', '--color-accent-muted'],
-          ['Deep Evergreen', '--color-evergreen'],
-          ['Mist Blue', '--color-mist'],
+          ['Primary / Deep Plum', '--color-primary'],
+          ['Teal Data', '--color-secondary'],
+          ['Signature Rose', '--color-accent'],
+          ['Petal Pink', '--color-accent-soft'],
+          ['Rose Milk', '--color-accent-muted'],
+          ['Deep Support', '--color-evergreen'],
+          ['Soft Lavender', '--color-mist'],
           ['Link', '--color-link'],
           ['CTA', '--color-cta'],
           ['CTA Foreground', '--color-cta-foreground'],
@@ -57,7 +58,7 @@ export default function TokenSanityCheck() {
       {
         title: 'Semantic + Data',
         description:
-          'Functional UI states and chart colors that complement the brand without duplicating it.',
+          'Functional UI states and chart colors that support the brand without becoming the brand.',
         tokens: [
           ['Success', '--color-success'],
           ['Success Soft', '--color-success-soft'],
@@ -71,10 +72,10 @@ export default function TokenSanityCheck() {
           ['Error', '--color-error'],
           ['Error Soft', '--color-error-soft'],
           ['Error Foreground', '--color-error-foreground'],
-          ['Chart 1', '--color-chart-1'],
-          ['Chart 2', '--color-chart-2'],
-          ['Chart 3', '--color-chart-3'],
-          ['Chart 4', '--color-chart-4'],
+          ['Chart Rose', '--color-chart-1'],
+          ['Chart Teal', '--color-chart-2'],
+          ['Chart Berry', '--color-chart-3'],
+          ['Chart Lavender', '--color-chart-4'],
           ['Chart Highlight', '--color-chart-hi'],
           ['Chart Grid', '--color-chart-grid'],
           ['Chart Axis', '--color-chart-axis'],
@@ -96,30 +97,30 @@ export default function TokenSanityCheck() {
 
         <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 py-16 md:px-8 md:py-24 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-5">
-            <SectionLabel>Design System</SectionLabel>
+            <SectionLabel>Chanaya W Brand System</SectionLabel>
 
             <div className="space-y-4">
-              <h1 className="font-heading text-4xl font-semibold tracking-tight text-balance md:text-6xl">
-                Token Sanity Check
+              <h1 className="font-heading text-4xl font-normal text-balance md:text-6xl">
+                Soft Academic Pink Token System
               </h1>
 
               <p className="text-muted max-w-2xl text-base leading-relaxed md:text-lg">
-                Visual verification for the updated Chanaya W brand system: light-first surfaces,
-                pink-forward accents, digital health teal, readable typography, data-inspired
-                motifs, and optional dark mode.
+                Visual verification for the updated Chanaya W brand system: soft academic pink
+                surfaces, deep plum typography, rose-forward accents, data-informed teal, feminine
+                motifs, and optional Pink Informatics Night dark mode.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <Pill variant="accent">modern feminine digital health</Pill>
-              <Pill variant="tech">biomedical informatics</Pill>
-              <Pill>software systems</Pill>
-              <Pill>women’s health equity</Pill>
+              <Pill variant="accent">soft academic pink</Pill>
+              <Pill variant="tech">women&apos;s health equity informatics</Pill>
+              <Pill>patient-centered tools</Pill>
+              <Pill>health data + care navigation</Pill>
             </div>
           </div>
 
           <div className="border-default bg-card shadow-card rounded-3xl border p-4 backdrop-blur">
-            <p className="font-mono-brand text-subtle mb-3 text-xs font-medium tracking-[0.22em] uppercase">
+            <p className="text-subtle mb-3 font-mono text-xs font-medium tracking-[0.22em] uppercase">
               Preview mode
             </p>
 
@@ -160,7 +161,7 @@ export default function TokenSanityCheck() {
           <section key={group.title} className="space-y-6">
             <div className="max-w-3xl space-y-2">
               <SectionLabel>{group.title}</SectionLabel>
-              <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
+              <h2 className="font-heading text-2xl font-normal md:text-3xl">
                 {group.title} tokens
               </h2>
               <p className="text-muted text-sm leading-relaxed md:text-base">{group.description}</p>
@@ -179,7 +180,7 @@ export default function TokenSanityCheck() {
         -------------------------------------------------- */}
         <section className="space-y-6">
           <SectionLabel>Surface System</SectionLabel>
-          <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
+          <h2 className="font-heading text-2xl font-normal md:text-3xl">
             Surface hierarchy and card treatments
           </h2>
 
@@ -222,32 +223,32 @@ export default function TokenSanityCheck() {
         -------------------------------------------------- */}
         <section className="space-y-6">
           <SectionLabel>Typography</SectionLabel>
-          <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
-            Sora, Manrope, and IBM Plex Mono
+          <h2 className="font-heading text-2xl font-normal md:text-3xl">
+            DM Serif Display, Nunito Sans, and Geist Mono
           </h2>
 
           <div className="grid gap-4 lg:grid-cols-2">
             <Panel title="Heading and body hierarchy" description="Primary reading experience.">
               <div className="space-y-5">
                 <div>
-                  <p className="font-mono-brand text-accent text-xs font-medium tracking-[0.22em] uppercase">
-                    Hero heading / Sora
+                  <p className="text-accent font-mono text-xs font-medium tracking-[0.22em] uppercase">
+                    Hero heading / DM Serif Display
                   </p>
-                  <h3 className="font-heading mt-2 text-3xl font-semibold tracking-tight text-balance">
+                  <h3 className="font-heading mt-2 text-3xl font-normal text-balance">
                     Building digital health tools at the intersection of software, systems, and
                     women’s health equity.
                   </h3>
                 </div>
 
-                <p className="font-body text-muted text-base leading-relaxed">
-                  I’m Chanaya W, a software developer and Health Services Management student
-                  building toward biomedical informatics, digital health product development, and
-                  women’s health equity.
+                <p className="text-muted font-sans text-base leading-relaxed">
+                  I’m Chanaya W, a software developer, Health Services Management student, and
+                  Digital Health Technologist in training building toward Women’s Health Equity
+                  Advocacy & Informatics.
                 </p>
 
-                <p className="font-body text-subtle text-sm leading-relaxed">
-                  Supporting copy should feel readable, modern, and warm without becoming too
-                  clinical or too decorative.
+                <p className="text-subtle font-sans text-sm leading-relaxed">
+                  Supporting copy should feel warm, readable, researched, and patient-centered
+                  without becoming too clinical or overly decorative.
                 </p>
               </div>
             </Panel>
@@ -257,7 +258,7 @@ export default function TokenSanityCheck() {
               description="Technical labels, project tags, and notes."
             >
               <div className="space-y-4">
-                <p className="font-mono-brand text-secondary text-xs font-medium tracking-[0.24em] uppercase">
+                <p className="text-secondary font-mono text-xs font-medium tracking-[0.24em] uppercase">
                   FIELD NOTE 001
                 </p>
 
@@ -270,9 +271,7 @@ export default function TokenSanityCheck() {
                 </div>
 
                 <div className="border-default bg-surface rounded-xl border p-4">
-                  <code className="font-mono-brand text-muted text-sm">
-                    patient_centered_tools=true
-                  </code>
+                  <code className="text-muted font-mono text-sm">patient_centered_tools=true</code>
                 </div>
               </div>
             </Panel>
@@ -284,7 +283,7 @@ export default function TokenSanityCheck() {
         -------------------------------------------------- */}
         <section className="space-y-6">
           <SectionLabel>Interaction</SectionLabel>
-          <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
+          <h2 className="font-heading text-2xl font-normal md:text-3xl">
             Buttons, links, focus states, and depth
           </h2>
 
@@ -323,7 +322,7 @@ export default function TokenSanityCheck() {
 -------------------------------------------------- */}
             <section className="space-y-6">
               <SectionLabel>Semantic States</SectionLabel>
-              <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
+              <h2 className="font-heading text-2xl font-normal md:text-3xl">
                 Status colors that support the brand without becoming the brand
               </h2>
 
@@ -387,32 +386,32 @@ export default function TokenSanityCheck() {
         -------------------------------------------------- */}
         <section className="space-y-6">
           <SectionLabel>Project Cards</SectionLabel>
-          <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
+          <h2 className="font-heading text-2xl font-normal md:text-3xl">
             Digital health product and systems cards
           </h2>
 
           <div className="grid gap-4 lg:grid-cols-3">
             <ProjectCard
-              label="Digital Health Product"
-              title="CareFlow Health Tracker"
-              description="A personal health tracking system for logging symptoms, medications, appointments, notes, labs, and health events over time."
-              tags={['Planned', 'Next.js', 'TypeScript', 'PostgreSQL']}
+              label="Health Equity Data"
+              title="Women’s Health Equity Data Story"
+              description="A research and data storytelling project exploring delayed diagnosis, early detection gaps, care access barriers, and patient experience among underserved women."
+              tags={['Capstone', 'Health Data', 'Research', 'Power BI']}
               variant="accent"
             />
 
             <ProjectCard
-              label="Clinical + Operational System"
-              title="Clinic Resource Coordination"
-              description="A role-based scheduling and resource coordination tool for appointment flow, staff availability, rooms, and operational conflicts."
-              tags={['Planned', 'Systems', 'Workflows', 'Data']}
+              label="Patient Education"
+              title="Patient Education & Advocacy Library"
+              description="A plain-language resource library with guides, templates, and advocacy tools for navigating symptoms, appointments, referrals, follow-up, and unclear care."
+              tags={['Capstone', 'Health Literacy', 'Care Navigation', 'Next.js']}
               variant="tech"
             />
 
             <ProjectCard
               label="Field Notes"
               title="The Informatics Diary"
-              description="Essays and field notes on digital health products, biomedical informatics, women’s health equity, software, data, and health systems."
-              tags={['Writing', 'Research', 'Health Tech']}
+              description="A field-note archive on women’s health equity, informatics, digital health, health data, patient education, and patient-centered care."
+              tags={['Writing', 'Research', 'Informatics']}
               variant="neutral"
             />
           </div>
@@ -423,7 +422,7 @@ export default function TokenSanityCheck() {
         -------------------------------------------------- */}
         <section className="space-y-6">
           <SectionLabel>Chips + Tags</SectionLabel>
-          <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
+          <h2 className="font-heading text-2xl font-normal md:text-3xl">
             Pill styles for categories, stacks, and interests
           </h2>
 
@@ -459,7 +458,7 @@ export default function TokenSanityCheck() {
         -------------------------------------------------- */}
         <section className="space-y-6">
           <SectionLabel>Data Visualization</SectionLabel>
-          <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
+          <h2 className="font-heading text-2xl font-normal md:text-3xl">
             Chart palette and contrast
           </h2>
 
@@ -525,7 +524,7 @@ export default function TokenSanityCheck() {
         -------------------------------------------------- */}
         <section className="space-y-6">
           <SectionLabel>Effects</SectionLabel>
-          <h2 className="font-heading text-2xl font-semibold tracking-tight md:text-3xl">
+          <h2 className="font-heading text-2xl font-normal md:text-3xl">
             Gradients, grids, and ambient layers
           </h2>
 
@@ -540,10 +539,10 @@ export default function TokenSanityCheck() {
                 <div className="to-surface absolute inset-0 bg-linear-to-r from-transparent" />
                 <div className="relative z-10 flex h-full items-end p-5">
                   <div>
-                    <p className="font-mono-brand text-secondary text-xs font-medium tracking-[0.22em] uppercase">
+                    <p className="text-secondary font-mono text-xs font-medium tracking-[0.22em] uppercase">
                       Systems Layer
                     </p>
-                    <p className="font-heading mt-2 text-2xl font-semibold">
+                    <p className="font-heading mt-2 text-2xl font-normal">
                       Data-aware, but still human.
                     </p>
                   </div>
@@ -575,7 +574,7 @@ export default function TokenSanityCheck() {
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
+    <p className="text-accent font-mono text-xs font-semibold tracking-[0.24em] uppercase">
       {children}
     </p>
   );
@@ -593,7 +592,7 @@ function Panel({
   return (
     <div className="border-default bg-card shadow-card rounded-3xl border p-6 backdrop-blur">
       <div className="mb-5 space-y-1">
-        <h3 className="font-heading text-lg font-semibold tracking-tight">{title}</h3>
+        <h3 className="font-heading text-lg font-normal">{title}</h3>
         {description ? <p className="text-subtle text-sm leading-relaxed">{description}</p> : null}
       </div>
       {children}
@@ -609,7 +608,7 @@ function Swatch({ label, varName }: { label: string; varName: string }) {
         style={{ backgroundColor: `var(${varName})` }}
       />
       <div className="text-muted text-sm font-semibold">{label}</div>
-      <div className="font-mono-brand text-subtle text-xs">{varName}</div>
+      <div className="text-subtle font-mono text-xs">{varName}</div>
     </div>
   );
 }
@@ -668,13 +667,11 @@ function ProjectCard({
 
   return (
     <article className="group border-default bg-card shadow-card hover:shadow-pop rounded-3xl border p-6 transition hover:-translate-y-1">
-      <p
-        className={`font-mono-brand text-xs font-semibold tracking-[0.22em] uppercase ${labelColor}`}
-      >
+      <p className={`font-mono text-xs font-semibold tracking-[0.22em] uppercase ${labelColor}`}>
         {label}
       </p>
 
-      <h3 className="font-heading mt-4 text-2xl font-semibold tracking-tight">{title}</h3>
+      <h3 className="font-heading mt-4 text-2xl font-normal">{title}</h3>
 
       <p className="text-muted mt-3 text-sm leading-relaxed">{description}</p>
 
@@ -735,7 +732,7 @@ function SemanticCard({
     >
       <div className="mb-4 flex items-center gap-3">
         <span className="h-3 w-3 rounded-full" style={{ backgroundColor: `var(${colorVar})` }} />
-        <h3 className="font-heading text-lg font-semibold">{label}</h3>
+        <h3 className="font-heading text-lg font-normal">{label}</h3>
       </div>
 
       <p className="text-sm leading-relaxed opacity-85">{description}</p>

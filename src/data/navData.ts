@@ -22,30 +22,48 @@ export type SocialIcon = {
 
 export const MenuItems: MenuItem[] = [
   { label: 'Home', href: '/', active: true },
-  {
-    label: 'Projects',
-    href: '/projects',
-    active: true,
-  },
-  {
-    label: 'Field Notes',
-    href: '/field-notes',
-    active: true,
-  },
+  { label: 'Projects', href: '/projects', active: true },
+  { label: 'Diary', href: '/field-notes', active: true },
   { label: 'About', href: '/about', active: true },
   { label: 'Contact', href: '/contact', active: true },
 ];
 
 export const SocialIcons: SocialIcon[] = [
-  { label: 'GitHub', href: 'https://github.com/chanayaw', icon: GitHub },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/chanaya-wheeler', icon: LinkedIn },
-  { label: 'Substack', href: 'https://theinformaticsdiary.substack.com', icon: Substack }, // coming soon
-  { label: 'YouTube', href: 'https://youtube.com/@chanayaw', icon: YouTube }, // coming soon
-  { label: 'Instagram', href: 'https://instagram.com/chanayaw', icon: Instagram },
-  { label: 'Threads', href: 'https://threads.com/chanayaw', icon: Threads },
+  { label: 'GitHub', href: 'https://github.com/chanayaw', icon: GitHub, active: true },
+  {
+    label: 'LinkedIn',
+    href: 'https://linkedin.com/in/chanaya-wheeler',
+    icon: LinkedIn,
+    active: true,
+  },
+  {
+    label: 'The Informatics Diary on Substack',
+    href: 'https://theinformaticsdiary.substack.com',
+    icon: Substack,
+    active: true,
+  },
+  {
+    label: 'YouTube',
+    href: 'https://youtube.com/@chanayaw',
+    icon: YouTube,
+    active: true,
+  },
+  {
+    label: 'Instagram',
+    href: 'https://instagram.com/chanayaw',
+    icon: Instagram,
+    active: true,
+  },
+  {
+    label: 'Threads',
+    href: 'https://threads.com/chanayaw',
+    icon: Threads,
+    active: true,
+  },
   {
     label: 'TikTok',
     href: 'https://www.tiktok.com/@chanaya.w',
     icon: TikTok,
+    active: true,
   },
 ];

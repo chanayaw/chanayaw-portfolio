@@ -12,13 +12,13 @@ interface PrimaryNavProps {
 
 const PrimaryNav = ({ menuItems, socialIcons }: PrimaryNavProps) => {
   return (
-    <div className="hidden items-center gap-8 lg:flex">
-      <ul className="flex flex-row items-center gap-8">
+    <div className="hidden items-center gap-6 lg:flex">
+      <ul className="border-default bg-surface/70 shadow-card flex flex-row items-center gap-1 rounded-full border pb-1 backdrop-blur">
         {menuItems.map((item) => (
-          <li key={item.label} className="group relative">
+          <li key={item.label}>
             <Link
               href={item.href}
-              className="link font-mono-brand text-sm font-semibold tracking-[0.18em] uppercase"
+              className="font-mono-brand text-subtle hover:bg-surface-soft hover:text-accent rounded-full px-4 py-2 text-[0.68rem] font-semibold tracking-[0.2em] uppercase transition"
             >
               {item.label}
             </Link>

@@ -8,35 +8,37 @@ export default function Hero() {
     <section className="overflow-hidden lg:min-h-screen">
       <BackgroundFX opacityClass="opacity-10" showParticles />
 
-      <div className="relative z-10 pt-16 pb-12 md:pt-18 md:pb-20 lg:pt-6 lg:pb-24">
+      <div className="relative z-10 pt-16 pb-12 md:pt-18 md:pb-20 lg:pt-28 lg:pb-24">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center lg:gap-0">
           <div className="lg:col-span-7">
-            <p className="font-mono-brand text-accent mb-4 text-xs font-semibold tracking-[0.28em] uppercase md:text-sm">
-              Women&apos;s Health Equity & Informatics · Digital Health · Health Data
+            <p className="text-accent mb-4 font-mono text-xs font-semibold tracking-[0.28em] uppercase md:text-sm">
+              Women&apos;s Health Equity Advocacy & Informatics
             </p>
 
-            <h1 className="font-heading max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-balance md:text-6xl md:leading-[1.05] lg:text-7xl">
-              Building patient-centered tools for women&apos;s health equity, early detection, and
-              clearer care
+            <h1 className="font-heading max-w-4xl text-5xl leading-[0.95] font-normal text-balance md:text-7xl md:leading-[0.95] lg:text-8xl">
+              Pink, precise, and patient-centered.
             </h1>
+
+            <p className="text-foreground mt-5 max-w-3xl text-2xl leading-snug font-semibold md:text-3xl">
+              Building digital health, health data, and patient education tools for clearer, more
+              equitable care.
+            </p>
 
             <div className="text-muted mt-6 max-w-3xl space-y-4 text-base leading-relaxed md:text-lg">
               <p>
                 I&apos;m Chanaya
-                <span className="text-accent ml-2 align-top text-sm font-medium tracking-wide opacity-80 md:text-base">
+                <span className="text-accent ml-2 align-top text-sm font-semibold tracking-wide opacity-85 md:text-base">
                   (shh-nay-yuh)
                 </span>
                 , a software developer, Health Services Management student, and Digital Health
-                Technologist in training. I&apos;m building toward Women&apos;s Health Equity
-                Advocacy & Informatics.
+                Technologist in training building toward Women&apos;s Health Equity Advocacy &
+                Informatics.
               </p>
 
               <p>
-                My work connects healthcare systems, health data, biomedical informatics, patient
-                education, care navigation, early detection, delayed diagnosis, precision health,
-                and patient-centered digital tools. I&apos;m especially interested in
-                underrepresented women who are dismissed, diagnosed late, undertreated, or left
-                without clear information.
+                My work connects health data, biomedical informatics, patient education, care
+                navigation, early detection, delayed diagnosis, research translation, and
+                patient-centered digital tools.
               </p>
 
               <p>The advocacy and research fuel the technology, not the other way around.</p>
@@ -51,7 +53,7 @@ export default function Hero() {
 
           <div className="lg:col-span-5 lg:pl-6">
             <GlassCard>
-              <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
+              <p className="text-accent font-mono text-xs font-semibold tracking-[0.24em] uppercase">
                 Current Direction
               </p>
 

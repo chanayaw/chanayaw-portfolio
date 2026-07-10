@@ -1,45 +1,103 @@
 import type { NextConfig } from 'next';
 
+const webpackSvgrOptions = {
+  icon: true,
+  svgProps: {
+    fill: 'currentColor',
+    focusable: 'false',
+    'aria-hidden': 'true',
+  },
+  svgo: true,
+  svgoConfig: {
+    plugins: [
+      {
+        name: 'removeDimensions',
+        active: true,
+      },
+      {
+        name: 'removeAttrs',
+        params: {
+          attrs: '(fill|stroke)',
+        },
+      },
+    ],
+  },
+};
+
+const turbopackSvgrOptions = {
+  icon: true,
+  svgProps: {
+    fill: 'currentColor',
+    focusable: 'false',
+    'aria-hidden': 'true',
+  },
+  svgo: true,
+  svgoConfig: {
+    plugins: [
+      {
+        name: 'removeDimensions',
+        active: true,
+        params: {},
+      },
+      {
+        name: 'removeAttrs',
+        active: true,
+        params: {
+          attrs: '(fill|stroke)',
+        },
+      },
+    ],
+  },
+};
+
 const nextConfig: NextConfig = {
+  webpack(config) {
+    const fileLoaderRule = config.module.rules.find(
+      (rule: { test?: RegExp }) => rule.test?.test?.('.svg'),
+    );
+
+    if (!fileLoaderRule) {
+      throw new Error('Could not find the existing Next.js SVG rule.');
+    }
+
+    config.module.rules.push(
+      {
+        ...fileLoaderRule,
+        test: /\.svg$/i,
+        resourceQuery: /url/,
+      },
+      {
+        test: /\.svg$/i,
+        issuer: fileLoaderRule.issuer,
+        resourceQuery: {
+          not: [
+            ...((fileLoaderRule.resourceQuery as { not?: RegExp[] })?.not ?? []),
+            /url/,
+          ],
+        },
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: webpackSvgrOptions,
+          },
+        ],
+      },
+    );
+
+    fileLoaderRule.exclude = /\.svg$/i;
+
+    return config;
+  },
+
   turbopack: {
     rules: {
-      // Transform .svg into React components with SVGR.
-      // Doc: https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#configuring-webpack-loaders
       '*.svg': {
         loaders: [
           {
             loader: '@svgr/webpack',
-            options: {
-              // Make icons scale naturally with font-size utilities
-              icon: true,
-              // Provide default props so color can be controlled via CSS
-              svgProps: {
-                // Use CSS currentColor by default
-                fill: 'currentColor',
-                stroke: 'currentColor',
-                // Preserve the viewBox for proper scaling
-                focusable: 'false',
-                role: 'img',
-                'aria-hidden': 'true',
-              },
-              svgo: true,
-              svgoConfig: {
-                plugins: [
-                  // Keep viewBox so the SVG scales correctly
-                  { name: 'removeViewBox', active: false },
-                  // Remove width/height so Tailwind sizing applies
-                  { name: 'removeDimensions', active: true },
-                  // Strip any hardcoded fill/stroke so CSS can take over
-                  {
-                    name: 'removeAttrs',
-                    params: { attrs: '(fill|stroke)' },
-                  },
-                ],
-              },
-            },
+            options: turbopackSvgrOptions,
           },
         ],
-        // Tell Turbopack the loader outputs JS (a React component)
         as: '*.js',
       },
     },

@@ -20,17 +20,22 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
   return (
     <main className="mx-auto w-full max-w-360 space-y-10 px-6 pb-24 md:px-10">
-      <section className="pt-20 md:pt-28">
-        <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">
+      <section className="relative isolate overflow-hidden pt-20 md:pt-28">
+        <div
+          aria-hidden="true"
+          className="data-grid pointer-events-none absolute inset-0 -z-10 opacity-[0.12]"
+        />
+
+        <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
           {caseStudy.status === 'Planned' ? 'Project Brief' : 'Case Study'}
         </p>
 
-        <div className="mt-4 max-w-4xl">
-          <h1 className="text-4xl leading-tight font-medium tracking-tight text-balance md:text-6xl">
+        <div className="mt-4 max-w-5xl">
+          <h1 className="font-heading text-primary text-5xl leading-[0.95] font-normal tracking-tight text-balance md:text-7xl">
             {caseStudy.title}
           </h1>
 
-          <p className="text-subtle mt-6 max-w-3xl text-base leading-relaxed md:text-lg">
+          <p className="text-muted mt-7 max-w-3xl text-base leading-relaxed md:text-lg">
             {caseStudy.summary}
           </p>
         </div>
@@ -47,7 +52,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
             href={caseStudy.backHref}
-            className="text-foreground hover:text-link text-sm font-medium transition"
+            className="text-foreground hover:text-link text-sm font-bold transition"
           >
             ← Back to Projects
           </Link>
@@ -57,7 +62,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               href={caseStudy.repoHref}
               target="_blank"
               rel="noreferrer"
-              className="text-foreground hover:text-link text-sm font-medium transition"
+              className="text-foreground hover:text-link text-sm font-bold transition"
             >
               Repository →
             </Link>
@@ -68,7 +73,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               href={caseStudy.demoHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:text-link text-sm font-medium transition"
+              className="text-foreground hover:text-link text-sm font-bold transition"
             >
               Live Demo ↗
             </Link>
@@ -149,14 +154,14 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           body={caseStudy.system.body}
         />
 
-        <div className="bg-card border-default shadow-card mt-8 rounded-3xl border p-8">
+        <div className="border-default bg-card shadow-card mt-8 rounded-[2rem] border p-8 backdrop-blur">
           <div className="space-y-4 text-center">
             {caseStudy.system.architecture.map((step, index) => (
               <div key={step.label}>
-                <p className="text-foreground text-lg font-medium">{step.label}</p>
+                <p className="text-foreground text-lg font-bold">{step.label}</p>
 
                 {index < caseStudy.system.architecture.length - 1 ? (
-                  <p className="text-poetic-soft text-sm">↓</p>
+                  <p className="font-mono-brand text-accent text-sm font-semibold">↓</p>
                 ) : null}
               </div>
             ))}
@@ -240,8 +245,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 function MetaItem({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="text-poetic-soft text-xs font-medium tracking-[0.22em] uppercase">{label}</p>
-      <p className="text-foreground mt-2 text-sm font-medium">{value}</p>
+      <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.22em] uppercase">
+        {label}
+      </p>
+      <p className="text-foreground mt-2 text-sm font-bold">{value}</p>
     </div>
   );
 }
@@ -249,10 +256,15 @@ function MetaItem({ label, value }: { label: string; value: string }) {
 function Section({ eyebrow, title, body }: { eyebrow: string; title: string; body?: string }) {
   return (
     <div className="max-w-3xl">
-      <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">{eyebrow}</p>
-      <h2 className="mt-3 text-3xl font-medium tracking-tight text-balance">{title}</h2>
+      <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
+        {eyebrow}
+      </p>
 
-      {body ? <p className="text-muted mt-4 text-base leading-relaxed">{body}</p> : null}
+      <h2 className="font-heading text-primary mt-3 text-3xl leading-tight font-normal text-balance md:text-5xl">
+        {title}
+      </h2>
+
+      {body ? <p className="text-muted mt-5 text-base leading-relaxed">{body}</p> : null}
     </div>
   );
 }
@@ -270,15 +282,21 @@ function SectionInner({
 }) {
   return (
     <div>
-      <p className="text-poetic-soft text-xs font-medium tracking-[0.24em] uppercase">{eyebrow}</p>
-      <h3 className="mt-3 text-2xl font-medium tracking-tight">{title}</h3>
+      <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
+        {eyebrow}
+      </p>
+
+      <h3 className="font-heading text-primary mt-3 text-2xl leading-tight font-normal">{title}</h3>
 
       {body ? <p className="text-muted mt-4 text-base leading-relaxed">{body}</p> : null}
 
       {list ? (
-        <ul className="text-muted mt-4 space-y-3 text-base leading-relaxed">
+        <ul className="text-muted mt-5 space-y-3 text-base leading-relaxed">
           {list.map((item) => (
-            <li key={item}>• {item}</li>
+            <li key={item} className="flex gap-3">
+              <span className="bg-accent mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" />
+              <span>{item}</span>
+            </li>
           ))}
         </ul>
       ) : null}
@@ -289,7 +307,7 @@ function SectionInner({
 function DecisionCard({ title, body }: { title: string; body: string }) {
   return (
     <div>
-      <h3 className="text-foreground text-lg font-medium tracking-tight">{title}</h3>
+      <h3 className="text-foreground text-lg font-bold">{title}</h3>
       <p className="text-muted mt-3 text-sm leading-relaxed">{body}</p>
     </div>
   );

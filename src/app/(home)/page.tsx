@@ -7,14 +7,14 @@ const featuredProjects = projects.filter((project) => project.featured);
 
 export default function HomePage() {
   return (
-    <main className="mx-auto w-full max-w-360 space-y-16 px-6 py-10 md:px-10 md:py-12">
+    <main className="mx-auto w-full max-w-360 space-y-20 px-6 py-10 md:px-10 md:py-14">
       <Hero />
 
       <section className="space-y-8">
         <div className="max-w-3xl space-y-3">
-          <SectionLabel>Featured Work</SectionLabel>
+          <SectionLabel>Selected Work</SectionLabel>
 
-          <h2 className="font-heading text-3xl font-semibold tracking-tight text-balance md:text-5xl">
+          <h2 className="font-heading text-3xl font-normal text-balance md:text-5xl">
             Digital health tools, care systems, and health equity projects
           </h2>
 
@@ -38,12 +38,14 @@ export default function HomePage() {
           <div className="max-w-3xl space-y-4">
             <SectionLabel>The Informatics Diary</SectionLabel>
 
-            <h2 className="font-heading text-3xl font-semibold tracking-tight text-balance md:text-4xl">
-              Field notes on women&apos;s health equity, informatics, digital health, and patient-centered care
+            <h2 className="font-heading text-3xl font-normal text-balance md:text-4xl">
+              Field notes on women&apos;s health equity, informatics, digital health, and
+              patient-centered care
             </h2>
 
             <p className="text-muted text-base leading-relaxed md:text-lg">
-              Essays and field notes on advocacy, research, health data, informatics, care systems, and patient-centered digital health.
+              A soft academic field-note archive where I connect advocacy, research, health data,
+              informatics, care navigation, patient education, and patient-centered digital health.
             </p>
           </div>
 
@@ -70,7 +72,7 @@ export default function HomePage() {
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
+    <p className="text-accent font-mono text-xs font-semibold tracking-[0.24em] uppercase">
       {children}
     </p>
   );

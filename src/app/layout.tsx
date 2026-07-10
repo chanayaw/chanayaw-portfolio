@@ -1,44 +1,47 @@
 import type { Metadata } from 'next';
-import { Sora, Manrope, IBM_Plex_Mono } from 'next/font/google';
+import { DM_Serif_Display, Nunito_Sans, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '../components/nav/Header';
 import Footer from '../components/nav/Footer';
 
-const sora = Sora({
-  variable: '--font-sora',
+const dmSerif = DM_Serif_Display({
+  variable: '--font-dm-serif',
   subsets: ['latin'],
+  weight: '400',
 });
 
-const manrope = Manrope({
-  variable: '--font-manrope',
+const nunitoSans = Nunito_Sans({
+  variable: '--font-nunito-sans',
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: '--font-ibm-plex-mono',
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
   subsets: ['latin'],
   weight: ['400', '500', '600'],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Chanaya W Portfolio',
+    default: 'Chanaya W',
     template: '%s | Chanaya W',
   },
   description:
-    "Software developer and Health Services Management student building toward biomedical informatics, digital health product development, and women's health equity.",
+    'Software developer, Health Services Management student, and Digital Health Technologist in training building toward Women’s Health Equity Advocacy & Informatics.',
   metadataBase: new URL('https://chanayaw.com'),
   openGraph: {
     title: 'Chanaya W',
-    description: "Software Engineer building research driven systems for women's health equity.",
+    description:
+      'Women’s Health Equity Advocacy & Informatics through health data, patient education, care navigation, digital health, and patient-centered tools.',
     url: 'https://chanayaw.com',
-    siteName: 'Chanaya W | Software Developer + Digital Health Product Builder',
+    siteName: 'Chanaya W',
     images: [
       {
         url: '/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Chanaya W',
+        alt: 'Chanaya W, Women’s Health Equity Advocacy & Informatics',
       },
     ],
     locale: 'en_US',
@@ -48,12 +51,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Chanaya W',
     description:
-      "Women's Health Data and Equity Technologist | Software Engineer | Research Translator",
+      'Digital Health Technologist in training building toward Women’s Health Equity Advocacy & Informatics.',
     images: ['/og-default.png'],
     creator: '@chanayaw',
   },
   icons: {
     icon: '/icon.png',
+    apple: '/apple-icon.png',
   },
 };
 
@@ -65,7 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.variable} ${manrope.variable} ${ibmPlexMono.variable} bg-background text-foreground overflow-x-hidden overflow-y-scroll antialiased`}
+        className={`${dmSerif.variable} ${nunitoSans.variable} ${geistMono.variable} bg-background text-foreground overflow-x-hidden overflow-y-scroll antialiased`}
       >
         <Header />
         {children}

@@ -1,3 +1,8 @@
 allowBuilds:
   sharp: true
   unrs-resolver: false
+
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+  - prettier@3.9.5

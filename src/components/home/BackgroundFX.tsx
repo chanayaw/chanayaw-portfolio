@@ -39,8 +39,8 @@ export default function BackgroundFX({ opacityClass = 'opacity-12', showParticle
     const getVar = (name: string, fallback: string) =>
       getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback;
 
-    const DOT = getVar('--color-secondary', '#6f88a6');
-    const LINE = getVar('--color-primary', '#7c8cff');
+    const DOT = getVar('--color-secondary', '#4b9a9a');
+    const LINE = getVar('--color-accent', '#d85c8a');
 
     const particles = Array.from({ length: COUNT }).map(() => ({
       x: Math.random() * wCss(),
