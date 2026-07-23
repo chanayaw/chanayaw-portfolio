@@ -1,18 +1,18 @@
-import { type Project, featuredProjects, projects } from '@/src/data/projectData';
+import { type Project, featuredProjects, projects } from "@/src/data/projectData";
 
-import { FeaturedProjectCard } from '@/src/components/projects/FeaturedProjectCard';
-import { ProjectCard } from '@/src/components/projects/ProjectCard';
-import { SectionLabel } from '@/src/components/projects/SectionLabel';
-import PageHeader from '@/src/components/shared/PageHeader';
+import { FeaturedProjectCard } from "@/src/components/projects/FeaturedProjectCard";
+import { ProjectCard } from "@/src/components/projects/ProjectCard";
+import { SectionLabel } from "@/src/components/projects/SectionLabel";
+import PageHeader from "@/src/components/shared/PageHeader";
 
 export default function ProjectsPage() {
   const healthInformationProjects = projects.filter(
-    (project) => project.category === 'Health Information + Data Systems',
+    (project) => project.category === "Health Information + Data Systems",
   );
 
   const conceptProjects = projects.filter(
     (project) =>
-      project.status !== 'Built' && project.category !== 'Health Information + Data Systems',
+      project.status !== "Built" && project.category !== "Health Information + Data Systems",
   );
 
   return (

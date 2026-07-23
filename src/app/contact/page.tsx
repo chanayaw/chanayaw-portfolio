@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useForm, ValidationError } from '@formspree/react';
+import Link from "next/link";
+import { useForm, ValidationError } from "@formspree/react";
 
-import SocialLinks from '@/src/components/nav/SocialLinks';
-import { SectionLabel } from '@/src/components/projects/SectionLabel';
-import PageHeader from '@/src/components/shared/PageHeader';
-import { Card, GlassCard } from '@/src/components/ui/Cards';
-import { ChipRegBorder } from '@/src/components/ui/Chips';
-import { SocialIcons } from '@/src/data/navData';
+import SocialLinks from "@/src/components/nav/SocialLinks";
+import { SectionLabel } from "@/src/components/projects/SectionLabel";
+import PageHeader from "@/src/components/shared/PageHeader";
+import { Card, GlassCard } from "@/src/components/ui/Cards";
+import { ChipRegBorder } from "@/src/components/ui/Chips";
+import { SocialIcons } from "@/src/data/navData";
 
 export default function ContactPage() {
-  const [state, handleSubmit] = useForm('xwvrbwvq');
+  const [state, handleSubmit] = useForm("xwvrbwvq");
 
   return (
     <main className="mx-auto w-full max-w-360 px-6 pb-24 md:px-10">
@@ -174,10 +174,10 @@ export default function ContactPage() {
                           className={inputClasses}
                           defaultValue=""
                           style={{
-                            appearance: 'none',
-                            WebkitAppearance: 'none',
-                            MozAppearance: 'none',
-                            backgroundImage: 'none',
+                            appearance: "none",
+                            WebkitAppearance: "none",
+                            MozAppearance: "none",
+                            backgroundImage: "none",
                           }}
                         >
                           <option value="" disabled>
@@ -241,11 +241,11 @@ export default function ContactPage() {
                       disabled={state.submitting}
                       className={`${
                         state.submitting
-                          ? 'bg-cta text-cta-foreground opacity-disabled cursor-not-allowed'
-                          : 'ring-brand bg-cta text-cta-foreground shadow-card hover:-translate-y-0.5 hover:brightness-105'
+                          ? "bg-cta text-cta-foreground opacity-disabled cursor-not-allowed"
+                          : "ring-brand bg-cta text-cta-foreground shadow-card hover:-translate-y-0.5 hover:brightness-105"
                       } inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold tracking-wide transition md:text-base`}
                     >
-                      {state.submitting ? 'Sending…' : 'Send Message'}
+                      {state.submitting ? "Sending…" : "Send Message"}
                     </button>
                   </div>
                 </form>
@@ -259,7 +259,7 @@ export default function ContactPage() {
 }
 
 const inputClasses =
-  'ring-brand border-default bg-surface/80 text-foreground placeholder:text-subtle h-12 w-full rounded-2xl border px-4 text-sm outline-none transition focus:border-strong focus:bg-surface';
+  "ring-brand border-default bg-surface/80 text-foreground placeholder:text-subtle h-12 w-full rounded-2xl border px-4 text-sm outline-none transition focus:border-strong focus:bg-surface";
 
 function Field({
   label,

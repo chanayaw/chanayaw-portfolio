@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useCallback, useEffect, useState } from 'react';
-import { AnimatePresence } from 'motion/react';
+import Link from "next/link";
+import { useCallback, useEffect, useState } from "react";
+import { AnimatePresence } from "motion/react";
 
-import { MenuItems, SocialIcons } from '../../data/navData';
-import MenuButton from './MenuButton';
-import NavDrawer from './NavDrawer';
-import PrimaryNav from './PrimaryNav';
+import { MenuItems, SocialIcons } from "../../data/navData";
+import MenuButton from "./MenuButton";
+import NavDrawer from "./NavDrawer";
+import PrimaryNav from "./PrimaryNav";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ const Header = () => {
     }
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         closeMenu();
       }
     };
@@ -33,17 +33,17 @@ const Header = () => {
       }
     };
 
-    const desktopBreakpoint = window.matchMedia('(min-width: 64rem)');
+    const desktopBreakpoint = window.matchMedia("(min-width: 64rem)");
 
-    window.addEventListener('keydown', handleKeyDown);
-    desktopBreakpoint.addEventListener('change', handleDesktopBreakpoint);
+    window.addEventListener("keydown", handleKeyDown);
+    desktopBreakpoint.addEventListener("change", handleDesktopBreakpoint);
 
     const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      desktopBreakpoint.removeEventListener('change', handleDesktopBreakpoint);
+      window.removeEventListener("keydown", handleKeyDown);
+      desktopBreakpoint.removeEventListener("change", handleDesktopBreakpoint);
 
       document.body.style.overflow = previousOverflow;
     };

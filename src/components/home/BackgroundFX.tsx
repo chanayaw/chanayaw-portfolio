@@ -1,5 +1,5 @@
-'use client';
-import { useEffect, useRef } from 'react';
+"use client";
+import { useEffect, useRef } from "react";
 
 type Props = {
   /** use opacity-08 | opacity-10 | opacity-12 etc. */
@@ -7,17 +7,17 @@ type Props = {
   showParticles?: boolean;
 };
 
-export default function BackgroundFX({ opacityClass = 'opacity-12', showParticles = true }: Props) {
+export default function BackgroundFX({ opacityClass = "opacity-12", showParticles = true }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
   const dprRef = useRef<number>(1);
 
   useEffect(() => {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!showParticles || reduceMotion) return;
 
     const canvas = canvasRef.current!;
-    const ctx = canvas.getContext('2d', { alpha: true })!;
+    const ctx = canvas.getContext("2d", { alpha: true })!;
 
     const setSize = () => {
       const dpr = window.devicePixelRatio || 1;
@@ -30,7 +30,7 @@ export default function BackgroundFX({ opacityClass = 'opacity-12', showParticle
     };
 
     setSize();
-    window.addEventListener('resize', setSize);
+    window.addEventListener("resize", setSize);
 
     const wCss = () => canvas.offsetWidth;
     const hCss = () => canvas.offsetHeight;
@@ -39,8 +39,8 @@ export default function BackgroundFX({ opacityClass = 'opacity-12', showParticle
     const getVar = (name: string, fallback: string) =>
       getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback;
 
-    const DOT = getVar('--color-secondary', '#4b9a9a');
-    const LINE = getVar('--color-accent', '#d85c8a');
+    const DOT = getVar("--color-secondary", "#4b9a9a");
+    const LINE = getVar("--color-accent", "#d85c8a");
 
     const particles = Array.from({ length: COUNT }).map(() => ({
       x: Math.random() * wCss(),
@@ -96,7 +96,7 @@ export default function BackgroundFX({ opacityClass = 'opacity-12', showParticle
     rafRef.current = requestAnimationFrame(tick);
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      window.removeEventListener('resize', setSize);
+      window.removeEventListener("resize", setSize);
     };
   }, [showParticles]);
 

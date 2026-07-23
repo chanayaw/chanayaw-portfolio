@@ -1,7 +1,7 @@
-import { type Project } from '@/src/data/projectData';
+import { type Project } from "@/src/data/projectData";
 
-import { PrimaryBtn } from '../ui/Buttons';
-import { StackBadge } from './StackBadge';
+import { PrimaryBtn } from "../ui/Buttons";
+import { StackBadge } from "./StackBadge";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   const hasLinks = Boolean(project.caseStudyHref || project.repoHref || project.demoHref);

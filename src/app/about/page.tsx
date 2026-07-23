@@ -1,8 +1,8 @@
-import PageHeader from '@/src/components/shared/PageHeader';
-import { SectionLabel } from '@/src/components/projects/SectionLabel';
-import { Card, GlassCard, SoftWashCard } from '@/src/components/ui/Cards';
-import { PrimaryCTA, SecondaryCTA } from '@/src/components/ui/Buttons';
-import { ChipMono, ChipThinBorder } from '@/src/components/ui/Chips';
+import PageHeader from "@/src/components/shared/PageHeader";
+import { SectionLabel } from "@/src/components/projects/SectionLabel";
+import { Card, GlassCard, SoftWashCard } from "@/src/components/ui/Cards";
+import { PrimaryCTA, SecondaryCTA } from "@/src/components/ui/Buttons";
+import { ChipMono, ChipThinBorder } from "@/src/components/ui/Chips";
 
 export default function AboutPage() {
   return (

@@ -1,35 +1,35 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import { SectionLabel } from '@/src/components/projects/SectionLabel';
-import PageHeader from '@/src/components/shared/PageHeader';
-import { Card, SoftWashCard } from '@/src/components/ui/Cards';
-import { ChipMono } from '@/src/components/ui/Chips';
-import { SecondaryCTA } from '@/src/components/ui/Buttons';
+import { SectionLabel } from "@/src/components/projects/SectionLabel";
+import PageHeader from "@/src/components/shared/PageHeader";
+import { Card, SoftWashCard } from "@/src/components/ui/Cards";
+import { ChipMono } from "@/src/components/ui/Chips";
+import { SecondaryCTA } from "@/src/components/ui/Buttons";
 
 const writingThemes = [
   {
-    label: 'EQUITY',
-    title: 'Women’s Health Equity',
+    label: "EQUITY",
+    title: "Women’s Health Equity",
     description:
-      'Independent writing on patient dismissal, delayed diagnosis, medical bias, care access, understandable information, and the experiences of women who are too often unheard.',
+      "Independent writing on patient dismissal, delayed diagnosis, medical bias, care access, understandable information, and the experiences of women who are too often unheard.",
   },
   {
-    label: 'INFORMATION',
-    title: 'Health Information + Systems',
+    label: "INFORMATION",
+    title: "Health Information + Systems",
     description:
-      'Learning notes on documentation, data quality, healthcare workflows, information systems, and how health information moves through care environments.',
+      "Learning notes on documentation, data quality, healthcare workflows, information systems, and how health information moves through care environments.",
   },
   {
-    label: 'DATA + TECH',
-    title: 'Digital Health + Healthcare Data',
+    label: "DATA + TECH",
+    title: "Digital Health + Healthcare Data",
     description:
-      'Explorations of structured data, digital tools, accessibility, dashboards, information design, and the responsible interpretation of healthcare data.',
+      "Explorations of structured data, digital tools, accessibility, dashboards, information design, and the responsible interpretation of healthcare data.",
   },
   {
-    label: 'LEARNING',
-    title: 'Academic Becoming',
+    label: "LEARNING",
+    title: "Academic Becoming",
     description:
-      'Field notes from studying Health Services Management, health information, data analytics, informatics, research practices, and professional development.',
+      "Field notes from studying Health Services Management, health information, data analytics, informatics, research practices, and professional development.",
   },
 ];
 

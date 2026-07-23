@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import { type Project } from '@/src/data/projectData';
+import { type Project } from "@/src/data/projectData";
 
-import { StackBadge } from './StackBadge';
+import { StackBadge } from "./StackBadge";
 
 export const FeaturedProjectCard = ({ project }: { project: Project }) => {
   return (

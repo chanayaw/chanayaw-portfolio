@@ -1,23 +1,23 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const webpackSvgrOptions = {
   icon: true,
   svgProps: {
-    fill: 'currentColor',
-    focusable: 'false',
-    'aria-hidden': 'true',
+    fill: "currentColor",
+    focusable: "false",
+    "aria-hidden": "true",
   },
   svgo: true,
   svgoConfig: {
     plugins: [
       {
-        name: 'removeDimensions',
+        name: "removeDimensions",
         active: true,
       },
       {
-        name: 'removeAttrs',
+        name: "removeAttrs",
         params: {
-          attrs: '(fill|stroke)',
+          attrs: "(fill|stroke)",
         },
       },
     ],
@@ -27,18 +27,18 @@ const webpackSvgrOptions = {
 const turbopackSvgrOptions = {
   icon: true,
   svgProps: {
-    focusable: 'false',
-    'aria-hidden': 'true',
+    focusable: "false",
+    "aria-hidden": "true",
   },
   svgo: true,
   svgoConfig: {
     plugins: [
       {
-        name: 'removeViewBox',
+        name: "removeViewBox",
         active: false,
       },
       {
-        name: 'removeDimensions',
+        name: "removeDimensions",
         active: true,
       },
     ],
@@ -47,12 +47,12 @@ const turbopackSvgrOptions = {
 
 const nextConfig: NextConfig = {
   webpack(config) {
-    const fileLoaderRule = config.module.rules.find(
-      (rule: { test?: RegExp }) => rule.test?.test?.('.svg'),
+    const fileLoaderRule = config.module.rules.find((rule: { test?: RegExp }) =>
+      rule.test?.test?.(".svg"),
     );
 
     if (!fileLoaderRule) {
-      throw new Error('Could not find the existing Next.js SVG rule.');
+      throw new Error("Could not find the existing Next.js SVG rule.");
     }
 
     config.module.rules.push(
@@ -65,14 +65,11 @@ const nextConfig: NextConfig = {
         test: /\.svg$/i,
         issuer: fileLoaderRule.issuer,
         resourceQuery: {
-          not: [
-            ...((fileLoaderRule.resourceQuery as { not?: RegExp[] })?.not ?? []),
-            /url/,
-          ],
+          not: [...((fileLoaderRule.resourceQuery as { not?: RegExp[] })?.not ?? []), /url/],
         },
         use: [
           {
-            loader: '@svgr/webpack',
+            loader: "@svgr/webpack",
             options: webpackSvgrOptions,
           },
         ],
@@ -86,14 +83,14 @@ const nextConfig: NextConfig = {
 
   turbopack: {
     rules: {
-      '*.svg': {
+      "*.svg": {
         loaders: [
           {
-            loader: '@svgr/webpack',
+            loader: "@svgr/webpack",
             options: turbopackSvgrOptions,
           },
         ],
-        as: '*.js',
+        as: "*.js",
       },
     },
   },

@@ -1,10 +1,10 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import Hero from '../../components/home/Hero';
-import { FeaturedProjectCard } from '../../components/projects/FeaturedProjectCard';
-import { projects } from '../../data/projectData';
+import Hero from "../../components/home/Hero";
+import { FeaturedProjectCard } from "../../components/projects/FeaturedProjectCard";
+import { projects } from "../../data/projectData";
 
-const productionProjects = projects.filter((project) => project.status === 'Built');
+const productionProjects = projects.filter((project) => project.status === "Built");
 
 export default function HomePage() {
   return (

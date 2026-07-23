@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { motion, useReducedMotion } from 'motion/react';
-import { useEffect, useRef } from 'react';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion, useReducedMotion } from "motion/react";
+import { useEffect, useRef } from "react";
 
-import CloseIcon from '../../assets/icons/close.svg';
+import CloseIcon from "../../assets/icons/close.svg";
 
-import type { MenuItem, SocialIcon } from '../../data/navData';
+import type { MenuItem, SocialIcon } from "../../data/navData";
 
-import SocialLinks from './SocialLinks';
-import ThemeToggle from './ThemeToggle';
+import SocialLinks from "./SocialLinks";
+import ThemeToggle from "./ThemeToggle";
 
 interface NavDrawerProps {
   menuItems: MenuItem[];
@@ -27,8 +27,8 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
   const openerRef = useRef<HTMLElement | null>(null);
 
   const isCurrentPage = (href: string) => {
-    if (href === '/') {
-      return pathname === '/';
+    if (href === "/") {
+      return pathname === "/";
     }
 
     return pathname === href || pathname.startsWith(`${href}/`);
@@ -47,22 +47,22 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
     }
 
     const handleTabKey = (event: KeyboardEvent) => {
-      if (event.key !== 'Tab') {
+      if (event.key !== "Tab") {
         return;
       }
 
       const focusableElements = Array.from(
         drawer.querySelectorAll<HTMLElement>(
           [
-            'a[href]',
-            'button:not([disabled])',
-            'input:not([disabled])',
-            'select:not([disabled])',
-            'textarea:not([disabled])',
+            "a[href]",
+            "button:not([disabled])",
+            "input:not([disabled])",
+            "select:not([disabled])",
+            "textarea:not([disabled])",
             '[tabindex]:not([tabindex="-1"])',
-          ].join(','),
+          ].join(","),
         ),
-      ).filter((element) => element.getAttribute('aria-hidden') !== 'true');
+      ).filter((element) => element.getAttribute("aria-hidden") !== "true");
 
       if (focusableElements.length === 0) {
         return;
@@ -83,10 +83,10 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
       }
     };
 
-    drawer.addEventListener('keydown', handleTabKey);
+    drawer.addEventListener("keydown", handleTabKey);
 
     return () => {
-      drawer.removeEventListener('keydown', handleTabKey);
+      drawer.removeEventListener("keydown", handleTabKey);
 
       window.requestAnimationFrame(() => {
         openerRef.current?.focus();
@@ -99,14 +99,14 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
       ref={drawerRef}
       key="mobile-menu"
       className="bg-background text-foreground fixed inset-0 z-9999 h-screen w-screen overflow-y-auto lg:hidden"
-      initial={reduceMotion ? { opacity: 0 } : { x: '100%', opacity: 0 }}
+      initial={reduceMotion ? { opacity: 0 } : { x: "100%", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      exit={reduceMotion ? { opacity: 0 } : { x: '100%', opacity: 0 }}
+      exit={reduceMotion ? { opacity: 0 } : { x: "100%", opacity: 0 }}
       transition={
         reduceMotion
           ? { duration: 0 }
           : {
-              type: 'spring',
+              type: "spring",
               stiffness: 300,
               damping: 30,
             }
@@ -114,7 +114,7 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
       role="dialog"
       aria-modal="true"
       aria-label="Mobile navigation"
-      style={{ willChange: 'transform, opacity' }}
+      style={{ willChange: "transform, opacity" }}
     >
       <motion.div
         aria-hidden="true"
@@ -169,15 +169,15 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    aria-current={current ? 'page' : undefined}
+                    aria-current={current ? "page" : undefined}
                     className={`group border-default shadow-card hover:shadow-pop flex items-center justify-between rounded-3xl border px-5 py-4 backdrop-blur transition hover:-translate-y-0.5 ${
-                      current ? 'bg-surface-soft' : 'bg-card hover:bg-surface-soft'
+                      current ? "bg-surface-soft" : "bg-card hover:bg-surface-soft"
                     }`}
                     onClick={onClose}
                   >
                     <span
                       className={`font-heading text-3xl leading-tight font-medium tracking-[-0.025em] ${
-                        current ? 'text-accent' : 'text-primary'
+                        current ? "text-accent" : "text-primary"
                       }`}
                     >
                       {item.label}

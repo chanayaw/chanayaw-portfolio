@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* ============================================================
    Chanaya W — Global Design Tokens
@@ -444,24 +444,24 @@
   .font-heading {
     font-family: var(--font-heading), var(--font-nunito-sans), system-ui, sans-serif;
     font-feature-settings:
-      'kern' 1,
-      'liga' 1;
+      "kern" 1,
+      "liga" 1;
     text-rendering: optimizeLegibility;
   }
 
   .font-sans {
     font-family: var(--font-nunito-sans), system-ui, sans-serif;
     font-feature-settings:
-      'kern' 1,
-      'liga' 1;
+      "kern" 1,
+      "liga" 1;
     text-rendering: optimizeLegibility;
   }
 
   .font-mono {
     font-family: var(--font-geist-mono), ui-monospace, monospace;
     font-feature-settings:
-      'kern' 1,
-      'liga' 1;
+      "kern" 1,
+      "liga" 1;
   }
 
   /* Brand type scale */

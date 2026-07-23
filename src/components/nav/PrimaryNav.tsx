@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { motion, useReducedMotion } from 'motion/react';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion, useReducedMotion } from "motion/react";
 
-import type { MenuItem, SocialIcon } from '../../data/navData';
+import type { MenuItem, SocialIcon } from "../../data/navData";
 
-import SocialLinks from './SocialLinks';
-import ThemeToggle from './ThemeToggle';
+import SocialLinks from "./SocialLinks";
+import ThemeToggle from "./ThemeToggle";
 
 interface PrimaryNavProps {
   menuItems: MenuItem[];
@@ -19,8 +19,8 @@ const PrimaryNav = ({ menuItems, socialIcons }: PrimaryNavProps) => {
   const reduceMotion = useReducedMotion();
 
   const isCurrentPage = (href: string) => {
-    if (href === '/') {
-      return pathname === '/';
+    if (href === "/") {
+      return pathname === "/";
     }
 
     return pathname === href || pathname.startsWith(`${href}/`);
@@ -36,9 +36,9 @@ const PrimaryNav = ({ menuItems, socialIcons }: PrimaryNavProps) => {
             <li key={item.href}>
               <Link
                 href={item.href}
-                aria-current={current ? 'page' : undefined}
+                aria-current={current ? "page" : undefined}
                 className={`font-mono-brand relative isolate rounded-full px-4 py-2 text-[0.68rem] font-semibold tracking-[0.2em] uppercase transition ${
-                  current ? 'text-accent' : 'text-subtle hover:text-accent'
+                  current ? "text-accent" : "text-subtle hover:text-accent"
                 }`}
               >
                 {current ? (
@@ -50,7 +50,7 @@ const PrimaryNav = ({ menuItems, socialIcons }: PrimaryNavProps) => {
                       reduceMotion
                         ? { duration: 0 }
                         : {
-                            type: 'spring',
+                            type: "spring",
                             stiffness: 420,
                             damping: 34,
                             mass: 0.7,

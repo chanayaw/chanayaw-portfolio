@@ -1,12 +1,12 @@
-import type { ComponentType, SVGProps } from 'react';
+import type { ComponentType, SVGProps } from "react";
 
-import GitHub from '../assets/icons/github.svg';
-import Instagram from '../assets/icons/instagram.svg';
-import LinkedIn from '../assets/icons/linkedin.svg';
-import Substack from '../assets/icons/substack.svg';
-import Threads from '../assets/icons/threads.svg';
-import TikTok from '../assets/icons/tiktok.svg';
-import YouTube from '../assets/icons/youtube.svg';
+import GitHub from "../assets/icons/github.svg";
+import Instagram from "../assets/icons/instagram.svg";
+import LinkedIn from "../assets/icons/linkedin.svg";
+import Substack from "../assets/icons/substack.svg";
+import Threads from "../assets/icons/threads.svg";
+import TikTok from "../assets/icons/tiktok.svg";
+import YouTube from "../assets/icons/youtube.svg";
 
 export type MenuItem = {
   label: string;
@@ -28,44 +28,44 @@ export type SocialIcon = {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
 };
 
-export const resumeHref = '/resume/chanaya-w-resume.pdf';
+export const resumeHref = "/resume/chanaya-w-resume.pdf";
 
 export const MenuItems: MenuItem[] = [
   {
-    label: 'Home',
-    href: '/',
+    label: "Home",
+    href: "/",
   },
   {
-    label: 'Experience',
-    href: '/experience',
+    label: "Experience",
+    href: "/experience",
   },
   {
-    label: 'Projects',
-    href: '/projects',
+    label: "Projects",
+    href: "/projects",
   },
   {
-    label: 'Diary',
-    href: '/field-notes',
+    label: "Diary",
+    href: "/field-notes",
   },
   {
-    label: 'About',
-    href: '/about',
+    label: "About",
+    href: "/about",
   },
   {
-    label: 'Contact',
-    href: '/contact',
+    label: "Contact",
+    href: "/contact",
   },
 ];
 
 export const RecruiterActions: RecruiterAction[] = [
   {
-    label: 'Experience',
-    href: '/experience',
+    label: "Experience",
+    href: "/experience",
     available: false,
   },
   {
-    label: 'Resume',
-    href: '/resume/chanaya-w-resume.pdf',
+    label: "Resume",
+    href: "/resume/chanaya-w-resume.pdf",
     available: false,
     download: true,
   },
@@ -73,38 +73,38 @@ export const RecruiterActions: RecruiterAction[] = [
 
 export const SocialIcons: SocialIcon[] = [
   {
-    label: 'GitHub',
-    href: 'https://github.com/chanayaw',
+    label: "GitHub",
+    href: "https://github.com/chanayaw",
     icon: GitHub,
   },
   {
-    label: 'LinkedIn',
-    href: 'https://linkedin.com/in/chanaya-wheeler',
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/chanaya-wheeler",
     icon: LinkedIn,
   },
   {
-    label: 'The Informatics Diary on Substack',
-    href: 'https://theinformaticsdiary.substack.com',
+    label: "The Informatics Diary on Substack",
+    href: "https://theinformaticsdiary.substack.com",
     icon: Substack,
   },
   {
-    label: 'YouTube',
-    href: 'https://youtube.com/@chanayaw',
+    label: "YouTube",
+    href: "https://youtube.com/@chanayaw",
     icon: YouTube,
   },
   {
-    label: 'Instagram',
-    href: 'https://instagram.com/chanayaw',
+    label: "Instagram",
+    href: "https://instagram.com/chanayaw",
     icon: Instagram,
   },
   {
-    label: 'Threads',
-    href: 'https://threads.com/chanayaw',
+    label: "Threads",
+    href: "https://threads.com/chanayaw",
     icon: Threads,
   },
   {
-    label: 'TikTok',
-    href: 'https://www.tiktok.com/@chanaya.w',
+    label: "TikTok",
+    href: "https://www.tiktok.com/@chanaya.w",
     icon: TikTok,
   },
 ];

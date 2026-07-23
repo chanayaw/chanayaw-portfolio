@@ -1,16 +1,16 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 interface ButtonProps {
   link: string;
   label: string;
-  status?: 'default' | 'disabled';
+  status?: "default" | "disabled";
 }
 
 const baseClasses =
-  'inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold tracking-wide transition duration-300 md:text-base';
+  "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold tracking-wide transition duration-300 md:text-base";
 
-export const PrimaryCTA = ({ link, label, status = 'default' }: ButtonProps) => {
-  if (status === 'disabled') {
+export const PrimaryCTA = ({ link, label, status = "default" }: ButtonProps) => {
+  if (status === "disabled") {
     return (
       <span
         aria-disabled="true"

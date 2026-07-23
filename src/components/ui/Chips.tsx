@@ -3,7 +3,7 @@ type ChipProps = {
 };
 
 const baseClasses =
-  'inline-flex items-center rounded-full border px-3 py-1.5 text-xs font-medium tracking-wide md:text-sm';
+  "inline-flex items-center rounded-full border px-3 py-1.5 text-xs font-medium tracking-wide md:text-sm";
 
 export const ChipThinBorder = ({ children }: ChipProps) => {
   return (

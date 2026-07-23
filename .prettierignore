@@ -1,0 +1,8 @@
+# Dependencies and builds
+node_modules/
+dist/
+build/
+
+# Lockfiles and system files
+package-lock.json
+.DS_Store

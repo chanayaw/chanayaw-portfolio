@@ -1,19 +1,19 @@
-import { PrimaryCTA, SecondaryCTA } from '../ui/Buttons';
-import { ChipThinBorder } from '../ui/Chips';
-import { GlassCard } from '../ui/Cards';
-import BackgroundFX from './BackgroundFX';
+import { PrimaryCTA, SecondaryCTA } from "../ui/Buttons";
+import { ChipThinBorder } from "../ui/Chips";
+import { GlassCard } from "../ui/Cards";
+import BackgroundFX from "./BackgroundFX";
 
 const professionalStrengths = [
-  'TypeScript',
-  'React',
-  'SQL',
-  'PostgreSQL',
-  'Structured Data',
-  'Documentation',
-  'Quality Assurance',
-  'Workflow Analysis',
-  'Accessibility',
-  'Troubleshooting',
+  "TypeScript",
+  "React",
+  "SQL",
+  "PostgreSQL",
+  "Structured Data",
+  "Documentation",
+  "Quality Assurance",
+  "Workflow Analysis",
+  "Accessibility",
+  "Troubleshooting",
 ];
 
 export default function Hero() {

@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { ChipThinBorder, ChipRegBorder } from '@/src/components/ui/Chips';
-import { Card, GlassCard } from '@/src/components/ui/Cards';
-import { caseStudies, getCaseStudyBySlug } from '@/src/data/caseStudyData';
-import type { Metadata } from 'next';
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ChipThinBorder, ChipRegBorder } from "@/src/components/ui/Chips";
+import { Card, GlassCard } from "@/src/components/ui/Cards";
+import { caseStudies, getCaseStudyBySlug } from "@/src/data/caseStudyData";
+import type { Metadata } from "next";
 
 type CaseStudyPageProps = {
   params: Promise<{
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
 
   if (!caseStudy) {
     return {
-      title: 'Project Not Found | Chanaya W.',
+      title: "Project Not Found | Chanaya W.",
     };
   }
 
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
       title: `${caseStudy.title} | Chanaya W.`,
       description: caseStudy.summary,
       url,
-      type: 'article',
+      type: "article",
     },
   };
 }
@@ -63,7 +63,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
           {caseStudy.projectType}
           <span aria-hidden="true"> · </span>
-          {caseStudy.status === 'Planned' ? 'Project Brief' : 'Case Study'}
+          {caseStudy.status === "Planned" ? "Project Brief" : "Case Study"}
         </p>
 
         <div className="mt-4 max-w-5xl">

@@ -1,24 +1,24 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import { SocialIcons } from '../../data/navData';
-import SocialLinks from './SocialLinks';
+import { SocialIcons } from "../../data/navData";
+import SocialLinks from "./SocialLinks";
 
 const footerLinks = [
   {
-    label: 'Projects',
-    href: '/projects',
+    label: "Projects",
+    href: "/projects",
   },
   {
-    label: 'Diary',
-    href: '/field-notes',
+    label: "Diary",
+    href: "/field-notes",
   },
   {
-    label: 'About',
-    href: '/about',
+    label: "About",
+    href: "/about",
   },
   {
-    label: 'Contact',
-    href: '/contact',
+    label: "Contact",
+    href: "/contact",
   },
 ];
 

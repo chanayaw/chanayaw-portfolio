@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-type ThemeMode = 'light' | 'dark';
+type ThemeMode = "light" | "dark";
 
 type ColorToken = {
   label: string;
@@ -12,163 +12,163 @@ type ColorToken = {
 
 const foundationTokens: ColorToken[] = [
   {
-    label: 'Background',
-    variable: '--color-background',
-    purpose: 'Primary page background',
+    label: "Background",
+    variable: "--color-background",
+    purpose: "Primary page background",
   },
   {
-    label: 'Foreground',
-    variable: '--color-foreground',
-    purpose: 'Primary readable text',
+    label: "Foreground",
+    variable: "--color-foreground",
+    purpose: "Primary readable text",
   },
   {
-    label: 'Surface',
-    variable: '--color-surface',
-    purpose: 'Standard cards and panels',
+    label: "Surface",
+    variable: "--color-surface",
+    purpose: "Standard cards and panels",
   },
   {
-    label: 'Soft Surface',
-    variable: '--color-surface-soft',
-    purpose: 'Editorial and supporting areas',
+    label: "Soft Surface",
+    variable: "--color-surface-soft",
+    purpose: "Editorial and supporting areas",
   },
   {
-    label: 'Elevated Surface',
-    variable: '--color-surface-elevated',
-    purpose: 'Higher-emphasis content',
+    label: "Elevated Surface",
+    variable: "--color-surface-elevated",
+    purpose: "Higher-emphasis content",
   },
   {
-    label: 'Card',
-    variable: '--color-card',
-    purpose: 'Translucent card treatment',
+    label: "Card",
+    variable: "--color-card",
+    purpose: "Translucent card treatment",
   },
   {
-    label: 'Border',
-    variable: '--color-border',
-    purpose: 'Default separation',
+    label: "Border",
+    variable: "--color-border",
+    purpose: "Default separation",
   },
   {
-    label: 'Strong Border',
-    variable: '--color-border-strong',
-    purpose: 'Interactive emphasis',
+    label: "Strong Border",
+    variable: "--color-border-strong",
+    purpose: "Interactive emphasis",
   },
   {
-    label: 'Muted Text',
-    variable: '--color-muted',
-    purpose: 'Secondary body copy',
+    label: "Muted Text",
+    variable: "--color-muted",
+    purpose: "Secondary body copy",
   },
   {
-    label: 'Subtle Text',
-    variable: '--color-subtle',
-    purpose: 'Metadata and supporting text',
+    label: "Subtle Text",
+    variable: "--color-subtle",
+    purpose: "Metadata and supporting text",
   },
 ];
 
 const brandTokens: ColorToken[] = [
   {
-    label: 'Primary',
-    variable: '--color-primary',
-    purpose: 'Professional headings',
+    label: "Primary",
+    variable: "--color-primary",
+    purpose: "Professional headings",
   },
   {
-    label: 'Signature Rose',
-    variable: '--color-accent',
-    purpose: 'Primary brand accent',
+    label: "Signature Rose",
+    variable: "--color-accent",
+    purpose: "Primary brand accent",
   },
   {
-    label: 'Soft Pink',
-    variable: '--color-accent-soft',
-    purpose: 'Gentle emphasis',
+    label: "Soft Pink",
+    variable: "--color-accent-soft",
+    purpose: "Gentle emphasis",
   },
   {
-    label: 'Rose Wash',
-    variable: '--color-accent-muted',
-    purpose: 'Soft supporting surfaces',
+    label: "Rose Wash",
+    variable: "--color-accent-muted",
+    purpose: "Soft supporting surfaces",
   },
   {
-    label: 'Data Teal',
-    variable: '--color-secondary',
-    purpose: 'Systems and information',
+    label: "Data Teal",
+    variable: "--color-secondary",
+    purpose: "Systems and information",
   },
   {
-    label: 'Lavender',
-    variable: '--color-mist',
-    purpose: 'Editorial depth',
+    label: "Lavender",
+    variable: "--color-mist",
+    purpose: "Editorial depth",
   },
   {
-    label: 'Link',
-    variable: '--color-link',
-    purpose: 'Interactive text',
+    label: "Link",
+    variable: "--color-link",
+    purpose: "Interactive text",
   },
   {
-    label: 'CTA',
-    variable: '--color-cta',
-    purpose: 'Primary actions',
+    label: "CTA",
+    variable: "--color-cta",
+    purpose: "Primary actions",
   },
 ];
 
 const semanticTokens: ColorToken[] = [
   {
-    label: 'Success',
-    variable: '--color-success',
-    purpose: 'Completed or verified',
+    label: "Success",
+    variable: "--color-success",
+    purpose: "Completed or verified",
   },
   {
-    label: 'Information',
-    variable: '--color-info',
-    purpose: 'Informational states',
+    label: "Information",
+    variable: "--color-info",
+    purpose: "Informational states",
   },
   {
-    label: 'Warning',
-    variable: '--color-warning',
-    purpose: 'Attention required',
+    label: "Warning",
+    variable: "--color-warning",
+    purpose: "Attention required",
   },
   {
-    label: 'Error',
-    variable: '--color-error',
-    purpose: 'Errors and destructive states',
+    label: "Error",
+    variable: "--color-error",
+    purpose: "Errors and destructive states",
   },
   {
-    label: 'Chart Rose',
-    variable: '--color-chart-1',
-    purpose: 'Primary data series',
+    label: "Chart Rose",
+    variable: "--color-chart-1",
+    purpose: "Primary data series",
   },
   {
-    label: 'Chart Teal',
-    variable: '--color-chart-2',
-    purpose: 'Secondary data series',
+    label: "Chart Teal",
+    variable: "--color-chart-2",
+    purpose: "Secondary data series",
   },
   {
-    label: 'Chart Berry',
-    variable: '--color-chart-3',
-    purpose: 'Supporting data series',
+    label: "Chart Berry",
+    variable: "--color-chart-3",
+    purpose: "Supporting data series",
   },
   {
-    label: 'Chart Lavender',
-    variable: '--color-chart-4',
-    purpose: 'Supporting data series',
+    label: "Chart Lavender",
+    variable: "--color-chart-4",
+    purpose: "Supporting data series",
   },
 ];
 
 const competencyChips = [
-  'Structured Data',
-  'Documentation',
-  'Information Accuracy',
-  'Quality Assurance',
-  'Workflow Analysis',
-  'SQL',
-  'PostgreSQL',
-  'Accessibility',
-  'Technical Troubleshooting',
+  "Structured Data",
+  "Documentation",
+  "Information Accuracy",
+  "Quality Assurance",
+  "Workflow Analysis",
+  "SQL",
+  "PostgreSQL",
+  "Accessibility",
+  "Technical Troubleshooting",
 ];
 
 export default function TokenPage() {
-  const [mode, setMode] = useState<ThemeMode>('light');
-  const isDark = mode === 'dark';
+  const [mode, setMode] = useState<ThemeMode>("light");
+  const isDark = mode === "dark";
 
   return (
     <main
       className={`${
-        isDark ? 'dark' : ''
+        isDark ? "dark" : ""
       } bg-background text-foreground min-h-screen overflow-x-hidden`}
     >
       <section className="hero-ambient border-default relative isolate overflow-hidden border-b">
@@ -512,12 +512,12 @@ function ThemeControl({
       <div className="border-default bg-surface flex rounded-full border p-1">
         <button
           type="button"
-          aria-pressed={mode === 'light'}
-          onClick={() => onChange('light')}
+          aria-pressed={mode === "light"}
+          onClick={() => onChange("light")}
           className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-            mode === 'light'
-              ? 'bg-cta text-cta-foreground shadow-card'
-              : 'text-muted hover:text-foreground'
+            mode === "light"
+              ? "bg-cta text-cta-foreground shadow-card"
+              : "text-muted hover:text-foreground"
           }`}
         >
           Light
@@ -525,12 +525,12 @@ function ThemeControl({
 
         <button
           type="button"
-          aria-pressed={mode === 'dark'}
-          onClick={() => onChange('dark')}
+          aria-pressed={mode === "dark"}
+          onClick={() => onChange("dark")}
           className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-            mode === 'dark'
-              ? 'bg-cta text-cta-foreground shadow-card'
-              : 'text-muted hover:text-foreground'
+            mode === "dark"
+              ? "bg-cta text-cta-foreground shadow-card"
+              : "text-muted hover:text-foreground"
           }`}
         >
           Dark
@@ -619,10 +619,10 @@ function HierarchyCard({
     <article
       className={`rounded-3xl border p-6 ${
         highlighted
-          ? 'border-tech-chip-border bg-surface-blue shadow-card'
+          ? "border-tech-chip-border bg-surface-blue shadow-card"
           : editorial
-            ? 'border-default soft-wash shadow-card'
-            : 'border-default bg-surface shadow-card'
+            ? "border-default soft-wash shadow-card"
+            : "border-default bg-surface shadow-card"
       }`}
     >
       <p className="text-accent font-mono text-xs font-semibold tracking-[0.2em]">{number}</p>
@@ -681,15 +681,15 @@ function ColorSwatch({ token }: { token: ColorToken }) {
 
 function Chip({
   children,
-  variant = 'default',
+  variant = "default",
 }: {
   children: React.ReactNode;
-  variant?: 'default' | 'accent' | 'tech';
+  variant?: "default" | "accent" | "tech";
 }) {
   const styles = {
-    default: 'border-default bg-surface text-foreground',
-    accent: 'border-chip-border bg-chip-bg text-chip-text',
-    tech: 'border-tech-chip-border bg-tech-chip-bg text-tech-chip-text',
+    default: "border-default bg-surface text-foreground",
+    accent: "border-chip-border bg-chip-bg text-chip-text",
+    tech: "border-tech-chip-border bg-tech-chip-bg text-tech-chip-text",
   };
 
   return (
@@ -706,14 +706,14 @@ function StatusBadge({
   status,
 }: {
   children: React.ReactNode;
-  status: 'production' | 'built' | 'educational' | 'progress' | 'planned';
+  status: "production" | "built" | "educational" | "progress" | "planned";
 }) {
   const styles = {
-    production: 'border-success bg-success-soft text-success-foreground',
-    built: 'border-info bg-info-soft text-info-foreground',
-    educational: 'border-tech-chip-border bg-tech-chip-bg text-tech-chip-text',
-    progress: 'border-warning bg-warning-soft text-warning-foreground',
-    planned: 'border-default bg-surface-soft text-muted',
+    production: "border-success bg-success-soft text-success-foreground",
+    built: "border-info bg-info-soft text-info-foreground",
+    educational: "border-tech-chip-border bg-tech-chip-bg text-tech-chip-text",
+    progress: "border-warning bg-warning-soft text-warning-foreground",
+    planned: "border-default bg-surface-soft text-muted",
   };
 
   return (

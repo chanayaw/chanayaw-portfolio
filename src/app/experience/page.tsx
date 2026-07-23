@@ -1,14 +1,14 @@
-import PageHeader from '@/src/components/shared/PageHeader';
-import { ChipThinBorder } from '@/src/components/ui/Chips';
+import PageHeader from "@/src/components/shared/PageHeader";
+import { ChipThinBorder } from "@/src/components/ui/Chips";
 
 import {
   additionalExperience,
   appliedStudy,
   education,
   featuredExperience,
-} from '@/src/data/experienceData';
+} from "@/src/data/experienceData";
 
-import { resumeHref } from '../../data/navData';
+import { resumeHref } from "../../data/navData";
 
 export default function ExperiencePage() {
   return (
