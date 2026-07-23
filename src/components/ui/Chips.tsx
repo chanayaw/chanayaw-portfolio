@@ -1,51 +1,89 @@
+import type { ReactNode } from "react";
+
 type ChipProps = {
-  children: React.ReactNode;
+  children: ReactNode;
+  className?: string;
 };
 
-const baseClasses =
-  "inline-flex items-center rounded-full border px-3 py-1.5 text-xs font-medium tracking-wide md:text-sm";
+const readableChipClasses =
+  "inline-flex min-h-8 max-w-full items-center justify-center rounded-full border px-3 py-1.5 text-center text-xs leading-snug font-semibold md:text-sm";
 
-export const ChipThinBorder = ({ children }: ChipProps) => {
+const metadataChipClasses =
+  "font-mono-brand inline-flex min-h-7 max-w-full items-center justify-center rounded-full border px-3 py-1 text-center text-[0.68rem] leading-snug font-semibold tracking-[0.14em] uppercase";
+
+export const ChipThinBorder = ({ children, className = "" }: ChipProps) => {
   return (
-    <span className={`${baseClasses} border-chip-border bg-chip-bg text-chip-text`}>
+    <span
+      className={`${readableChipClasses} border-chip-border bg-chip-bg text-chip-text ${className}`}
+    >
       {children}
     </span>
   );
 };
 
-export const ChipRegBorder = ({ children }: ChipProps) => {
+export const ChipRegBorder = ({ children, className = "" }: ChipProps) => {
   return (
-    <span className={`${baseClasses} border-tech-chip-border bg-tech-chip-bg text-tech-chip-text`}>
+    <span
+      className={`${readableChipClasses} border-tech-chip-border bg-tech-chip-bg text-tech-chip-text ${className}`}
+    >
       {children}
     </span>
   );
 };
 
-export const ChipPrimary = ({ children }: ChipProps) => {
+export const ChipPrimary = ({ children, className = "" }: ChipProps) => {
   return (
-    <span className={`${baseClasses} border-default bg-surface text-foreground`}>{children}</span>
-  );
-};
-
-export const ChipAccent = ({ children }: ChipProps) => {
-  return (
-    <span className={`${baseClasses} border-chip-border bg-chip-bg text-chip-text`}>
+    <span
+      className={`${readableChipClasses} border-default bg-surface text-foreground ${className}`}
+    >
       {children}
     </span>
   );
 };
 
-export const ChipTech = ({ children }: ChipProps) => {
+export const ChipAccent = ({ children, className = "" }: ChipProps) => {
   return (
-    <span className={`${baseClasses} border-tech-chip-border bg-tech-chip-bg text-tech-chip-text`}>
+    <span
+      className={`${readableChipClasses} border-chip-border bg-chip-bg text-chip-text ${className}`}
+    >
       {children}
     </span>
   );
 };
 
-export const ChipMono = ({ children }: ChipProps) => {
+export const ChipTech = ({ children, className = "" }: ChipProps) => {
   return (
-    <span className="font-mono-brand border-default bg-surface text-subtle inline-flex items-center rounded-full border px-3 py-1.5 text-[0.68rem] font-semibold tracking-[0.2em] uppercase">
+    <span
+      className={`${metadataChipClasses} border-tech-chip-border bg-tech-chip-bg text-tech-chip-text ${className}`}
+    >
+      {children}
+    </span>
+  );
+};
+
+export const ChipMono = ({ children, className = "" }: ChipProps) => {
+  return (
+    <span className={`${metadataChipClasses} border-default bg-surface text-subtle ${className}`}>
+      {children}
+    </span>
+  );
+};
+
+export const ChipContext = ({ children, className = "" }: ChipProps) => {
+  return (
+    <span
+      className={`${metadataChipClasses} border-chip-border bg-chip-bg text-chip-text ${className}`}
+    >
+      {children}
+    </span>
+  );
+};
+
+export const ChipStatus = ({ children, className = "" }: ChipProps) => {
+  return (
+    <span
+      className={`${metadataChipClasses} border-default bg-surface/80 text-subtle ${className}`}
+    >
       {children}
     </span>
   );

@@ -2,6 +2,7 @@ import { type Project } from "@/src/data/projectData";
 
 import { PrimaryBtn } from "../ui/Buttons";
 import { StackBadge } from "./StackBadge";
+import { ChipContext, ChipStatus } from "../ui/Chips";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   const hasLinks = Boolean(project.caseStudyHref || project.repoHref || project.demoHref);
@@ -10,13 +11,8 @@ export const ProjectCard = ({ project }: { project: Project }) => {
     <article className="border-default bg-card shadow-card hover:shadow-pop flex min-h-90 flex-col justify-between rounded-xl border p-5 backdrop-blur transition duration-300 hover:-translate-y-1">
       <div>
         <div className="flex flex-wrap gap-2">
-          <span className="font-mono-brand border-chip-border bg-chip-bg text-chip-text inline-flex rounded-full border px-3 py-1 text-[0.68rem] font-semibold tracking-[0.16em] uppercase">
-            {project.projectType}
-          </span>
-
-          <span className="font-mono-brand border-default bg-surface/80 text-subtle inline-flex rounded-full border px-3 py-1 text-[0.68rem] font-semibold tracking-[0.16em] uppercase">
-            {project.status}
-          </span>
+          <ChipContext>{project.projectType}</ChipContext>
+          <ChipStatus>{project.status}</ChipStatus>
         </div>
 
         <p className="font-mono-brand text-accent mt-5 text-[0.68rem] font-semibold tracking-[0.16em] uppercase">

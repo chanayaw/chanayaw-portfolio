@@ -197,7 +197,7 @@ export default function TokenPage() {
               <Chip variant="accent">Health Information</Chip>
               <Chip variant="tech">Systems + Structured Data</Chip>
               <Chip>Healthcare Operations</Chip>
-              <Chip>Women's Health Equity Informatics</Chip>
+              <Chip>Women&apos;s Health Equity Informatics</Chip>
             </div>
           </div>
 
@@ -236,8 +236,8 @@ export default function TokenPage() {
               description="Readable supporting copy across pages, cards, forms, and project descriptions."
             >
               <p className="text-muted font-sans text-base leading-relaxed md:text-lg">
-                I'm a software developer and Health Services Management student transitioning into
-                health information, healthcare data, and informatics. I bring experience with
+                I&apos;m a software developer and Health Services Management student transitioning
+                into health information, healthcare data, and informatics. I bring experience with
                 structured information, digital systems, documentation, quality-focused workflows,
                 and technical problem-solving.
               </p>
@@ -385,7 +385,7 @@ export default function TokenPage() {
               </p>
 
               <p className="font-heading text-primary text-3xl leading-[1.08] font-medium tracking-tight">
-                I'm building toward Women's Health Equity Advocacy & Informatics.
+                I&apos;m building toward Women&apos;s Health Equity Advocacy & Informatics.
               </p>
             </div>
           </div>
@@ -470,8 +470,8 @@ export default function TokenPage() {
             >
               <p className="text-foreground text-base leading-relaxed">
                 I bring professional experience managing production software, structured data,
-                documentation, testing, troubleshooting, and operational workflows. I'm now applying
-                that foundation within health information and healthcare systems.
+                documentation, testing, troubleshooting, and operational workflows. I&apos;m now
+                applying that foundation within health information and healthcare systems.
               </p>
             </Specimen>
 
@@ -480,7 +480,7 @@ export default function TokenPage() {
               description="Purposeful, personal, and clearly identified as future-facing."
             >
               <p className="font-heading text-primary text-3xl leading-[1.08] font-medium tracking-[-0.02em]">
-                I'm building toward Women's Health Equity Advocacy & Informatics.
+                I&apos;m building toward Women&apos;s Health Equity Advocacy & Informatics.
               </p>
 
               <p className="text-muted mt-4 text-sm leading-relaxed">
