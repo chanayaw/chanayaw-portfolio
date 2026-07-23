@@ -483,7 +483,7 @@
   }
 
   .type-section-title {
-    @apply font-bold tracking-[-0.025em] text-balance;
+    @apply font-bold tracking-tight text-balance;
     font-family: var(--font-heading), var(--font-nunito-sans), system-ui, sans-serif;
     line-height: 1.08;
   }
@@ -495,7 +495,7 @@
   }
 
   .type-signature {
-    @apply font-medium tracking-[-0.025em] text-balance;
+    @apply font-medium tracking-tight text-balance;
     font-family: var(--font-heading), var(--font-nunito-sans), system-ui, sans-serif;
     line-height: 1.08;
   }

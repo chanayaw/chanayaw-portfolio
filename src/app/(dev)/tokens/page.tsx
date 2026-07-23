@@ -340,7 +340,7 @@ export default function TokenPage() {
             <div className="soft-wash border-default shadow-card rounded-[2rem] border p-6">
               <Eyebrow>Advocacy + Field Notes</Eyebrow>
 
-              <p className="font-heading text-primary mt-4 text-3xl leading-[1.08] font-medium tracking-[-0.025em]">
+              <p className="font-heading text-primary mt-4 text-3xl leading-[1.08] font-medium tracking-tight">
                 The advocacy and research fuel the technology.
               </p>
 
@@ -556,7 +556,7 @@ function DesignSection({
       <div className="max-w-3xl">
         <Eyebrow>{eyebrow}</Eyebrow>
 
-        <h2 className="font-heading text-primary mt-3 text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-5xl">
+        <h2 className="font-heading text-primary mt-3 text-3xl leading-[1.08] font-bold tracking-tight text-balance md:text-5xl">
           {title}
         </h2>
 
@@ -630,7 +630,7 @@ function HierarchyCard({
       <p className="text-subtle mt-6 text-xs font-bold tracking-[0.16em] uppercase">{label}</p>
 
       {editorial ? (
-        <h3 className="font-heading text-primary mt-3 text-3xl leading-[1.08] font-medium tracking-[-0.025em]">
+        <h3 className="font-heading text-primary mt-3 text-3xl leading-[1.08] font-medium tracking-tight">
           {title}
         </h3>
       ) : (

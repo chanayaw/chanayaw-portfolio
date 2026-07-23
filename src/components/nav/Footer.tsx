@@ -48,7 +48,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <p className="font-heading text-primary text-2xl leading-[1.08] font-medium tracking-[-0.025em]">
+          <p className="font-heading text-primary text-2xl leading-[1.08] font-medium tracking-tight">
             Pink, precise, and patient-centered.
           </p>
 
