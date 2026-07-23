@@ -9,7 +9,6 @@ import {
 } from '@/src/data/experienceData';
 
 import { resumeHref } from '../../data/navData';
-import { PrimaryCTA } from '@/src/components/ui/Buttons';
 
 export default function ExperiencePage() {
   return (

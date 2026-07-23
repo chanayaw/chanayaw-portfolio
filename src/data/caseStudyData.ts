@@ -1,3 +1,5 @@
+import type { ProjectType } from './projectData';
+
 export type CaseStudyMetaItem = {
   label: string;
   value: string;
@@ -20,6 +22,7 @@ export type CaseStudyArchitectureStep = {
 };
 
 export type CaseStudyCategory =
+  | 'Health Information + Data Systems'
   | 'Product Systems'
   | 'Operational Tools'
   | 'Full-Stack Applications'
@@ -36,6 +39,7 @@ export type CaseStudy = {
   summary: string;
   category: CaseStudyCategory;
   status: CaseStudyStatus;
+  projectType: ProjectType;
   stack: string[];
   backHref: string;
   repoHref?: string;
@@ -79,17 +83,16 @@ export const caseStudies: CaseStudy[] = [
     summary:
       'A full-stack reservation management application built to support structured booking workflows, table coordination, operational visibility, and clearer day-to-day service management.',
     category: 'Full-Stack Applications',
+    projectType: 'Educational Project',
     status: 'Built',
     stack: ['React', 'Express.js', 'PostgreSQL', 'Knex.js'],
     backHref: '/projects',
-    repoHref: '',
-    demoHref: '',
 
     meta: [
       { label: 'Role', value: 'Solo Engineer' },
-      { label: 'Status', value: 'Built / Rebuild Planned' },
+      { label: 'Status', value: 'Built' },
       { label: 'Focus', value: 'Workflow + Operations' },
-      { label: 'Type', value: 'Full-Stack Application' },
+      { label: 'Type', value: 'Educational Full-Stack Application' },
     ],
 
     overview: {
@@ -177,7 +180,7 @@ export const caseStudies: CaseStudy[] = [
     outcome: {
       eyebrow: 'Outcome',
       title: 'What this project demonstrates',
-      body: 'This project demonstrates full-stack application design, relational data modeling, database-backed workflow management, and the ability to translate operational complexity into clearer user-facing systems. It remains relevant to my future direction because healthcare, digital health, and informatics work also require structured workflows, reliable data, and usable systems.',
+      body: 'This project demonstrates full-stack application development, relational data modeling, database-backed workflow management, validation, and the translation of operational complexity into a clearer user-facing system. These capabilities are transferable to information-intensive environments where accuracy, structured workflows, and reliable systems matter.',
     },
 
     nextSteps: {
@@ -200,6 +203,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       'A production feature designed to improve add-on visibility, checkout usability, and user flow clarity within an existing ticketing ecosystem.',
     category: 'Full-Stack Applications',
+    projectType: 'Professional Work',
     status: 'Production',
     stack: ['React', 'TypeScript', 'Tailwind CSS'],
     backHref: '/projects',
@@ -208,7 +212,7 @@ export const caseStudies: CaseStudy[] = [
       { label: 'Role', value: 'Sole Developer' },
       { label: 'Status', value: 'Production' },
       { label: 'Focus', value: 'Checkout UX + Feature Integration' },
-      { label: 'Type', value: 'Product Feature' },
+      { label: 'Type', value: 'Professional Production Feature' },
     ],
 
     overview: {
@@ -295,7 +299,7 @@ export const caseStudies: CaseStudy[] = [
     outcome: {
       eyebrow: 'Outcome',
       title: 'What this project demonstrates',
-      body: 'This work demonstrates production-minded frontend implementation, feature integration inside an existing system, and thoughtful alignment between user flow, technical constraints, and business priorities. It also reflects skills that transfer into digital health work, where new tools often need to fit safely into existing systems and workflows.',
+      body: 'This work demonstrates production frontend development, feature integration within an established system, accessibility-conscious implementation, and thoughtful alignment between user flow, technical constraints, and organizational priorities.',
     },
 
     nextSteps: {
@@ -318,6 +322,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       'A mobile-first event companion app designed to support vendor discovery, event navigation, structured information access, and reusable UI patterns for future event experiences.',
     category: 'Full-Stack Applications',
+    projectType: 'Professional Work',
     status: 'Production',
     stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
     backHref: '/projects',
@@ -326,7 +331,7 @@ export const caseStudies: CaseStudy[] = [
       { label: 'Role', value: 'Sole Developer' },
       { label: 'Status', value: 'Production' },
       { label: 'Focus', value: 'Information Access + Event Experience' },
-      { label: 'Type', value: 'Mobile-First Application' },
+      { label: 'Type', value: 'Professional Production Application' },
     ],
 
     overview: {
@@ -413,7 +418,7 @@ export const caseStudies: CaseStudy[] = [
     outcome: {
       eyebrow: 'Outcome',
       title: 'What this project demonstrates',
-      body: 'This project demonstrates mobile-first application design, structured content modeling, reusable system design, and the ability to build tools that improve information access in a real-world setting. It connects to my future digital health direction because patient-centered tools also require clear information architecture, usable interfaces, and workflows that help people find what they need at the right time.',
+      body: 'This project demonstrates mobile-first application development, structured content modeling, relational data systems, reusable interface design, and the creation of tools that improve information access in a real-world environment.',
     },
 
     nextSteps: {
@@ -429,6 +434,14 @@ export const caseStudies: CaseStudy[] = [
     },
   },
 ];
+
+const duplicateSlugs = caseStudies
+  .map((caseStudy) => caseStudy.slug)
+  .filter((slug, index, slugs) => slugs.indexOf(slug) !== index);
+
+if (process.env.NODE_ENV === 'development' && duplicateSlugs.length > 0) {
+  console.warn('Duplicate case-study slugs found:', duplicateSlugs);
+}
 
 export function getCaseStudyBySlug(slug: string) {
   return caseStudies.find((caseStudy) => caseStudy.slug === slug);

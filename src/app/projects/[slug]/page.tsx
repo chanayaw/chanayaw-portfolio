@@ -2,13 +2,47 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChipThinBorder, ChipRegBorder } from '@/src/components/ui/Chips';
 import { Card, GlassCard } from '@/src/components/ui/Cards';
-import { getCaseStudyBySlug } from '@/src/data/caseStudyData';
+import { caseStudies, getCaseStudyBySlug } from '@/src/data/caseStudyData';
+import type { Metadata } from 'next';
 
 type CaseStudyPageProps = {
   params: Promise<{
     slug: string;
   }>;
 };
+
+export function generateStaticParams() {
+  return caseStudies.map((caseStudy) => ({
+    slug: caseStudy.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const caseStudy = getCaseStudyBySlug(slug);
+
+  if (!caseStudy) {
+    return {
+      title: 'Project Not Found | Chanaya W.',
+    };
+  }
+
+  const url = `https://www.chanayaw.com/projects/${caseStudy.slug}`;
+
+  return {
+    title: `${caseStudy.title} | Chanaya W.`,
+    description: caseStudy.summary,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${caseStudy.title} | Chanaya W.`,
+      description: caseStudy.summary,
+      url,
+      type: 'article',
+    },
+  };
+}
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   const { slug } = await params;
@@ -27,11 +61,13 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         />
 
         <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
+          {caseStudy.projectType}
+          <span aria-hidden="true"> · </span>
           {caseStudy.status === 'Planned' ? 'Project Brief' : 'Case Study'}
         </p>
 
         <div className="mt-4 max-w-5xl">
-          <h1 className="font-heading text-primary text-5xl leading-[0.95] font-normal tracking-tight text-balance md:text-7xl">
+          <h1 className="font-heading text-primary text-5xl leading-[0.95] font-extrabold tracking-[-0.03em] text-balance md:text-7xl">
             {caseStudy.title}
           </h1>
 
@@ -58,25 +94,27 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           </Link>
 
           {caseStudy.repoHref ? (
-            <Link
+            <a
               href={caseStudy.repoHref}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              aria-label={`View the ${caseStudy.title} repository in a new tab`}
               className="text-foreground hover:text-link text-sm font-bold transition"
             >
-              Repository →
-            </Link>
+              Repository ↗
+            </a>
           ) : null}
 
           {caseStudy.demoHref ? (
-            <Link
+            <a
               href={caseStudy.demoHref}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Open the ${caseStudy.title} live demo in a new tab`}
               className="text-foreground hover:text-link text-sm font-bold transition"
             >
               Live Demo ↗
-            </Link>
+            </a>
           ) : null}
         </div>
       </section>
@@ -260,7 +298,7 @@ function Section({ eyebrow, title, body }: { eyebrow: string; title: string; bod
         {eyebrow}
       </p>
 
-      <h2 className="font-heading text-primary mt-3 text-3xl leading-tight font-normal text-balance md:text-5xl">
+      <h2 className="font-heading text-primary mt-3 text-3xl leading-tight font-bold tracking-tight text-balance md:text-5xl">
         {title}
       </h2>
 
@@ -286,7 +324,9 @@ function SectionInner({
         {eyebrow}
       </p>
 
-      <h3 className="font-heading text-primary mt-3 text-2xl leading-tight font-normal">{title}</h3>
+      <h3 className="font-heading text-primary mt-3 text-2xl leading-tight font-semibold">
+        {title}
+      </h3>
 
       {body ? <p className="text-muted mt-4 text-base leading-relaxed">{body}</p> : null}
 
@@ -294,7 +334,10 @@ function SectionInner({
         <ul className="text-muted mt-5 space-y-3 text-base leading-relaxed">
           {list.map((item) => (
             <li key={item} className="flex gap-3">
-              <span className="bg-accent mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" />
+              <span
+                aria-hidden="true"
+                className="bg-accent mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
+              />
               <span>{item}</span>
             </li>
           ))}

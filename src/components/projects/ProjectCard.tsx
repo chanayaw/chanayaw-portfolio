@@ -1,58 +1,75 @@
 import { type Project } from '@/src/data/projectData';
-import { StackBadge } from './StackBadge';
-import Link from 'next/link';
+
 import { PrimaryBtn } from '../ui/Buttons';
+import { StackBadge } from './StackBadge';
 
 export const ProjectCard = ({ project }: { project: Project }) => {
+  const hasLinks = Boolean(project.caseStudyHref || project.repoHref || project.demoHref);
+
   return (
     <article className="border-default bg-card shadow-card hover:shadow-pop flex min-h-90 flex-col justify-between rounded-xl border p-5 backdrop-blur transition duration-300 hover:-translate-y-1">
       <div>
         <div className="flex flex-wrap gap-2">
-          <span className="font-mono-brand border-default bg-surface/80 text-subtle rounded-full border px-3 py-1 text-[0.68rem] font-semibold tracking-[0.18em] uppercase">
+          <span className="font-mono-brand border-chip-border bg-chip-bg text-chip-text inline-flex rounded-full border px-3 py-1 text-[0.68rem] font-semibold tracking-[0.16em] uppercase">
+            {project.projectType}
+          </span>
+
+          <span className="font-mono-brand border-default bg-surface/80 text-subtle inline-flex rounded-full border px-3 py-1 text-[0.68rem] font-semibold tracking-[0.16em] uppercase">
             {project.status}
           </span>
         </div>
 
-        <h3 className="font-heading text-primary mt-4 text-2xl leading-tight font-normal tracking-tight">
+        <p className="font-mono-brand text-accent mt-5 text-[0.68rem] font-semibold tracking-[0.16em] uppercase">
+          {project.category}
+        </p>
+
+        <h3 className="font-heading text-primary mt-3 text-2xl leading-tight font-semibold tracking-tight">
           {project.title}
         </h3>
 
         <p className="text-muted mt-4 text-sm leading-relaxed">{project.summary}</p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div
+          className="mt-5 flex flex-wrap gap-2"
+          aria-label={`Technologies and focus areas for ${project.title}`}
+        >
           {project.stack.map((item) => (
             <StackBadge key={item} label={item} />
           ))}
         </div>
       </div>
 
-      <div
-        className={`${project.caseStudyHref && 'border-default border-t pt-5'} mt-2 flex flex-wrap items-center justify-between gap-3`}
-      >
-        {project.caseStudyHref && <PrimaryBtn link={project.caseStudyHref} label="Case Study" />}
+      {hasLinks ? (
+        <div className="border-default mt-7 flex flex-wrap items-center justify-between gap-3 border-t pt-5">
+          {project.caseStudyHref ? (
+            <PrimaryBtn link={project.caseStudyHref} label="View Case Study" />
+          ) : null}
 
-        {project.repoHref ? (
-          <Link
-            href={project.repoHref}
-            target="_blank"
-            rel="noreferrer"
-            className="text-subtle hover:text-link text-sm font-bold transition"
-          >
-            Repository →
-          </Link>
-        ) : null}
+          {project.repoHref ? (
+            <a
+              href={project.repoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View the ${project.title} repository in a new tab`}
+              className="text-subtle hover:text-link text-sm font-bold transition"
+            >
+              Repository ↗
+            </a>
+          ) : null}
 
-        {project.demoHref ? (
-          <Link
-            href={project.demoHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-link text-sm font-bold transition hover:underline hover:underline-offset-4"
-          >
-            Live Demo ↗
-          </Link>
-        ) : null}
-      </div>
+          {project.demoHref ? (
+            <a
+              href={project.demoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open the ${project.title} live demo in a new tab`}
+              className="text-link text-sm font-bold transition hover:underline hover:underline-offset-4"
+            >
+              Live Demo ↗
+            </a>
+          ) : null}
+        </div>
+      ) : null}
     </article>
   );
 };
