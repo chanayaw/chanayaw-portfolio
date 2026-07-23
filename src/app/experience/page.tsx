@@ -10,6 +10,26 @@ import {
 
 import { resumeHref } from "../../data/navData";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience",
+
+  description:
+    "Professional software-development, data, documentation, accessibility, quality-assurance, and operational experience supporting Chanaya W's transition into health information and informatics.",
+
+  alternates: {
+    canonical: "/experience",
+  },
+
+  openGraph: {
+    title: "Experience",
+    description:
+      "Professional experience across software systems, structured data, documentation, accessibility, quality assurance, and operational workflows.",
+    url: "/experience",
+  },
+};
+
 export default function ExperiencePage() {
   return (
     <main className="mx-auto w-full max-w-360 space-y-20 px-6 pb-24 md:px-10">
@@ -25,7 +45,7 @@ export default function ExperiencePage() {
         }
         supportingText={
           <>
-            I'm now bringing that foundation into health information, healthcare data, and
+            I&apos;m now bringing that foundation into health information, healthcare data, and
             informatics while completing my Health Services Management degree.
           </>
         }
@@ -49,7 +69,7 @@ export default function ExperiencePage() {
         <div className="max-w-3xl space-y-4">
           <SectionLabel>Featured Experience</SectionLabel>
 
-          <h2 className="font-heading text-primary text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-5xl">
+          <h2 className="font-heading text-primary tracking-light text-3xl leading-[1.08] font-bold text-balance md:text-5xl">
             Professional software and systems work
           </h2>
 
@@ -70,13 +90,13 @@ export default function ExperiencePage() {
         <div className="max-w-3xl space-y-4">
           <SectionLabel>Applied Study</SectionLabel>
 
-          <h2 className="font-heading text-primary text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-4xl">
+          <h2 className="font-heading text-primary tracking-light text-3xl leading-[1.08] font-bold text-balance md:text-4xl">
             Health information, digital health, and informatics
           </h2>
 
           <p className="text-muted text-base leading-relaxed md:text-lg">
             Independent educational work connecting my software background with healthcare systems,
-            health information, data, and women's health equity.
+            health information, data, and women&apos;s health equity.
           </p>
         </div>
 
@@ -128,7 +148,7 @@ export default function ExperiencePage() {
         <div className="max-w-3xl space-y-4">
           <SectionLabel>Additional Experience</SectionLabel>
 
-          <h2 className="font-heading text-primary text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-4xl">
+          <h2 className="font-heading text-primary tracking-light text-3xl leading-[1.08] font-bold text-balance md:text-4xl">
             Operations, technical support, and customer experience
           </h2>
 
@@ -149,7 +169,7 @@ export default function ExperiencePage() {
         <div className="max-w-3xl space-y-4">
           <SectionLabel>Education</SectionLabel>
 
-          <h2 className="font-heading text-primary text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-4xl">
+          <h2 className="font-heading text-primary tracking-light text-3xl leading-[1.08] font-bold text-balance md:text-4xl">
             Healthcare management and software engineering
           </h2>
         </div>

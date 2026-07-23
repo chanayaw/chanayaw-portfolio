@@ -23,20 +23,20 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
 
   if (!caseStudy) {
     return {
-      title: "Project Not Found | Chanaya W.",
+      title: "Project Not Found | Chanaya W",
     };
   }
 
   const url = `https://www.chanayaw.com/projects/${caseStudy.slug}`;
 
   return {
-    title: `${caseStudy.title} | Chanaya W.`,
+    title: caseStudy.title,
     description: caseStudy.summary,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: `${caseStudy.title} | Chanaya W.`,
+      title: caseStudy.title,
       description: caseStudy.summary,
       url,
       type: "article",

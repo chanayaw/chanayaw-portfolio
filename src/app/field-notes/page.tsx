@@ -6,6 +6,27 @@ import { Card, SoftWashCard } from "@/src/components/ui/Cards";
 import { ChipMono } from "@/src/components/ui/Chips";
 import { SecondaryCTA } from "@/src/components/ui/Buttons";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The Informatics Diary",
+
+  description:
+    "Independent field notes on health information, healthcare data, digital health, informatics, academic learning, and women's health equity.",
+
+  alternates: {
+    canonical: "/field-notes",
+  },
+
+  openGraph: {
+    title: "The Informatics Diary",
+    description:
+      "Independent writing and learning across health information, digital health, informatics, and women's health equity.",
+    url: "/field-notes",
+    type: "website",
+  },
+};
+
 const writingThemes = [
   {
     label: "EQUITY",
@@ -101,7 +122,7 @@ export default function FieldNotesPage() {
             id="writing-themes-heading"
             className="font-heading text-primary mt-3 text-3xl leading-tight font-bold tracking-tight md:text-5xl"
           >
-            What I'm studying and documenting
+            What I&apos;m studying and documenting
           </h2>
 
           <p className="text-muted mt-4 text-base leading-relaxed md:text-lg">

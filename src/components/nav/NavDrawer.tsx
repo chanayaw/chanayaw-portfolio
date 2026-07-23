@@ -176,7 +176,7 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
                     onClick={onClose}
                   >
                     <span
-                      className={`font-heading text-3xl leading-tight font-medium tracking-[-0.025em] ${
+                      className={`font-heading tracking-light text-3xl leading-tight font-medium ${
                         current ? "text-accent" : "text-primary"
                       }`}
                     >
@@ -206,7 +206,7 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
 
         <div className="mt-auto pt-12">
           <div className="border-default bg-surface-soft/70 rounded-[2rem] border p-5">
-            <p className="font-heading text-primary text-2xl leading-[1.08] font-medium tracking-[-0.025em]">
+            <p className="font-heading text-primary tracking-light text-2xl leading-[1.08] font-medium">
               Pink, precise, and patient-centered.
             </p>
 
@@ -216,7 +216,7 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
             </p>
 
             <p className="text-subtle mt-3 text-sm leading-relaxed">
-              Building toward Women's Health Equity Advocacy & Informatics through systems, data,
+              Building toward Women&apos;s Health Equity Advocacy & Informatics through systems, data,
               research, and patient-centered technology.
             </p>
 

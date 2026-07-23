@@ -4,6 +4,28 @@ import Hero from "../../components/home/Hero";
 import { FeaturedProjectCard } from "../../components/projects/FeaturedProjectCard";
 import { projects } from "../../data/projectData";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Chanaya W | Software, Health Information & Informatics",
+  },
+
+  description:
+    "Software developer and Health Services Management student bringing experience with structured data, systems, documentation, accessibility, and operational workflows into healthcare.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "Chanaya W | Software, Health Information & Informatics",
+    description:
+      "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare.",
+    url: "/",
+  },
+};
+
 const productionProjects = projects.filter((project) => project.status === "Built");
 
 export default function HomePage() {
@@ -16,7 +38,7 @@ export default function HomePage() {
           <div className="max-w-4xl space-y-4">
             <SectionLabel>Selected Professional Work</SectionLabel>
 
-            <h2 className="font-heading text-primary text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-5xl">
+            <h2 className="font-heading text-primary tracking-light text-3xl leading-[1.08] font-bold text-balance md:text-5xl">
               Production systems, operational workflows, and software foundations
             </h2>
 
@@ -48,13 +70,14 @@ export default function HomePage() {
           <div className="max-w-3xl space-y-4">
             <SectionLabel>The Informatics Diary</SectionLabel>
 
-            <h2 className="font-heading text-primary text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-4xl">
-              Field notes on health information, digital health, data, and women's health equity
+            <h2 className="font-heading text-primary tracking-light text-3xl leading-[1.08] font-bold text-balance md:text-4xl">
+              Field notes on health information, digital health, data, and women&apos;s health
+              equity
             </h2>
 
             <p className="text-muted text-base leading-relaxed md:text-lg">
-              A field-note archive where I document what I'm studying, questioning, building, and
-              translating as I work toward Women's Health Equity Advocacy & Informatics.
+              A field-note archive where I document what I&apos;m studying, questioning, building,
+              and translating as I work toward Women&apos;s Health Equity Advocacy & Informatics.
             </p>
           </div>
 

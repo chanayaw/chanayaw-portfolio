@@ -4,6 +4,26 @@ import { Card, GlassCard, SoftWashCard } from "@/src/components/ui/Cards";
 import { PrimaryCTA, SecondaryCTA } from "@/src/components/ui/Buttons";
 import { ChipMono, ChipThinBorder } from "@/src/components/ui/Chips";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+
+  description:
+    "Learn about Chanaya W's transition from software systems into health information, healthcare data, informatics, and Women's Health Equity Advocacy & Informatics.",
+
+  alternates: {
+    canonical: "/about",
+  },
+
+  openGraph: {
+    title: "About",
+    description:
+      "From software systems to health information, healthcare data, informatics, and women's health equity.",
+    url: "/about",
+  },
+};
+
 export default function AboutPage() {
   return (
     <main className="mx-auto w-full max-w-360 px-6 pb-24 md:px-10">
@@ -35,7 +55,7 @@ export default function AboutPage() {
 
               <div className="text-muted mt-6 space-y-5 text-base leading-relaxed md:text-lg">
                 <p>
-                  My professional background is in full-stack software development. I've worked with
+                  My professional background is in full-stack software development. I&apos;ve worked with
                   structured data, databases, APIs, documentation, testing, troubleshooting,
                   accessibility, and operational workflows using technologies including TypeScript,
                   React, Next.js, Node.js, SQL, and PostgreSQL.
@@ -50,14 +70,14 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  I'm now developing healthcare-domain knowledge through my Health Services
+                  I&apos;m now developing healthcare-domain knowledge through my Health Services
                   Management degree and certificate pathways in Health Information Management & Data
-                  Analytics and Data Analytics. I'm intentionally seeking hands-on work where
+                  Analytics and Data Analytics. I&apos;m intentionally seeking hands-on work where
                   healthcare information, documentation, data, systems, and operations intersect.
                 </p>
 
                 <p>
-                  Long term, I'm building toward Women's Health Equity Advocacy & Informatics: work
+                  Long term, I&apos;m building toward Women&apos;s Health Equity Advocacy & Informatics: work
                   connecting health information, data, research, digital health, and
                   patient-centered systems to support clearer information and more equitable care.
                 </p>
@@ -80,7 +100,7 @@ export default function AboutPage() {
 
                 <InfoBlock
                   label="Academic Path"
-                  body="BS in Health Services Management at UMGC, 2026–2029."
+                  body="BS in Health Services Management at UMGC, 2026-2029."
                 />
 
                 <div>
@@ -113,13 +133,13 @@ export default function AboutPage() {
                 id="equity-lens-heading"
                 className="font-heading text-primary mt-3 text-4xl leading-tight font-bold tracking-tight md:text-5xl"
               >
-                Why women's health equity remains central
+                Why women&apos;s health equity remains central
               </h2>
             </div>
 
             <div className="text-muted space-y-5 text-base leading-relaxed md:text-lg">
               <p>
-                I'm especially interested in women who are dismissed, diagnosed late, undertreated,
+                I&apos;m especially interested in women who are dismissed, diagnosed late, undertreated,
                 or left without understandable information and clear next steps.
               </p>
 
@@ -131,7 +151,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                This long-term direction is why I'm learning how healthcare information is
+                This long-term direction is why I&apos;m learning how healthcare information is
                 documented, managed, interpreted, and moved through real systems. The technical work
                 matters because the people affected by those systems matter.
               </p>
@@ -152,7 +172,7 @@ export default function AboutPage() {
           </h2>
 
           <p className="text-muted mt-4 text-base leading-relaxed md:text-lg">
-            I'm drawn to work that requires accuracy, organization, systems thinking, clear
+            I&apos;m drawn to work that requires accuracy, organization, systems thinking, clear
             documentation, and respect for the people who rely on the information.
           </p>
         </div>

@@ -29,27 +29,27 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.chanayaw.com"),
 
   title: {
-    default: "Chanaya W. | Software, Health Information & Informatics",
-    template: "%s | Chanaya W.",
+    default: "Chanaya W | Software, Health Information & Informatics",
+    template: "%s | Chanaya W",
   },
 
   description:
     "Software developer and Health Services Management student transitioning into health information, healthcare data, and informatics, with a long-term focus on Women's Health Equity Advocacy & Informatics.",
 
-  applicationName: "Chanaya W.",
+  applicationName: "Chanaya W",
 
   authors: [
     {
-      name: "Chanaya W.",
+      name: "Chanaya W",
       url: "https://www.chanayaw.com",
     },
   ],
 
-  creator: "Chanaya W.",
-  publisher: "Chanaya W.",
+  creator: "Chanaya W",
+  publisher: "Chanaya W",
 
   keywords: [
-    "Chanaya W.",
+    "Chanaya W",
     "health information",
     "medical records",
     "healthcare data",
@@ -72,8 +72,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Chanaya W.",
-    title: "Chanaya W. | Software, Health Information & Informatics",
+    siteName: "Chanaya W",
+    title: "Chanaya W | Software, Health Information & Informatics",
     description:
       "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare.",
     url: "https://www.chanayaw.com",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Chanaya W. | Software, Health Information & Informatics",
+    title: "Chanaya W | Software, Health Information & Informatics",
     description:
       "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare.",
   },

@@ -5,6 +5,26 @@ import { ProjectCard } from "@/src/components/projects/ProjectCard";
 import { SectionLabel } from "@/src/components/projects/SectionLabel";
 import PageHeader from "@/src/components/shared/PageHeader";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+
+  description:
+    "Selected professional and educational projects demonstrating software development, structured data, operational workflows, information access, accessibility, and emerging health-information work.",
+
+  alternates: {
+    canonical: "/projects",
+  },
+
+  openGraph: {
+    title: "Projects",
+    description:
+      "Selected software, systems, data, and emerging health-information projects by Chanaya W.",
+    url: "/projects",
+  },
+};
+
 export default function ProjectsPage() {
   const healthInformationProjects = projects.filter(
     (project) => project.category === "Health Information + Data Systems",
