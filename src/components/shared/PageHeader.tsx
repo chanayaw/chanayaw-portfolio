@@ -14,19 +14,25 @@ const PageHeader = ({
   actions,
 }: PageHeaderProps) => {
   return (
-    <section className="relative isolate overflow-hidden pt-20 md:pt-28">
+    <section
+      aria-labelledby="page-heading"
+      className="relative isolate overflow-hidden pt-20 md:pt-28"
+    >
       <div
         aria-hidden="true"
         className="data-grid pointer-events-none absolute inset-0 -z-10 opacity-[0.12]"
       />
 
       <div className="max-w-5xl">
-        <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
+        <p className="text-accent font-mono text-xs font-semibold tracking-[0.24em] uppercase">
           {eyebrow}
         </p>
 
         <div className="mt-4">
-          <h1 className="font-heading text-primary text-5xl leading-[0.95] font-normal tracking-tight text-balance md:text-7xl">
+          <h1
+            id="page-heading"
+            className="font-heading text-primary text-5xl leading-[1.02] font-bold tracking-[-0.03em] text-balance md:text-7xl"
+          >
             {heading}
           </h1>
 
@@ -40,7 +46,11 @@ const PageHeader = ({
             </div>
           ) : null}
 
-          {actions ? <div className="mt-8 flex flex-wrap gap-4">{actions}</div> : null}
+          {actions ? (
+            <div aria-label="Page actions" className="mt-8 flex flex-wrap gap-4">
+              {actions}
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

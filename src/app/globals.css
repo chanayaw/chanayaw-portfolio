@@ -10,7 +10,6 @@
   /* ----------------------------------------------------------
      Font families
   ---------------------------------------------------------- */
-  --font-heading: var(--font-dm-serif);
   --font-sans: var(--font-nunito-sans);
   --font-mono: var(--font-geist-mono);
 
@@ -273,6 +272,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   body {
@@ -436,9 +440,9 @@
   }
 
   /* Typography helpers */
+
   .font-heading {
-    font-family: var(--font-dm-serif), Georgia, serif;
-    font-weight: 400;
+    font-family: var(--font-heading), var(--font-nunito-sans), system-ui, sans-serif;
     font-feature-settings:
       'kern' 1,
       'liga' 1;
@@ -461,28 +465,39 @@
   }
 
   /* Brand type scale */
+
   .type-eyebrow {
     @apply text-accent font-mono text-xs font-semibold tracking-[0.24em] uppercase;
   }
 
   .type-display {
-    @apply font-heading font-normal tracking-[-0.01em] text-balance;
-    line-height: 0.95;
+    @apply font-extrabold tracking-[-0.035em] text-balance;
+    font-family: var(--font-heading), var(--font-nunito-sans), system-ui, sans-serif;
+    line-height: 0.98;
   }
 
   .type-page-title {
-    @apply font-heading font-normal tracking-[-0.005em] text-balance;
-    line-height: 1;
+    @apply font-bold tracking-[-0.03em] text-balance;
+    font-family: var(--font-heading), var(--font-nunito-sans), system-ui, sans-serif;
+    line-height: 1.02;
   }
 
   .type-section-title {
-    @apply font-heading font-normal tracking-normal text-balance;
-    line-height: 1.05;
+    @apply font-bold tracking-[-0.025em] text-balance;
+    font-family: var(--font-heading), var(--font-nunito-sans), system-ui, sans-serif;
+    line-height: 1.08;
   }
 
   .type-card-title {
-    @apply font-heading font-normal tracking-normal;
-    line-height: 1.1;
+    @apply font-semibold tracking-[-0.015em];
+    font-family: var(--font-heading), var(--font-nunito-sans), system-ui, sans-serif;
+    line-height: 1.12;
+  }
+
+  .type-signature {
+    @apply font-medium tracking-[-0.025em] text-balance;
+    font-family: var(--font-heading), var(--font-nunito-sans), system-ui, sans-serif;
+    line-height: 1.08;
   }
 
   .type-body {

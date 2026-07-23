@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
-import { DM_Serif_Display, Nunito_Sans, Geist_Mono } from 'next/font/google';
-import './globals.css';
-import Header from '../components/nav/Header';
-import Footer from '../components/nav/Footer';
+import { Geist_Mono, Nunito_Sans, Plus_Jakarta_Sans } from 'next/font/google';
 
-const dmSerif = DM_Serif_Display({
-  variable: '--font-dm-serif',
+import './globals.css';
+
+import Footer from '../components/nav/Footer';
+import Header from '../components/nav/Header';
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: '--font-heading',
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '500', '600', '700', '800'],
 });
 
 const nunitoSans = Nunito_Sans({
@@ -24,35 +26,29 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Chanaya W',
+    default: 'Chanaya W | Health Information, Data & Informatics',
     template: '%s | Chanaya W',
   },
   description:
-    'Software developer, Health Services Management student, and Digital Health Technologist in training building toward Women’s Health Equity Advocacy & Informatics.',
+    'Software developer and Health Services Management student transitioning into health information, healthcare data, and informatics, with a long-term focus on women’s health equity.',
   metadataBase: new URL('https://chanayaw.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Chanaya W',
+    title: 'Chanaya W | Health Information, Data & Informatics',
     description:
-      'Women’s Health Equity Advocacy & Informatics through health data, patient education, care navigation, digital health, and patient-centered tools.',
+      'A technology professional transitioning into health information and informatics, building toward Women’s Health Equity Advocacy & Informatics.',
     url: 'https://chanayaw.com',
     siteName: 'Chanaya W',
-    images: [
-      {
-        url: '/og-default.png',
-        width: 1200,
-        height: 630,
-        alt: 'Chanaya W, Women’s Health Equity Advocacy & Informatics',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chanaya W',
+    title: 'Chanaya W | Health Information, Data & Informatics',
     description:
-      'Digital Health Technologist in training building toward Women’s Health Equity Advocacy & Informatics.',
-    images: ['/og-default.png'],
+      'Software developer and Health Services Management student transitioning into health information and informatics.',
     creator: '@chanayaw',
   },
   icons: {
@@ -67,9 +63,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const storedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia(
+                  '(prefers-color-scheme: dark)'
+                ).matches;
+
+                if (
+                  storedTheme === 'dark' ||
+                  (!storedTheme && prefersDark)
+                ) {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
+
       <body
-        className={`${dmSerif.variable} ${nunitoSans.variable} ${geistMono.variable} bg-background text-foreground overflow-x-hidden overflow-y-scroll antialiased`}
+        className={`${plusJakartaSans.variable} ${nunitoSans.variable} ${geistMono.variable} bg-background text-foreground overflow-x-hidden overflow-y-scroll antialiased`}
       >
         <Header />
         {children}
