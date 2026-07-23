@@ -21,7 +21,7 @@ export default function ProjectsPage() {
         eyebrow="Projects"
         heading="Software, systems, and emerging health-information work"
         description="Selected professional and educational projects demonstrating structured data, operational workflows, information access, accessibility, and full-stack development."
-        supportingText="My current work builds on that technical foundation as I develop knowledge across health information, healthcare data, informatics, and Women’s Health Equity Advocacy & Informatics."
+        supportingText="My current work builds on that technical foundation as I develop knowledge across health information, healthcare data, informatics, and Women's Health Equity Advocacy & Informatics."
       />
 
       <section aria-labelledby="selected-work-heading" className="mt-16 md:mt-20">
@@ -62,7 +62,7 @@ export default function ProjectsPage() {
         <ProjectSection
           id="concept-roadmap"
           eyebrow="Concept Roadmap"
-          heading="Future work in digital health and women’s health equity"
+          heading="Future work in digital health and women's health equity"
           description="Planned independent concepts connecting software, data, patient education, care navigation, and health-equity research. Their status is shown clearly so completed evidence remains distinct from future direction."
           projects={conceptProjects}
         />

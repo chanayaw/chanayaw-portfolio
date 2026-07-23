@@ -9,7 +9,7 @@ export default function ProjectNotFound() {
         </p>
 
         <h1 className="font-heading text-primary mt-4 text-4xl leading-tight font-extrabold tracking-[-0.03em] text-balance md:text-6xl">
-          This case study isn’t available.
+          This case study isn't available.
         </h1>
 
         <p className="text-muted mt-5 max-w-xl text-base leading-relaxed md:text-lg">

@@ -25,7 +25,7 @@ export default function ExperiencePage() {
         }
         supportingText={
           <>
-            I’m now bringing that foundation into health information, healthcare data, and
+            I'm now bringing that foundation into health information, healthcare data, and
             informatics while completing my Health Services Management degree.
           </>
         }
@@ -76,7 +76,7 @@ export default function ExperiencePage() {
 
           <p className="text-muted text-base leading-relaxed md:text-lg">
             Independent educational work connecting my software background with healthcare systems,
-            health information, data, and women’s health equity.
+            health information, data, and women's health equity.
           </p>
         </div>
 

@@ -9,7 +9,7 @@ import { SecondaryCTA } from "@/src/components/ui/Buttons";
 const writingThemes = [
   {
     label: "EQUITY",
-    title: "Women’s Health Equity",
+    title: "Women's Health Equity",
     description:
       "Independent writing on patient dismissal, delayed diagnosis, medical bias, care access, understandable information, and the experiences of women who are too often unheard.",
   },
@@ -38,9 +38,9 @@ export default function FieldNotesPage() {
     <main className="mx-auto w-full max-w-360 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="The Informatics Diary"
-        heading="Field notes on health information, digital health, and women’s health equity"
-        description="The Informatics Diary is my independent writing and learning archive for documenting questions, research, coursework, technical concepts, and the professional direction I’m building."
-        supportingText="It connects my software background, healthcare education, developing informatics knowledge, and long-term commitment to Women’s Health Equity Advocacy & Informatics."
+        heading="Field notes on health information, digital health, and women's health equity"
+        description="The Informatics Diary is my independent writing and learning archive for documenting questions, research, coursework, technical concepts, and the professional direction I'm building."
+        supportingText="It connects my software background, healthcare education, developing informatics knowledge, and long-term commitment to Women's Health Equity Advocacy & Informatics."
         actions={
           <>
             <a
@@ -101,7 +101,7 @@ export default function FieldNotesPage() {
             id="writing-themes-heading"
             className="font-heading text-primary mt-3 text-3xl leading-tight font-bold tracking-tight md:text-5xl"
           >
-            What I’m studying and documenting
+            What I'm studying and documenting
           </h2>
 
           <p className="text-muted mt-4 text-base leading-relaxed md:text-lg">

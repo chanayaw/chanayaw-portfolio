@@ -121,12 +121,12 @@ export const projects: Project[] = [
   },
 
   /*
-   * Long-term women’s-health and digital-health concepts remain part
+   * Long-term women's-health and digital-health concepts remain part
    * of the portfolio without appearing above completed evidence.
    */
   {
     slug: "womens-health-equity-data-story",
-    title: "Women’s Health Equity Data Story",
+    title: "Women's Health Equity Data Story",
     summary:
       "A planned research and data-storytelling project exploring delayed diagnosis, early-detection gaps, care-access barriers, and patient experience among underserved women through public data and plain-language interpretation.",
     category: "Women's Health Equity Data + Research",

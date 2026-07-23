@@ -53,7 +53,7 @@ const Footer = () => {
           </p>
 
           <p className="text-subtle max-w-xl text-sm leading-relaxed">
-            Long-term direction: Women’s Health Equity Advocacy & Informatics through health
+            Long-term direction: Women's Health Equity Advocacy & Informatics through health
             information, data, research, and patient-centered technology.
           </p>
         </div>

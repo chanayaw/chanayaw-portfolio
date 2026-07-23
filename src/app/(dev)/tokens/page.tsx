@@ -197,7 +197,7 @@ export default function TokenPage() {
               <Chip variant="accent">Health Information</Chip>
               <Chip variant="tech">Systems + Structured Data</Chip>
               <Chip>Healthcare Operations</Chip>
-              <Chip>Women’s Health Equity Informatics</Chip>
+              <Chip>Women's Health Equity Informatics</Chip>
             </div>
           </div>
 
@@ -214,7 +214,7 @@ export default function TokenPage() {
           <div className="grid gap-5 lg:grid-cols-2">
             <Specimen
               label="Display Heading · Plus Jakarta Sans ExtraBold"
-              description="ExtraBold display typography for the homepage hero and the portfolio’s most important professional statement."
+              description="ExtraBold display typography for the homepage hero and the portfolio's most important professional statement."
             >
               <h2 className="font-heading text-primary text-4xl leading-[0.98] font-extrabold tracking-[-0.035em] text-balance md:text-5xl">
                 Building at the intersection of healthcare information, technology, and
@@ -236,7 +236,7 @@ export default function TokenPage() {
               description="Readable supporting copy across pages, cards, forms, and project descriptions."
             >
               <p className="text-muted font-sans text-base leading-relaxed md:text-lg">
-                I’m a software developer and Health Services Management student transitioning into
+                I'm a software developer and Health Services Management student transitioning into
                 health information, healthcare data, and informatics. I bring experience with
                 structured information, digital systems, documentation, quality-focused workflows,
                 and technical problem-solving.
@@ -288,7 +288,7 @@ export default function TokenPage() {
             <HierarchyCard
               number="03"
               label="Long-Term Direction"
-              title="Women’s Health Equity Advocacy & Informatics"
+              title="Women's Health Equity Advocacy & Informatics"
               description="Connecting health information, data, research, informatics, and patient-centered technology to support clearer and more equitable care."
               editorial
             />
@@ -385,7 +385,7 @@ export default function TokenPage() {
               </p>
 
               <p className="font-heading text-primary text-3xl leading-[1.08] font-medium tracking-tight">
-                I’m building toward Women’s Health Equity Advocacy & Informatics.
+                I'm building toward Women's Health Equity Advocacy & Informatics.
               </p>
             </div>
           </div>
@@ -470,7 +470,7 @@ export default function TokenPage() {
             >
               <p className="text-foreground text-base leading-relaxed">
                 I bring professional experience managing production software, structured data,
-                documentation, testing, troubleshooting, and operational workflows. I’m now applying
+                documentation, testing, troubleshooting, and operational workflows. I'm now applying
                 that foundation within health information and healthcare systems.
               </p>
             </Specimen>
@@ -480,7 +480,7 @@ export default function TokenPage() {
               description="Purposeful, personal, and clearly identified as future-facing."
             >
               <p className="font-heading text-primary text-3xl leading-[1.08] font-medium tracking-[-0.02em]">
-                I’m building toward Women’s Health Equity Advocacy & Informatics.
+                I'm building toward Women's Health Equity Advocacy & Informatics.
               </p>
 
               <p className="text-muted mt-4 text-sm leading-relaxed">

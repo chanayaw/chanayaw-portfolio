@@ -93,12 +93,12 @@ export const appliedStudy: AppliedStudyEntry[] = [
     organization: "Independent Study / Applied Health-Tech Projects",
     period: "January 2026 - Present",
     summary:
-      "Independent study and portfolio development connecting software engineering, health systems, health information, healthcare data, digital health, and women’s health equity.",
+      "Independent study and portfolio development connecting software engineering, health systems, health information, healthcare data, digital health, and women's health equity.",
     highlights: [
       "Developing educational project concepts involving patient education, care navigation, symptom documentation, health-data organization, and care coordination.",
       "Strengthening technical fluency through health-focused exercises in TypeScript, React, Next.js, SQL, forms, accessibility, data modeling, and full-stack workflows.",
       "Exploring how structured information, workflow design, and user-centered interfaces can support clearer health communication and more usable healthcare information.",
-      "Developing The Informatics Diary as a field-note archive documenting learning across health information, informatics, data, software, healthcare systems, and women’s health equity.",
+      "Developing The Informatics Diary as a field-note archive documenting learning across health information, informatics, data, software, healthcare systems, and women's health equity.",
       "Building foundational knowledge in health services management, health information management, data analytics, privacy-conscious information handling, healthcare operations, and clinical-workflow concepts.",
     ],
     focusAreas: [
@@ -108,7 +108,7 @@ export const appliedStudy: AppliedStudyEntry[] = [
       "Informatics",
       "Patient Education",
       "Care Navigation",
-      "Women’s Health Equity",
+      "Women's Health Equity",
     ],
   },
 ];
@@ -145,7 +145,7 @@ export const additionalExperience: ExperienceEntry[] = [
     highlights: [
       "Delivered product presentations associated with a 15% increase in client engagement.",
       "Achieved a 96% resolution rate for technical issues involving mobile devices.",
-      "Closed 30% more sales than the company’s average sales representative.",
+      "Closed 30% more sales than the company's average sales representative.",
     ],
     strengths: ["Technical Support", "Customer Education", "Communication", "Problem Resolution"],
   },

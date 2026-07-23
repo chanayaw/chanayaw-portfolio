@@ -17,9 +17,9 @@ export default function ContactPage() {
     <main className="mx-auto w-full max-w-360 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="Contact"
-        heading="Let’s connect about healthcare information, systems, and thoughtful work"
-        description="I’m currently open to professional opportunities in health information, medical records, documentation and data workflows, healthcare operations, healthcare data support, and related health-technology roles."
-        supportingText="I also welcome relevant conversations across digital health, informatics, patient education, research, and women’s health equity."
+        heading="Let's connect about healthcare information, systems, and thoughtful work"
+        description="I'm currently open to professional opportunities in health information, medical records, documentation and data workflows, healthcare operations, healthcare data support, and related health-technology roles."
+        supportingText="I also welcome relevant conversations across digital health, informatics, patient education, research, and women's health equity."
       />
 
       <section aria-labelledby="contact-form-heading" className="mt-16 md:mt-20">
@@ -35,7 +35,7 @@ export default function ContactPage() {
                   <ChipRegBorder>Healthcare Operations</ChipRegBorder>
                   <ChipRegBorder>Healthcare Data Support</ChipRegBorder>
                   <ChipRegBorder>Health Technology</ChipRegBorder>
-                  <ChipRegBorder>Women’s Health Equity</ChipRegBorder>
+                  <ChipRegBorder>Women's Health Equity</ChipRegBorder>
                 </div>
               </div>
 
@@ -43,13 +43,13 @@ export default function ContactPage() {
                 <SectionLabel>Professional Direction</SectionLabel>
 
                 <p className="text-muted mt-3 text-sm leading-relaxed">
-                  I’m bringing professional experience in software systems, structured data,
+                  I'm bringing professional experience in software systems, structured data,
                   documentation, quality assurance, accessibility, and workflow analysis into
                   healthcare.
                 </p>
 
                 <p className="text-muted mt-4 text-sm leading-relaxed">
-                  Long term, I’m building toward Women’s Health Equity Advocacy & Informatics
+                  Long term, I'm building toward Women's Health Equity Advocacy & Informatics
                   through health information, data, research, digital health, and patient-centered
                   systems.
                 </p>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   </h2>
 
                   <p className="text-muted mt-4 max-w-md text-sm leading-relaxed">
-                    Your message was submitted successfully. I’ll review the details and respond
+                    Your message was submitted successfully. I'll review the details and respond
                     when the opportunity or conversation is a relevant fit.
                   </p>
 
@@ -200,7 +200,7 @@ export default function ContactPage() {
 
                           <option value="research-collaboration">Research or Collaboration</option>
 
-                          <option value="advocacy">Women’s Health Equity or Advocacy</option>
+                          <option value="advocacy">Women's Health Equity or Advocacy</option>
 
                           <option value="other">Other</option>
                         </select>

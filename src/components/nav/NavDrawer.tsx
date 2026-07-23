@@ -216,7 +216,7 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
             </p>
 
             <p className="text-subtle mt-3 text-sm leading-relaxed">
-              Building toward Women’s Health Equity Advocacy & Informatics through systems, data,
+              Building toward Women's Health Equity Advocacy & Informatics through systems, data,
               research, and patient-centered technology.
             </p>
 

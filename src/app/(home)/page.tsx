@@ -49,12 +49,12 @@ export default function HomePage() {
             <SectionLabel>The Informatics Diary</SectionLabel>
 
             <h2 className="font-heading text-primary text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-4xl">
-              Field notes on health information, digital health, data, and women’s health equity
+              Field notes on health information, digital health, data, and women's health equity
             </h2>
 
             <p className="text-muted text-base leading-relaxed md:text-lg">
-              A field-note archive where I document what I’m studying, questioning, building, and
-              translating as I work toward Women’s Health Equity Advocacy & Informatics.
+              A field-note archive where I document what I'm studying, questioning, building, and
+              translating as I work toward Women's Health Equity Advocacy & Informatics.
             </p>
           </div>
 
