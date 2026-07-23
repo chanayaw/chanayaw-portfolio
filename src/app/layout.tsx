@@ -10,6 +10,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   variable: '--font-heading',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
 });
 
 const nunitoSans = Nunito_Sans({

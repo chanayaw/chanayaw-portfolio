@@ -1,68 +1,79 @@
-import Hero from '../../components/home/Hero';
-import { projects } from '../../data/projectData';
-import { FeaturedProjectCard } from '../../components/projects/FeaturedProjectCard';
 import Link from 'next/link';
 
-const featuredProjects = projects.filter((project) => project.featured);
+import Hero from '../../components/home/Hero';
+import { FeaturedProjectCard } from '../../components/projects/FeaturedProjectCard';
+import { projects } from '../../data/projectData';
+
+const productionProjects = projects.filter((project) => project.status === 'Built');
 
 export default function HomePage() {
   return (
-    <main className="mx-auto w-full max-w-360 space-y-20 px-6 py-10 md:px-10 md:py-14">
+    <main className="mx-auto w-full max-w-360 space-y-20 px-6 pb-16 md:px-10 md:pb-20">
       <Hero />
 
       <section className="space-y-8">
-        <div className="max-w-3xl space-y-3">
-          <SectionLabel>Selected Work</SectionLabel>
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-4xl space-y-4">
+            <SectionLabel>Selected Professional Work</SectionLabel>
 
-          <h2 className="font-heading text-3xl font-normal text-balance md:text-5xl">
-            Digital health tools, care systems, and health equity projects
-          </h2>
+            <h2 className="font-heading text-primary text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-5xl">
+              Production systems, operational workflows, and software foundations
+            </h2>
 
-          <p className="text-muted max-w-2xl text-base leading-relaxed md:text-lg">
-            A selection of digital health concepts, health data explorations, care navigation
-            systems, technical case studies, and research-informed work connected to early
-            detection, delayed diagnosis, patient education, healthcare workflows, and Women&apos;s
-            Health Equity Advocacy & Informatics.
-          </p>
+            <p className="text-muted max-w-3xl text-base leading-relaxed md:text-lg">
+              Built work demonstrating professional software experience, technical ownership,
+              structured information, user-flow improvement, accessibility, and systems designed
+              around real operational needs.
+            </p>
+          </div>
+
+          <Link
+            href="/projects"
+            className="ring-brand text-link hover:text-accent inline-flex shrink-0 items-center gap-2 rounded-md text-sm font-bold transition-colors"
+          >
+            View all projects
+            <span aria-hidden="true">→</span>
+          </Link>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
-          {featuredProjects.map((project) => (
+          {productionProjects.map((project) => (
             <FeaturedProjectCard key={project.slug} project={project} />
           ))}
         </div>
       </section>
 
-      <section className="soft-wash border-default shadow-card rounded-4xl border p-6 md:p-8">
+      <section className="soft-wash border-default shadow-card rounded-[2rem] border p-6 md:p-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-end">
           <div className="max-w-3xl space-y-4">
             <SectionLabel>The Informatics Diary</SectionLabel>
 
-            <h2 className="font-heading text-3xl font-normal text-balance md:text-4xl">
-              Field notes on women&apos;s health equity, informatics, digital health, and
-              patient-centered care
+            <h2 className="font-heading text-primary text-3xl leading-[1.08] font-bold tracking-[-0.025em] text-balance md:text-4xl">
+              Field notes on health information, digital health, data, and women’s health equity
             </h2>
 
             <p className="text-muted text-base leading-relaxed md:text-lg">
-              A soft academic field-note archive where I connect advocacy, research, health data,
-              informatics, care navigation, patient education, and patient-centered digital health.
+              A field-note archive where I document what I’m studying, questioning, building, and
+              translating as I work toward Women’s Health Equity Advocacy & Informatics.
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-3 lg:justify-end">
-            <Link
-              href="/field-notes"
-              className="ring-brand bg-cta text-cta-foreground shadow-card hover:shadow-pop inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition"
-            >
-              Read Field Notes
-            </Link>
+          <div className="space-y-5 lg:text-right">
+            <div className="flex flex-wrap gap-3 lg:justify-end">
+              <Link
+                href="/field-notes"
+                className="ring-brand bg-cta text-cta-foreground shadow-card hover:shadow-pop inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition"
+              >
+                Read Field Notes
+              </Link>
 
-            <Link
-              href="/projects"
-              className="ring-brand border-default bg-surface text-foreground hover:border-strong hover:bg-surface-soft inline-flex items-center justify-center rounded-full border px-5 py-2.5 text-sm font-semibold transition"
-            >
-              View Projects
-            </Link>
+              <Link
+                href="/projects"
+                className="ring-brand border-default bg-surface text-foreground hover:border-strong hover:bg-surface-soft inline-flex items-center justify-center rounded-full border px-5 py-2.5 text-sm font-semibold transition"
+              >
+                Explore Projects
+              </Link>
+            </div>
           </div>
         </div>
       </section>

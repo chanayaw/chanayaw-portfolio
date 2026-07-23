@@ -28,16 +28,16 @@ export type SocialIcon = {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
 };
 
-/*
- * Keep primary navigation limited to routes that currently exist.
- *
- * Experience will be added when /experience is created in Phase 4.
- * Resume will be activated when the targeted resume PDF is ready.
- */
+export const resumeHref = '/resume/chanaya-w-resume.pdf';
+
 export const MenuItems: MenuItem[] = [
   {
     label: 'Home',
     href: '/',
+  },
+  {
+    label: 'Experience',
+    href: '/experience',
   },
   {
     label: 'Projects',
@@ -57,10 +57,6 @@ export const MenuItems: MenuItem[] = [
   },
 ];
 
-/*
- * These actions establish the intended recruiter journey without
- * publishing links to destinations that do not exist yet.
- */
 export const RecruiterActions: RecruiterAction[] = [
   {
     label: 'Experience',

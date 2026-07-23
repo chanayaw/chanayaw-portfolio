@@ -176,7 +176,7 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
                     onClick={onClose}
                   >
                     <span
-                      className={`font-heading text-3xl leading-tight font-medium tracking-tight ${
+                      className={`font-heading text-3xl leading-tight font-medium tracking-[-0.025em] ${
                         current ? 'text-accent' : 'text-primary'
                       }`}
                     >
@@ -206,7 +206,7 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
 
         <div className="mt-auto pt-12">
           <div className="border-default bg-surface-soft/70 rounded-[2rem] border p-5">
-            <p className="font-heading text-primary text-2xl leading-[1.08] font-medium tracking-tight">
+            <p className="font-heading text-primary text-2xl leading-[1.08] font-medium tracking-[-0.025em]">
               Pink, precise, and patient-centered.
             </p>
 
