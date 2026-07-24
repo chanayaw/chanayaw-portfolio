@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "About",
 
   description:
-    "Learn about Chanaya W's transition from software systems into health information, healthcare data, informatics, and Women's Health Equity Advocacy & Informatics.",
+    "Learn about Chanaya W's transition from software development into health information, healthcare data, and informatics, and her path toward becoming a Women's Health Equity Advocate & Informatician.",
 
   alternates: {
     canonical: "/about",
@@ -28,10 +28,10 @@ export default function AboutPage() {
   return (
     <main className="mx-auto w-full max-w-360 px-6 pb-24 md:px-10">
       <PageHeader
-        eyebrow="About Chanaya W."
+        eyebrow="About Me"
         heading="From software systems to health information and informatics"
         description="I'm a software developer and Health Services Management student bringing a systems-and-data foundation into healthcare."
-        supportingText="My immediate focus is gaining experience in health information, medical records, healthcare data, documentation workflows, and healthcare operations while building toward Women's Health Equity Advocacy & Informatics."
+        supportingText="My immediate focus is gaining experience in health information, medical records, healthcare data, documentation workflows, and healthcare operations while building toward becoming a Women's Health Equity Advocate & Informatician."
         actions={
           <>
             <PrimaryCTA link="/experience" label="View Experience" />
@@ -55,8 +55,8 @@ export default function AboutPage() {
 
               <div className="text-muted mt-6 space-y-5 text-base leading-relaxed md:text-lg">
                 <p>
-                  My professional background is in full-stack software development. I&apos;ve worked with
-                  structured data, databases, APIs, documentation, testing, troubleshooting,
+                  My professional background is in full-stack software development. I&apos;ve worked
+                  with structured data, databases, APIs, documentation, testing, troubleshooting,
                   accessibility, and operational workflows using technologies including TypeScript,
                   React, Next.js, Node.js, SQL, and PostgreSQL.
                 </p>
@@ -70,16 +70,21 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  I&apos;m now developing healthcare-domain knowledge through my Health Services
-                  Management degree and certificate pathways in Health Information Management & Data
-                  Analytics and Data Analytics. I&apos;m intentionally seeking hands-on work where
-                  healthcare information, documentation, data, systems, and operations intersect.
+                  I wanted to use my technical background to contribute more directly to
+                  people&apos;s health and access to information. My personal health experiences,
+                  interest in healthcare disparities, and desire to understand how information
+                  affects care led me toward health technology and informatics. I&apos;m now
+                  developing healthcare-domain knowledge through my Health Services Management
+                  degree and certificate pathways in Health Information Management &amp; Data
+                  Analytics and Data Analytics.
                 </p>
 
                 <p>
-                  Long term, I&apos;m building toward Women&apos;s Health Equity Advocacy & Informatics: work
-                  connecting health information, data, research, digital health, and
-                  patient-centered systems to support clearer information and more equitable care.
+                  I&apos;m intentionally seeking hands-on work where healthcare information,
+                  documentation, data, systems, and operations intersect. Long term, I&apos;m
+                  building toward becoming a Women&apos;s Health Equity Advocate &amp;
+                  Informatician, connecting health information, research, data, and patient-centered
+                  technology to support clearer information and more equitable care.
                 </p>
               </div>
             </div>
@@ -107,7 +112,9 @@ export default function AboutPage() {
                   <SectionLabel>Certificates in Progress</SectionLabel>
 
                   <div className="mt-3 flex flex-wrap gap-2">
-                    <ChipThinBorder>Health Information Management & Data Analytics</ChipThinBorder>
+                    <ChipThinBorder>
+                      Health Information Management &amp; Data Analytics
+                    </ChipThinBorder>
 
                     <ChipThinBorder>Data Analytics</ChipThinBorder>
                   </div>
@@ -115,7 +122,7 @@ export default function AboutPage() {
 
                 <InfoBlock
                   label="Long-Term Direction"
-                  body="Women's Health Equity Advocacy & Informatics, connecting health information, data, research, digital health, and patient-centered technology."
+                  body="Becoming a Women's Health Equity Advocate & Informatician, connecting health information, data, research, digital health, and patient-centered technology."
                 />
               </div>
             </GlassCard>
@@ -139,21 +146,24 @@ export default function AboutPage() {
 
             <div className="text-muted space-y-5 text-base leading-relaxed md:text-lg">
               <p>
-                I&apos;m especially interested in women who are dismissed, diagnosed late, undertreated,
-                or left without understandable information and clear next steps.
+                My advocacy centers racially underserved and underrepresented women whose symptoms,
+                pain, concerns, and full-body health are too often dismissed, misunderstood,
+                diagnosed late, undertreated, or overlooked in research and healthcare data.
+                Everyone is welcome to learn from this work, but the women most affected by these
+                disparities remain at the center.
               </p>
 
               <p>
-                My advocacy interests include reproductive, endocrine, metabolic, cardiovascular,
-                autoimmune, chronic illness, and mental health concerns, particularly where
-                fragmented information, delayed diagnosis, and gaps between systems make care harder
-                to navigate.
+                My interests include reproductive, endocrine, metabolic, cardiovascular, autoimmune,
+                chronic illness, and mental health concerns. I&apos;m especially interested in the
+                racial disparities, fragmented information, research gaps, and delayed answers that
+                can make care more difficult to understand and navigate.
               </p>
 
               <p>
-                This long-term direction is why I&apos;m learning how healthcare information is
-                documented, managed, interpreted, and moved through real systems. The technical work
-                matters because the people affected by those systems matter.
+                This direction is why I&apos;m learning how healthcare information is documented,
+                managed, interpreted, and moved through real systems. The advocacy and research fuel
+                the technology, not the other way around.
               </p>
             </div>
           </div>

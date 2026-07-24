@@ -76,8 +76,9 @@ export default function HomePage() {
             </h2>
 
             <p className="text-muted text-base leading-relaxed md:text-lg">
-              A field-note archive where I document what I&apos;m studying, questioning, building,
-              and translating as I work toward Women&apos;s Health Equity Advocacy & Informatics.
+              A field-note archive documenting what I&apos;m studying, questioning, building, and
+              researching along my path toward becoming a Women&apos;s Health Equity Advocate &amp;
+              Informatician.
             </p>
           </div>
 

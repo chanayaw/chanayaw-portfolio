@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Software developer and Health Services Management student transitioning into health information, healthcare data, and informatics, with a long-term focus on Women's Health Equity Advocacy & Informatics.",
+    "Software developer and Health Services Management student transitioning into health information, healthcare data, and informatics while building toward becoming a Women's Health Equity Advocate & Informatician.",
 
   applicationName: "Chanaya W",
 
@@ -52,6 +52,7 @@ export const metadata: Metadata = {
     "Chanaya W",
     "health information",
     "medical records",
+    "release of information",
     "healthcare data",
     "health informatics",
     "health services management",
@@ -60,7 +61,11 @@ export const metadata: Metadata = {
     "health technology",
     "digital health",
     "women's health equity",
+    "women's health equity advocate",
+    "informatician",
     "healthcare operations",
+    "healthcare documentation",
+    "data quality",
   ],
 
   formatDetection: {
@@ -75,7 +80,7 @@ export const metadata: Metadata = {
     siteName: "Chanaya W",
     title: "Chanaya W | Software, Health Information & Informatics",
     description:
-      "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare.",
+      "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare and building toward becoming a Women's Health Equity Advocate & Informatician.",
     url: "https://www.chanayaw.com",
   },
 
@@ -83,7 +88,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Chanaya W | Software, Health Information & Informatics",
     description:
-      "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare.",
+      "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare and building toward becoming a Women's Health Equity Advocate & Informatician.",
   },
 
   robots: {

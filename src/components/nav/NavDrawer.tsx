@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 
 import CloseIcon from "../../assets/icons/close.svg";
 
+import { resumeHref } from "../../data/navData";
 import type { MenuItem, SocialIcon } from "../../data/navData";
 
 import SocialLinks from "./SocialLinks";
@@ -134,7 +135,7 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
         <div className="flex items-center justify-between gap-4">
           <Link
             href="/"
-            aria-label="Chanaya W — home"
+            aria-label="Chanaya W home"
             onClick={onClose}
             className="ring-brand text-accent hover:text-primary font-heading inline-flex items-center rounded-lg py-1 text-xl font-normal tracking-[0.2em] lowercase transition-colors"
           >
@@ -206,21 +207,36 @@ const NavDrawer = ({ menuItems, socialIcons, onClose }: NavDrawerProps) => {
 
         <div className="mt-auto pt-12">
           <div className="border-default bg-surface-soft/70 rounded-[2rem] border p-5">
-            <p className="font-heading text-primary tracking-light text-2xl leading-[1.08] font-medium">
-              Pink, precise, and patient-centered.
+            <p className="font-mono-brand text-accent text-xs font-semibold tracking-[0.24em] uppercase">
+              Current Direction
             </p>
 
-            <p className="text-muted mt-3 text-sm leading-relaxed">
-              Technology professional transitioning into health information, healthcare data, and
+            <p className="text-foreground mt-4 text-base leading-relaxed font-semibold">
+              Bringing a software, systems, and data foundation into health information and
               informatics.
             </p>
 
-            <p className="text-subtle mt-3 text-sm leading-relaxed">
-              Building toward Women&apos;s Health Equity Advocacy & Informatics through systems, data,
-              research, and patient-centered technology.
+            <p className="text-muted mt-3 text-sm leading-relaxed">
+              I&apos;m seeking hands-on healthcare experience in health information, medical
+              records, documentation and data workflows, healthcare operations, and related support
+              roles.
             </p>
 
-            <div className="mt-5">
+            <p className="text-subtle mt-3 text-sm leading-relaxed">
+              Long term, I&apos;m building toward becoming a Women&apos;s Health Equity Advocate
+              &amp; Informatician.
+            </p>
+
+            <div className="mt-5 flex flex-wrap items-center gap-4">
+              <a
+                href={resumeHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ring-brand border-default bg-surface text-foreground hover:border-strong hover:bg-surface inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm font-bold transition"
+              >
+                View Resume
+              </a>
+
               <SocialLinks icons={socialIcons} />
             </div>
           </div>

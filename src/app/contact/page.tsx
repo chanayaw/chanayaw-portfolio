@@ -17,9 +17,9 @@ export default function ContactPage() {
     <main className="mx-auto w-full max-w-360 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="Contact"
-        heading="Let's connect about healthcare information, systems, and thoughtful work"
+        heading="Let's connect about health information, healthcare systems, and patient-centered technology"
         description="I'm currently open to professional opportunities in health information, medical records, documentation and data workflows, healthcare operations, healthcare data support, and related health-technology roles."
-        supportingText="I also welcome relevant conversations across digital health, informatics, patient education, research, and women's health equity."
+        supportingText="I also welcome relevant conversations across digital health, informatics, patient education, research, and women's health equity advocacy."
       />
 
       <section aria-labelledby="contact-form-heading" className="mt-16 md:mt-20">
@@ -35,7 +35,7 @@ export default function ContactPage() {
                   <ChipRegBorder>Healthcare Operations</ChipRegBorder>
                   <ChipRegBorder>Healthcare Data Support</ChipRegBorder>
                   <ChipRegBorder>Health Technology</ChipRegBorder>
-                  <ChipRegBorder>Women&apos;s Health Equity</ChipRegBorder>
+                  <ChipRegBorder>Women&apos;s Health Equity Advocacy</ChipRegBorder>
                 </div>
               </div>
 
@@ -49,9 +49,9 @@ export default function ContactPage() {
                 </p>
 
                 <p className="text-muted mt-4 text-sm leading-relaxed">
-                  Long term, I&apos;m building toward Women&apos;s Health Equity Advocacy &
-                  Informatics through health information, data, research, digital health, and
-                  patient-centered systems.
+                  Long term, I&apos;m building toward becoming a Women&apos;s Health Equity Advocate
+                  &amp; Informatician through health information, data, research, digital health,
+                  and patient-centered systems.
                 </p>
               </div>
 
@@ -200,7 +200,7 @@ export default function ContactPage() {
 
                           <option value="research-collaboration">Research or Collaboration</option>
 
-                          <option value="advocacy">Women&apos;s Health Equity or Advocacy</option>
+                          <option value="advocacy">Women&apos;s Health Equity Advocacy</option>
 
                           <option value="other">Other</option>
                         </select>

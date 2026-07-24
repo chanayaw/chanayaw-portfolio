@@ -2,6 +2,17 @@
 
 import { useState } from "react";
 
+import { PrimaryCTA, PrimaryBtn, SecondaryCTA } from "@/src/components/ui/Buttons";
+import { Card, GlassCard, SoftWashCard } from "@/src/components/ui/Cards";
+import {
+  ChipContext,
+  ChipMono,
+  ChipRegBorder,
+  ChipStatus,
+  ChipTech,
+  ChipThinBorder,
+} from "@/src/components/ui/Chips";
+
 type ThemeMode = "light" | "dark";
 
 type ColorToken = {
@@ -24,22 +35,27 @@ const foundationTokens: ColorToken[] = [
   {
     label: "Surface",
     variable: "--color-surface",
-    purpose: "Standard cards and panels",
+    purpose: "Cards, forms, and controls",
   },
   {
     label: "Soft Surface",
     variable: "--color-surface-soft",
-    purpose: "Editorial and supporting areas",
+    purpose: "Supporting areas and active states",
   },
   {
-    label: "Elevated Surface",
-    variable: "--color-surface-elevated",
-    purpose: "Higher-emphasis content",
+    label: "Data Surface",
+    variable: "--color-surface-blue",
+    purpose: "Systems, data, and technical emphasis",
   },
   {
     label: "Card",
     variable: "--color-card",
-    purpose: "Translucent card treatment",
+    purpose: "Translucent card backgrounds",
+  },
+  {
+    label: "Glass",
+    variable: "--color-glass",
+    purpose: "Glass panels and direction cards",
   },
   {
     label: "Border",
@@ -59,15 +75,15 @@ const foundationTokens: ColorToken[] = [
   {
     label: "Subtle Text",
     variable: "--color-subtle",
-    purpose: "Metadata and supporting text",
+    purpose: "Metadata and supporting details",
   },
 ];
 
 const brandTokens: ColorToken[] = [
   {
-    label: "Primary",
+    label: "Primary Plum",
     variable: "--color-primary",
-    purpose: "Professional headings",
+    purpose: "Headings and high-emphasis text",
   },
   {
     label: "Signature Rose",
@@ -77,7 +93,7 @@ const brandTokens: ColorToken[] = [
   {
     label: "Soft Pink",
     variable: "--color-accent-soft",
-    purpose: "Gentle emphasis",
+    purpose: "Gentle pink emphasis",
   },
   {
     label: "Rose Wash",
@@ -87,69 +103,26 @@ const brandTokens: ColorToken[] = [
   {
     label: "Data Teal",
     variable: "--color-secondary",
-    purpose: "Systems and information",
+    purpose: "Systems, data, and technology",
   },
   {
-    label: "Lavender",
+    label: "Lavender Mist",
     variable: "--color-mist",
-    purpose: "Editorial depth",
+    purpose: "Editorial depth and ambient color",
   },
   {
     label: "Link",
     variable: "--color-link",
-    purpose: "Interactive text",
+    purpose: "Text links and tertiary actions",
   },
   {
-    label: "CTA",
+    label: "Primary CTA",
     variable: "--color-cta",
-    purpose: "Primary actions",
+    purpose: "Primary buttons and actions",
   },
 ];
 
-const semanticTokens: ColorToken[] = [
-  {
-    label: "Success",
-    variable: "--color-success",
-    purpose: "Completed or verified",
-  },
-  {
-    label: "Information",
-    variable: "--color-info",
-    purpose: "Informational states",
-  },
-  {
-    label: "Warning",
-    variable: "--color-warning",
-    purpose: "Attention required",
-  },
-  {
-    label: "Error",
-    variable: "--color-error",
-    purpose: "Errors and destructive states",
-  },
-  {
-    label: "Chart Rose",
-    variable: "--color-chart-1",
-    purpose: "Primary data series",
-  },
-  {
-    label: "Chart Teal",
-    variable: "--color-chart-2",
-    purpose: "Secondary data series",
-  },
-  {
-    label: "Chart Berry",
-    variable: "--color-chart-3",
-    purpose: "Supporting data series",
-  },
-  {
-    label: "Chart Lavender",
-    variable: "--color-chart-4",
-    purpose: "Supporting data series",
-  },
-];
-
-const competencyChips = [
+const professionalStrengths = [
   "Structured Data",
   "Documentation",
   "Information Accuracy",
@@ -158,7 +131,7 @@ const competencyChips = [
   "SQL",
   "PostgreSQL",
   "Accessibility",
-  "Technical Troubleshooting",
+  "Troubleshooting",
 ];
 
 export default function TokenPage() {
@@ -183,21 +156,20 @@ export default function TokenPage() {
 
             <div className="space-y-4">
               <h1 className="font-heading text-primary text-4xl leading-[0.98] font-extrabold tracking-[-0.035em] text-balance md:text-6xl">
-                Health information, technology, and equity
+                Pink academic warmth with professional clarity
               </h1>
 
               <p className="text-muted max-w-3xl text-base leading-relaxed md:text-lg">
-                A recruiter-ready visual system combining structured professional typography with
-                editorial warmth, soft academic pink surfaces, deep plum text, rose accents, and
-                data-informed teal.
+                A light-first visual system combining structured typography, soft pink surfaces,
+                deep plum text, rose accents, data-informed teal, and selective editorial detail.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <Chip variant="accent">Health Information</Chip>
-              <Chip variant="tech">Systems + Structured Data</Chip>
-              <Chip>Healthcare Operations</Chip>
-              <Chip>Women&apos;s Health Equity Informatics</Chip>
+              <ChipThinBorder>Health Information</ChipThinBorder>
+              <ChipRegBorder>Systems + Structured Data</ChipRegBorder>
+              <ChipThinBorder>Healthcare Operations</ChipThinBorder>
+              <ChipRegBorder>Women&apos;s Health Equity</ChipRegBorder>
             </div>
           </div>
 
@@ -208,44 +180,60 @@ export default function TokenPage() {
       <div className="mx-auto w-full max-w-7xl space-y-24 px-6 py-14 md:px-10 md:py-20">
         <DesignSection
           eyebrow="Typography"
-          title="Professional structure with editorial distinction"
-          description="Plus Jakarta Sans creates the heading hierarchy through carefully assigned weights. Nunito Sans handles readable body and interface copy, while Geist Mono identifies metadata and technical details."
+          title="Three typefaces with clearly assigned roles"
+          description="Plus Jakarta Sans creates the heading hierarchy. Nunito Sans handles body and interface copy. Geist Mono identifies metadata, categories, dates, technologies, and compact labels."
         >
           <div className="grid gap-5 lg:grid-cols-2">
             <Specimen
-              label="Display Heading · Plus Jakarta Sans ExtraBold"
-              description="ExtraBold display typography for the homepage hero and the portfolio's most important professional statement."
+              label="Display Heading"
+              description="Plus Jakarta Sans ExtraBold for the homepage hero and the site's strongest statement."
             >
               <h2 className="font-heading text-primary text-4xl leading-[0.98] font-extrabold tracking-[-0.035em] text-balance md:text-5xl">
-                Building at the intersection of healthcare information, technology, and
-                patient-centered systems.
+                Where software systems meet health information.
               </h2>
             </Specimen>
 
             <Specimen
-              label="Signature Statement · Plus Jakarta Sans Medium"
-              description="Medium-weight display typography creates a softer voice for signature statements, advocacy language, and field-note moments."
+              label="Page and Section Headings"
+              description="Plus Jakarta Sans Bold for page titles, section headings, and major content transitions."
             >
-              <p className="font-heading text-primary text-4xl leading-[1.08] font-medium tracking-tight text-balance md:text-5xl">
+              <h2 className="font-heading text-primary text-4xl leading-[1.08] font-bold tracking-tight text-balance md:text-5xl">
+                Technology, information, and healthcare systems
+              </h2>
+            </Specimen>
+
+            <Specimen
+              label="Card and Supporting Headings"
+              description="Plus Jakarta Sans SemiBold for cards, experience entries, project titles, and supporting hierarchy."
+            >
+              <h3 className="font-heading text-primary text-2xl leading-[1.12] font-semibold tracking-[-0.015em]">
+                Health information and data workflows
+              </h3>
+            </Specimen>
+
+            <Specimen
+              label="Signature Statement"
+              description="Plus Jakarta Sans Medium Italic for one selective brand-signature placement."
+            >
+              <p className="font-heading text-accent text-3xl leading-[1.08] font-medium tracking-[0.06em] uppercase italic md:text-4xl">
                 Pink, precise, and patient-centered.
               </p>
             </Specimen>
 
             <Specimen
-              label="Body Copy · Nunito Sans"
-              description="Readable supporting copy across pages, cards, forms, and project descriptions."
+              label="Body Copy"
+              description="Nunito Sans for readable paragraphs, descriptions, forms, and supporting content."
             >
               <p className="text-muted font-sans text-base leading-relaxed md:text-lg">
-                I&apos;m a software developer and Health Services Management student transitioning
-                into health information, healthcare data, and informatics. I bring experience with
-                structured information, digital systems, documentation, quality-focused workflows,
-                and technical problem-solving.
+                I&apos;m a software developer and Health Services Management student bringing a
+                systems-and-data foundation into health information, healthcare data, and
+                informatics.
               </p>
             </Specimen>
 
             <Specimen
-              label="Metadata · Geist Mono"
-              description="Eyebrows, project states, technical labels, dates, and compact supporting information."
+              label="Metadata and Technical Labels"
+              description="Geist Mono for eyebrows, project states, categories, dates, and technology labels."
             >
               <div className="space-y-3">
                 <p className="text-accent font-mono text-xs font-semibold tracking-[0.24em] uppercase">
@@ -255,10 +243,6 @@ export default function TokenPage() {
                 <p className="text-subtle font-mono text-sm">
                   HEALTH INFORMATION · MEDICAL RECORDS · DATA WORKFLOWS
                 </p>
-
-                <p className="text-secondary font-mono text-xs font-semibold">
-                  STATUS: TRANSITION IN PROGRESS
-                </p>
               </div>
             </Specimen>
           </div>
@@ -266,30 +250,30 @@ export default function TokenPage() {
 
         <DesignSection
           eyebrow="Identity Hierarchy"
-          title="Present capabilities first, long-term direction second"
-          description="Every recruiter-facing page should distinguish what is already proven, what is being pursued now, and what the work is building toward."
+          title="Present foundation, immediate transition, and long-term direction"
+          description="Recruiter-facing pages should establish proven experience first, clearly identify the current healthcare transition, and present the advocacy and informatics goal as long-term direction."
         >
           <div className="grid gap-5 lg:grid-cols-3">
             <HierarchyCard
               number="01"
-              label="Present Foundation"
-              title="Technology professional"
-              description="Professional software development, SQL and databases, structured systems, documentation, accessibility, testing, troubleshooting, and production ownership."
+              label="Professional Foundation"
+              title="Software, systems, and data"
+              description="Professional software development, structured data, SQL and databases, documentation, accessibility, testing, troubleshooting, and production ownership."
             />
 
             <HierarchyCard
               number="02"
-              label="Immediate Transition"
-              title="Health information and operations"
-              description="Building hands-on healthcare experience through medical records, documentation workflows, information accuracy, EHR exposure, and healthcare operations."
+              label="Immediate Focus"
+              title="Health information and medical records"
+              description="Building hands-on healthcare experience through medical records, documentation workflows, information accuracy, data quality, and healthcare operations."
               highlighted
             />
 
             <HierarchyCard
               number="03"
               label="Long-Term Direction"
-              title="Women's Health Equity Advocacy & Informatics"
-              description="Connecting health information, data, research, informatics, and patient-centered technology to support clearer and more equitable care."
+              title="Women's Health Equity Advocate & Informatician"
+              description="Connecting health information, data, research, digital health, and patient-centered technology to support clearer and more equitable care."
               editorial
             />
           </div>
@@ -298,170 +282,238 @@ export default function TokenPage() {
         <DesignSection
           eyebrow="Color"
           title="Soft academic pink with professional contrast"
-          description="Pink remains the recognizable identity. Plum anchors professional communication, while teal signals systems, information, and data."
+          description="The working palette uses plum for authority, rose for identity, teal for systems and data, and lavender for selective editorial atmosphere."
         >
-          <TokenGroup title="Foundation" tokens={foundationTokens} />
-          <TokenGroup title="Brand" tokens={brandTokens} />
-          <TokenGroup title="Semantic + Data" tokens={semanticTokens} />
+          <TokenGroup title="Foundation and Surfaces" tokens={foundationTokens} />
+
+          <TokenGroup title="Brand and Interaction" tokens={brandTokens} />
         </DesignSection>
 
         <DesignSection
-          eyebrow="Surface Hierarchy"
-          title="Different treatments for different audiences"
-          description="Recruiter-facing information should be quieter and easier to scan. Advocacy and field-note content can retain more atmosphere through spacing, color, scale, and softer heading weights."
+          eyebrow="Background Treatments"
+          title="Atmosphere without visual crowding"
+          description="The portfolio uses three supporting treatments. They should establish tone without competing with text, professional evidence, or calls to action."
         >
           <div className="grid gap-5 lg:grid-cols-3">
-            <div className="border-default bg-surface rounded-2xl border p-6">
-              <Eyebrow>Recruiter-Facing</Eyebrow>
+            <div className="hero-ambient border-default relative isolate min-h-64 overflow-hidden rounded-[2rem] border p-6">
+              <div
+                aria-hidden="true"
+                className="data-grid data-grid-fade pointer-events-none absolute inset-0 -z-10 opacity-50"
+              />
+
+              <Eyebrow>Hero Ambient</Eyebrow>
 
               <h3 className="font-heading text-primary mt-4 text-2xl font-bold tracking-tight">
-                Professional experience
+                Homepage atmosphere
               </h3>
 
               <p className="text-muted mt-3 text-sm leading-relaxed">
-                Clean structure, reduced decoration, concise evidence, strong contrast, and clear
-                employment relevance.
-              </p>
-            </div>
-
-            <div className="border-tech-chip-border bg-surface-blue rounded-3xl border p-6">
-              <Eyebrow>Systems + Data</Eyebrow>
-
-              <h3 className="font-heading text-primary mt-4 text-2xl font-bold tracking-tight">
-                Information workflows
-              </h3>
-
-              <p className="text-muted mt-3 text-sm leading-relaxed">
-                Teal-supported surfaces identify structured information, healthcare data, technical
-                systems, and operational thinking.
+                Layered pink, lavender, and teal light with the data-grid treatment reserved for
+                high-level brand framing.
               </p>
             </div>
 
             <div className="soft-wash border-default shadow-card rounded-[2rem] border p-6">
-              <Eyebrow>Advocacy + Field Notes</Eyebrow>
+              <Eyebrow>Soft Wash</Eyebrow>
 
-              <p className="font-heading text-primary mt-4 text-3xl leading-[1.08] font-medium tracking-tight">
-                The advocacy and research fuel the technology.
-              </p>
+              <h3 className="font-heading text-primary mt-4 text-2xl font-bold tracking-tight">
+                Editorial emphasis
+              </h3>
 
               <p className="text-muted mt-3 text-sm leading-relaxed">
-                More expressive typography and atmospheric surfaces belong in field notes, advocacy
-                content, and signature brand moments.
+                Used for the Informatics Diary, advocacy sections, and reflective content that
+                benefits from a softer atmosphere.
+              </p>
+            </div>
+
+            <div className="glass-panel shadow-glow rounded-[2rem] p-6">
+              <Eyebrow>Glass Panel</Eyebrow>
+
+              <h3 className="font-heading text-primary mt-4 text-2xl font-bold tracking-tight">
+                Direction and summary
+              </h3>
+
+              <p className="text-muted mt-3 text-sm leading-relaxed">
+                Used for current-direction cards, compact professional summaries, and information
+                that needs gentle separation from the page.
               </p>
             </div>
           </div>
         </DesignSection>
 
         <DesignSection
-          eyebrow="Card Density"
-          title="Compact evidence before expansive storytelling"
-          description="Recruiters need to scan skills and experience quickly. Larger editorial cards should be reserved for content that benefits from reflection or narrative."
+          eyebrow="Cards"
+          title="The three card treatments used across the site"
+          description="Card selection should follow the content's purpose. Professional evidence stays clean, summaries may use glass, and editorial content may use the soft wash."
         >
-          <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="border-default bg-surface shadow-card rounded-2xl border p-5">
-              <Eyebrow>Compact Professional Card</Eyebrow>
+          <div className="grid gap-5 lg:grid-cols-3">
+            <Card>
+              <Eyebrow>Standard Card</Eyebrow>
 
-              <h3 className="font-heading text-primary mt-3 text-xl font-bold">
-                Information and data
+              <h3 className="font-heading text-primary mt-4 text-2xl font-semibold">
+                Professional evidence
               </h3>
 
-              <p className="text-muted mt-2 text-sm leading-relaxed">
-                Structured data, SQL, database systems, information accuracy, documentation, and
-                quality assurance.
+              <p className="text-muted mt-3 text-sm leading-relaxed">
+                Used for projects, experience summaries, working principles, and content that should
+                be easy to scan.
               </p>
+            </Card>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                <Chip variant="tech">SQL</Chip>
-                <Chip variant="tech">Data Quality</Chip>
-                <Chip variant="tech">Documentation</Chip>
+            <GlassCard>
+              <Eyebrow>Glass Card</Eyebrow>
+
+              <h3 className="font-heading text-primary mt-4 text-2xl font-semibold">
+                Current direction
+              </h3>
+
+              <p className="text-muted mt-3 text-sm leading-relaxed">
+                Used for professional snapshots, focus areas, academic direction, and compact
+                supporting information.
+              </p>
+            </GlassCard>
+
+            <SoftWashCard>
+              <Eyebrow>Soft-Wash Card</Eyebrow>
+
+              <h3 className="font-heading text-primary mt-4 text-2xl font-semibold">
+                Editorial and advocacy
+              </h3>
+
+              <p className="text-muted mt-3 text-sm leading-relaxed">
+                Used selectively for the Diary, equity-focused content, and reflective narrative
+                sections.
+              </p>
+            </SoftWashCard>
+          </div>
+        </DesignSection>
+
+        <DesignSection
+          eyebrow="Chips"
+          title="Readable skills and compact metadata"
+          description="Readable chips communicate skills and focus areas. Monospaced chips identify technologies, context, and project status."
+        >
+          <div className="border-default bg-surface space-y-7 rounded-3xl border p-6">
+            <div>
+              <p className="text-subtle mb-3 text-sm font-semibold">Skills and focus areas</p>
+
+              <div className="flex flex-wrap gap-2">
+                <ChipThinBorder>Documentation</ChipThinBorder>
+                <ChipThinBorder>Quality Assurance</ChipThinBorder>
+                <ChipRegBorder>Healthcare Data</ChipRegBorder>
+                <ChipRegBorder>Workflow Analysis</ChipRegBorder>
               </div>
             </div>
 
-            <div className="glass-panel shadow-glow rounded-[2rem] p-7">
-              <Eyebrow>Expanded Narrative Card</Eyebrow>
-
-              <p className="font-heading text-primary mt-4 text-3xl leading-[1.08] font-medium tracking-tight md:text-4xl">
-                From software systems to healthcare information to informatics.
+            <div>
+              <p className="text-subtle mb-3 text-sm font-semibold">
+                Technologies, context, and status
               </p>
 
-              <p className="font-heading text-primary text-3xl leading-[1.08] font-medium tracking-tight">
-                I&apos;m building toward Women&apos;s Health Equity Advocacy & Informatics.
-              </p>
+              <div className="flex flex-wrap gap-2">
+                <ChipTech>PostgreSQL</ChipTech>
+                <ChipTech>TypeScript</ChipTech>
+                <ChipMono>Educational Project</ChipMono>
+                <ChipContext>Professional Work</ChipContext>
+                <ChipStatus>Built</ChipStatus>
+                <ChipStatus>Planned</ChipStatus>
+              </div>
             </div>
           </div>
         </DesignSection>
 
         <DesignSection
           eyebrow="Competencies"
-          title="Shared language across seven bridge-role families"
-          description="The portfolio should demonstrate transferable capabilities instead of presenting seven separate professional identities."
+          title="Shared language across bridge-role families"
+          description="The portfolio demonstrates transferable capabilities rather than presenting a separate identity for every possible role."
         >
           <div className="border-default bg-card shadow-card rounded-3xl border p-6 backdrop-blur md:p-8">
             <div className="flex flex-wrap gap-3">
-              {competencyChips.map((competency) => (
-                <Chip key={competency} variant="tech">
-                  {competency}
-                </Chip>
+              {professionalStrengths.map((strength) => (
+                <ChipRegBorder key={strength}>{strength}</ChipRegBorder>
               ))}
             </div>
           </div>
         </DesignSection>
 
         <DesignSection
-          eyebrow="Buttons"
-          title="A clear recruiter action hierarchy"
-          description="Experience and resume actions receive priority during the job search. Projects and editorial content remain accessible without competing for first attention."
+          eyebrow="Actions"
+          title="A simple recruiter action hierarchy"
+          description="Primary actions support professional evaluation. Secondary actions offer more context. Inline links guide visitors without creating another competing button."
         >
-          <div className="border-default bg-surface flex flex-wrap gap-4 rounded-3xl border p-6">
-            <button
-              type="button"
-              className="ring-brand bg-cta text-cta-foreground shadow-card hover:shadow-pop inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold transition hover:-translate-y-0.5"
-            >
-              View Experience
-            </button>
+          <div className="border-default bg-surface flex flex-wrap items-center gap-4 rounded-3xl border p-6">
+            <PrimaryCTA link="/experience" label="View Experience" />
 
-            <button
-              type="button"
-              className="ring-brand border-default bg-surface text-foreground hover:border-strong hover:bg-surface-soft inline-flex items-center justify-center rounded-full border px-5 py-2.5 text-sm font-bold transition"
-            >
-              Download Resume
-            </button>
+            <SecondaryCTA link="/resume/chanaya-w-resume.pdf" label="View Resume" />
 
-            <button
-              type="button"
-              className="ring-secondary border-tech-chip-border bg-tech-chip-bg text-secondary hover:bg-surface-blue inline-flex items-center justify-center rounded-full border px-5 py-2.5 text-sm font-bold transition"
-            >
-              View Projects
-            </button>
+            <PrimaryBtn link="/projects" label="View Projects" />
 
-            <button
-              type="button"
-              className="text-link hover:text-accent inline-flex items-center gap-2 px-2 py-2.5 text-sm font-bold transition"
-            >
-              Read Field Notes
-              <span aria-hidden="true">→</span>
-            </button>
+            <PrimaryBtn link="/field-notes" label="Read Field Notes" />
           </div>
         </DesignSection>
 
         <DesignSection
-          eyebrow="Status Language"
-          title="Make proof and project maturity unmistakable"
-          description="Project labels should separate production experience, built work, educational simulations, active development, and future concepts."
+          eyebrow="Depth and Shape"
+          title="Rounded, soft, and structured"
+          description="Large radii and restrained shadows support the feminine visual identity while borders and consistent spacing preserve professional structure."
         >
-          <div className="border-default bg-surface flex flex-wrap gap-3 rounded-3xl border p-6">
-            <StatusBadge status="production">Production</StatusBadge>
-            <StatusBadge status="built">Built</StatusBadge>
-            <StatusBadge status="educational">Educational Simulation</StatusBadge>
-            <StatusBadge status="progress">In Progress</StatusBadge>
-            <StatusBadge status="planned">Planned Concept</StatusBadge>
+          <div className="grid gap-5 md:grid-cols-3">
+            <ReferenceCard
+              label="Radius"
+              title="Cards and panels"
+              description="Use rounded-2xl, rounded-3xl, or rounded-[2rem]. Reserve rounded-full for buttons, chips, and navigation pills."
+            />
+
+            <ReferenceCard
+              label="Shadow"
+              title="Subtle elevation"
+              description="Use shadow-card by default, shadow-pop for hover states, and shadow-glow only for glass or high-emphasis panels."
+            />
+
+            <ReferenceCard
+              label="Spacing"
+              title="Room to scan"
+              description="Use generous section spacing, compact card interiors, and controlled paragraph widths. Avoid adding content only to fill space."
+            />
           </div>
         </DesignSection>
 
         <DesignSection
-          eyebrow="Writing Tone"
-          title="Precise, grounded, and forward-looking"
-          description="The portfolio can retain its personality while distinguishing professional experience from study, independent projects, advocacy, and future goals."
+          eyebrow="Content and Visual Restraint"
+          title="Professional first, expressive where it adds meaning"
+          description="The portfolio should feel related to the social ecosystem without adopting the density or decoration of a social-media graphic."
+        >
+          <div className="grid gap-5 lg:grid-cols-2">
+            <Specimen
+              label="Recruiter-Facing Areas"
+              description="Homepage, Experience, professional projects, navigation, resume access, and contact form."
+            >
+              <ul className="text-muted space-y-3 text-sm leading-relaxed md:text-base">
+                <li>Use concise, evidence-based language.</li>
+                <li>Keep decorative imagery and emojis out of critical actions.</li>
+                <li>Prioritize experience, accuracy, documentation, systems, and outcomes.</li>
+                <li>Use standard cards, clear labels, and strong contrast.</li>
+              </ul>
+            </Specimen>
+
+            <Specimen
+              label="Editorial Areas"
+              description="The Informatics Diary, advocacy sections, and selective future-facing project content."
+            >
+              <ul className="text-muted space-y-3 text-sm leading-relaxed md:text-base">
+                <li>Use soft-wash surfaces and more atmospheric spacing.</li>
+                <li>Allow one intentional visual motif or editorial composition per page.</li>
+                <li>Use emojis only when they support voice or meaning.</li>
+                <li>Keep all decoration away from paragraphs and interactive controls.</li>
+              </ul>
+            </Specimen>
+          </div>
+        </DesignSection>
+
+        <DesignSection
+          eyebrow="Writing Direction"
+          title="Precise, grounded, and purpose-led"
+          description="Professional experience, developing knowledge, advocacy, and future direction should remain clearly distinguished."
         >
           <div className="grid gap-5 lg:grid-cols-2">
             <Specimen
@@ -470,8 +522,9 @@ export default function TokenPage() {
             >
               <p className="text-foreground text-base leading-relaxed">
                 I bring professional experience managing production software, structured data,
-                documentation, testing, troubleshooting, and operational workflows. I&apos;m now
-                applying that foundation within health information and healthcare systems.
+                documentation, testing, troubleshooting, accessibility, and operational workflows.
+                I&apos;m now applying that foundation within health information and healthcare
+                systems.
               </p>
             </Specimen>
 
@@ -480,13 +533,14 @@ export default function TokenPage() {
               description="Purposeful, personal, and clearly identified as future-facing."
             >
               <p className="font-heading text-primary text-3xl leading-[1.08] font-medium tracking-[-0.02em]">
-                I&apos;m building toward Women&apos;s Health Equity Advocacy & Informatics.
+                I&apos;m building toward becoming a Women&apos;s Health Equity Advocate &amp;
+                Informatician.
               </p>
 
               <p className="text-muted mt-4 text-sm leading-relaxed">
-                The long-term goal is to use health data, research, informatics, and
-                patient-centered technology to support earlier answers, clearer information, and
-                more equitable care.
+                My advocacy centers racially underserved and underrepresented women who are too
+                often dismissed, diagnosed late, undertreated, overlooked in research, or left
+                without clear information and coordinated care.
               </p>
             </Specimen>
           </div>
@@ -629,15 +683,9 @@ function HierarchyCard({
 
       <p className="text-subtle mt-6 text-xs font-bold tracking-[0.16em] uppercase">{label}</p>
 
-      {editorial ? (
-        <h3 className="font-heading text-primary mt-3 text-3xl leading-[1.08] font-medium tracking-tight">
-          {title}
-        </h3>
-      ) : (
-        <h3 className="font-heading text-primary mt-3 text-2xl leading-[1.12] font-semibold tracking-[-0.015em]">
-          {title}
-        </h3>
-      )}
+      <h3 className="font-heading text-primary mt-3 text-2xl leading-[1.12] font-semibold tracking-[-0.015em]">
+        {title}
+      </h3>
 
       <p className="text-muted mt-4 text-sm leading-relaxed">{description}</p>
     </article>
@@ -651,7 +699,7 @@ function TokenGroup({ title, tokens }: { title: string; tokens: ColorToken[] }) 
         {title}
       </h3>
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
         {tokens.map((token) => (
           <ColorSwatch key={token.variable} token={token} />
         ))}
@@ -679,48 +727,22 @@ function ColorSwatch({ token }: { token: ColorToken }) {
   );
 }
 
-function Chip({
-  children,
-  variant = "default",
+function ReferenceCard({
+  label,
+  title,
+  description,
 }: {
-  children: React.ReactNode;
-  variant?: "default" | "accent" | "tech";
+  label: string;
+  title: string;
+  description: string;
 }) {
-  const styles = {
-    default: "border-default bg-surface text-foreground",
-    accent: "border-chip-border bg-chip-bg text-chip-text",
-    tech: "border-tech-chip-border bg-tech-chip-bg text-tech-chip-text",
-  };
-
   return (
-    <span
-      className={`${styles[variant]} inline-flex items-center rounded-full border px-3 py-1.5 text-xs font-semibold tracking-wide`}
-    >
-      {children}
-    </span>
-  );
-}
+    <article className="border-default bg-surface shadow-card rounded-3xl border p-6">
+      <Eyebrow>{label}</Eyebrow>
 
-function StatusBadge({
-  children,
-  status,
-}: {
-  children: React.ReactNode;
-  status: "production" | "built" | "educational" | "progress" | "planned";
-}) {
-  const styles = {
-    production: "border-success bg-success-soft text-success-foreground",
-    built: "border-info bg-info-soft text-info-foreground",
-    educational: "border-tech-chip-border bg-tech-chip-bg text-tech-chip-text",
-    progress: "border-warning bg-warning-soft text-warning-foreground",
-    planned: "border-default bg-surface-soft text-muted",
-  };
+      <h3 className="font-heading text-primary mt-4 text-2xl font-semibold">{title}</h3>
 
-  return (
-    <span
-      className={`${styles[status]} inline-flex items-center rounded-full border px-3 py-1.5 font-mono text-xs font-semibold tracking-[0.12em] uppercase`}
-    >
-      {children}
-    </span>
+      <p className="text-muted mt-3 text-sm leading-relaxed">{description}</p>
+    </article>
   );
 }

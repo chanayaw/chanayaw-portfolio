@@ -1,9 +1,13 @@
 import Link from "next/link";
 
-import { SocialIcons } from "../../data/navData";
+import { resumeHref, SocialIcons } from "../../data/navData";
 import SocialLinks from "./SocialLinks";
 
 const footerLinks = [
+  {
+    label: "Experience",
+    href: "/experience",
+  },
   {
     label: "Projects",
     href: "/projects",
@@ -29,7 +33,7 @@ const Footer = () => {
         <div className="max-w-2xl space-y-5">
           <Link
             href="/"
-            aria-label="Chanaya W — home"
+            aria-label="Chanaya W home"
             className="ring-brand text-accent hover:text-primary font-heading inline-flex rounded-lg py-1 text-2xl font-normal tracking-[0.24em] lowercase transition-colors md:text-3xl"
           >
             chanaya w
@@ -48,13 +52,10 @@ const Footer = () => {
             </p>
           </div>
 
-          <p className="font-heading text-primary text-2xl leading-[1.08] font-medium tracking-tight">
-            Pink, precise, and patient-centered.
-          </p>
-
           <p className="text-subtle max-w-xl text-sm leading-relaxed">
-            Long-term direction: Women&apos;s Health Equity Advocacy & Informatics through health
-            information, data, research, and patient-centered technology.
+            Long term, I&apos;m building toward becoming a Women&apos;s Health Equity Advocate &amp;
+            Informatician through health information, data, research, and patient-centered
+            technology.
           </p>
         </div>
 
@@ -71,6 +72,17 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+
+              <li>
+                <a
+                  href={resumeHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ring-brand text-subtle hover:text-accent rounded-md py-1 font-mono text-[0.68rem] font-semibold tracking-[0.18em] uppercase transition-colors"
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </nav>
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Projects",
 
   description:
-    "Selected professional and educational projects demonstrating software development, structured data, operational workflows, information access, accessibility, and emerging health-information work.",
+    "Professional and educational projects by Chanaya W. across software development, structured data, operational systems, health information, digital health, and women's health equity.",
 
   alternates: {
     canonical: "/projects",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Projects",
     description:
-      "Selected software, systems, data, and emerging health-information projects by Chanaya W.",
+      "Projects across software development, structured data, operational systems, health information, and digital health.",
     url: "/projects",
   },
 };
@@ -39,9 +39,9 @@ export default function ProjectsPage() {
     <main className="mx-auto w-full max-w-360 px-6 pb-24 md:px-10">
       <PageHeader
         eyebrow="Projects"
-        heading="Software, systems, and emerging health-information work"
+        heading="Projects across software, health information, and digital health"
         description="Selected professional and educational projects demonstrating structured data, operational workflows, information access, accessibility, and full-stack development."
-        supportingText="My current work builds on that technical foundation as I develop knowledge across health information, healthcare data, informatics, and Women's Health Equity Advocacy & Informatics."
+        supportingText="My current work builds on that technical foundation as I develop knowledge across health information, healthcare data, informatics, and women's health equity."
       />
 
       <section aria-labelledby="selected-work-heading" className="mt-16 md:mt-20">

@@ -14,13 +14,10 @@ const PageHeader = ({
   actions,
 }: PageHeaderProps) => {
   return (
-    <section
-      aria-labelledby="page-heading"
-      className="relative isolate overflow-hidden pt-20 md:pt-28"
-    >
+    <section aria-labelledby="page-heading" className="relative isolate pt-20 md:pt-28">
       <div
         aria-hidden="true"
-        className="data-grid pointer-events-none absolute inset-0 -z-10 opacity-[0.12]"
+        className="data-grid pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2 opacity-[0.25] dark:opacity-[0.22]"
       />
 
       <div className="max-w-5xl">

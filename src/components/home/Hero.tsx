@@ -49,9 +49,10 @@ export default function Hero() {
               </p>
 
               <p>
-                My immediate focus is health information and medical records-work where accuracy,
+                My immediate focus is health information and medical records work where accuracy,
                 organization, documentation, data quality, and reliable systems matter. Long term,
-                I&apos;m building toward Women&apos;s Health Equity Advocacy & Informatics.
+                I&apos;m building toward becoming a Women&apos;s Health Equity Advocate &amp;
+                Informatician.
               </p>
             </div>
 
@@ -90,7 +91,7 @@ export default function Hero() {
 
                 <SnapshotBlock
                   label="Long-Term Direction"
-                  body="Women's Health Equity Advocacy & Informatics through health information, data, research, digital health, and patient-centered technology."
+                  body="Becoming a Women's Health Equity Advocate & Informatician, connecting health information, data, research, digital health, and patient-centered technology."
                 />
               </div>
 

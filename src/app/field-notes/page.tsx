@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "The Informatics Diary",
 
   description:
-    "Independent field notes on health information, healthcare data, digital health, informatics, academic learning, and women's health equity.",
+    "Independent field notes documenting Chanaya W's transition from software development into health information, healthcare data, informatics, and women's health equity advocacy.",
 
   alternates: {
     canonical: "/field-notes",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Informatics Diary",
     description:
-      "Independent writing and learning across health information, digital health, informatics, and women's health equity.",
+      "Field notes on health information, digital health, healthcare data, academic learning, and women's health equity.",
     url: "/field-notes",
     type: "website",
   },
@@ -32,7 +32,7 @@ const writingThemes = [
     label: "EQUITY",
     title: "Women's Health Equity",
     description:
-      "Independent writing on patient dismissal, delayed diagnosis, medical bias, care access, understandable information, and the experiences of women who are too often unheard.",
+      "Writing on racial disparities, patient dismissal, delayed diagnosis, undertreatment, medical bias, research gaps, care access, and the experiences of women who are too often unheard.",
   },
   {
     label: "INFORMATION",
@@ -60,8 +60,8 @@ export default function FieldNotesPage() {
       <PageHeader
         eyebrow="The Informatics Diary"
         heading="Field notes on health information, digital health, and women's health equity"
-        description="The Informatics Diary is my independent writing and learning archive for documenting questions, research, coursework, technical concepts, and the professional direction I'm building."
-        supportingText="It connects my software background, healthcare education, developing informatics knowledge, and long-term commitment to Women's Health Equity Advocacy & Informatics."
+        description="The Informatics Diary documents my transition from software development into health information, healthcare data, and informatics."
+        supportingText="I write about what I'm learning through my Health Services Management education, health-tech projects, research, and developing understanding of healthcare systems as I work toward becoming a Women's Health Equity Advocate & Informatician."
         actions={
           <>
             <a
@@ -94,15 +94,16 @@ export default function FieldNotesPage() {
 
             <div className="text-muted space-y-5 text-base leading-relaxed md:text-lg">
               <p>
-                Some entries examine health-equity questions and patient experiences. Others focus
-                on health information, healthcare data, digital systems, accessibility, patient
-                education, or lessons from my academic and professional transition.
+                My advocacy centers racially underserved and underrepresented women who are too
+                often dismissed, diagnosed late, undertreated, overlooked in research, or left
+                without clear information and coordinated care. Everyone is welcome to learn, but
+                the women most affected by these disparities remain at the center.
               </p>
 
               <p>
                 The writing is exploratory and evidence-conscious. I aim to distinguish established
-                information from interpretation, document limitations, and avoid presenting
-                developing knowledge as professional clinical authority.
+                information from interpretation, cite credible sources, document limitations, and
+                avoid presenting developing knowledge as professional clinical authority.
               </p>
 
               <p className="text-sm">
@@ -160,7 +161,8 @@ export default function FieldNotesPage() {
             </h2>
 
             <p className="text-muted mt-4 text-base leading-relaxed">
-              Visit The Informatics Diary for published writing and updates as the archive develops.
+              Visit The Informatics Diary for published writing, research notes, and updates as the
+              archive develops.
             </p>
           </div>
 

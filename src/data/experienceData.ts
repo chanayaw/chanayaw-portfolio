@@ -89,16 +89,16 @@ export const featuredExperience: ExperienceEntry[] = [
 export const appliedStudy: AppliedStudyEntry[] = [
   {
     id: "applied-health-tech-projects",
-    title: "Digital Health Technology & Informatics Projects",
+    title: "Health Information, Digital Health & Informatics Projects",
     organization: "Independent Study / Applied Health-Tech Projects",
     period: "January 2026 - Present",
     summary:
       "Independent study and portfolio development connecting software engineering, health systems, health information, healthcare data, digital health, and women's health equity.",
     highlights: [
-      "Developing educational project concepts involving patient education, care navigation, symptom documentation, health-data organization, and care coordination.",
+      "Developing educational project concepts involving health-record data quality, patient education, care navigation, symptom documentation, healthcare information organization, and care coordination.",
       "Strengthening technical fluency through health-focused exercises in TypeScript, React, Next.js, SQL, forms, accessibility, data modeling, and full-stack workflows.",
-      "Exploring how structured information, workflow design, and user-centered interfaces can support clearer health communication and more usable healthcare information.",
-      "Developing The Informatics Diary as a field-note archive documenting learning across health information, informatics, data, software, healthcare systems, and women's health equity.",
+      "Exploring how structured information, workflow design, data quality, and user-centered interfaces can support clearer health communication and more usable healthcare information.",
+      "Developing The Informatics Diary as a field-note archive documenting my healthcare education, informatics learning, technical projects, and research into disparities affecting racially underserved and underrepresented women.",
       "Building foundational knowledge in health services management, health information management, data analytics, privacy-conscious information handling, healthcare operations, and clinical-workflow concepts.",
     ],
     focusAreas: [
