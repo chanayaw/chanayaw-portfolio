@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "The Informatics Diary",
 
   description:
-    "Independent field notes documenting Chanaya W's transition from software development into health information, healthcare data, informatics, and women's health equity advocacy.",
+    "Independent field notes documenting Ariela Israel's transition from software development into health information, healthcare data, informatics, and women's health equity advocacy.",
 
   alternates: {
     canonical: "/field-notes",

@@ -152,7 +152,7 @@ export default function TokenPage() {
 
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-16 md:px-10 md:py-24 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-4xl space-y-6">
-            <Eyebrow>Chanaya W Design System</Eyebrow>
+            <Eyebrow>Ariela Israel Design System</Eyebrow>
 
             <div className="space-y-4">
               <h1 className="font-heading text-primary text-4xl leading-[0.98] font-extrabold tracking-[-0.035em] text-balance md:text-6xl">
@@ -444,7 +444,7 @@ export default function TokenPage() {
           <div className="border-default bg-surface flex flex-wrap items-center gap-4 rounded-3xl border p-6">
             <PrimaryCTA link="/experience" label="View Experience" />
 
-            <SecondaryCTA link="/resume/chanaya-w-resume.pdf" label="View Resume" />
+            <SecondaryCTA link="/resume/arielaisrael-resume.pdf" label="View Resume" />
 
             <PrimaryBtn link="/projects" label="View Projects" />
 

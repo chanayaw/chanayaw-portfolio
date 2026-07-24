@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { caseStudies } from "@/src/data/caseStudyData";
 
-const siteUrl = "https://www.chanayaw.com";
+const siteUrl = "https://www.arielainstem.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const primaryRoutes: MetadataRoute.Sitemap = [

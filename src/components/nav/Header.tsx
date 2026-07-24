@@ -57,11 +57,11 @@ const Header = () => {
       >
         <Link
           href="/"
-          aria-label="Chanaya W — home"
+          aria-label="Ariela Israel — home"
           className="ring-brand text-accent hover:text-primary font-heading inline-flex shrink-0 items-center rounded-lg py-1 text-xl font-normal tracking-[0.2em] lowercase transition-colors md:text-2xl md:tracking-[0.24em]"
           onClick={closeMenu}
         >
-          chanaya w
+          ariela israel
         </Link>
 
         <div className="flex items-center gap-3">

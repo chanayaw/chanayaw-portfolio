@@ -28,7 +28,7 @@ export type SocialIcon = {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
 };
 
-export const resumeHref = "/resume/chanaya-w-resume.pdf";
+export const resumeHref = "/resume/arielaisrael-resume.pdf";
 
 export const MenuItems: MenuItem[] = [
   {
@@ -65,7 +65,7 @@ export const RecruiterActions: RecruiterAction[] = [
   },
   {
     label: "Resume",
-    href: "/resume/chanaya-w-resume.pdf",
+    href: "/resume/arielaisrael-resume.pdf",
     available: false,
     download: true,
   },
@@ -74,12 +74,12 @@ export const RecruiterActions: RecruiterAction[] = [
 export const SocialIcons: SocialIcon[] = [
   {
     label: "GitHub",
-    href: "https://github.com/chanayaw",
+    href: "https://github.com/thearielaisrael",
     icon: GitHub,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/chanaya-wheeler",
+    href: "https://linkedin.com/in/ariela-israel",
     icon: LinkedIn,
   },
   {
@@ -89,22 +89,22 @@ export const SocialIcons: SocialIcon[] = [
   },
   {
     label: "YouTube",
-    href: "https://youtube.com/@chanayaw",
+    href: "https://youtube.com/@thearielaisrael",
     icon: YouTube,
   },
   {
     label: "Instagram",
-    href: "https://instagram.com/chanayaw",
+    href: "https://instagram.com/thearielaisrael",
     icon: Instagram,
   },
   {
     label: "Threads",
-    href: "https://threads.com/chanayaw",
+    href: "https://threads.com/thearielaisrael",
     icon: Threads,
   },
   {
     label: "TikTok",
-    href: "https://www.tiktok.com/@chanaya.w",
+    href: "https://www.tiktok.com/@thearielaisrael",
     icon: TikTok,
   },
 ];

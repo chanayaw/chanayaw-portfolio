@@ -33,10 +33,10 @@ const Footer = () => {
         <div className="max-w-2xl space-y-5">
           <Link
             href="/"
-            aria-label="Chanaya W home"
+            aria-label="Ariela Israel home"
             className="ring-brand text-accent hover:text-primary font-heading inline-flex rounded-lg py-1 text-2xl font-normal tracking-[0.24em] lowercase transition-colors md:text-3xl"
           >
-            chanaya w
+            ariela israel
           </Link>
 
           <div className="space-y-3">
@@ -96,7 +96,7 @@ const Footer = () => {
               Open to aligned professional opportunities →
             </Link>
 
-            <p className="text-subtle text-sm">© {new Date().getFullYear()} Chanaya W</p>
+            <p className="text-subtle text-sm">© {new Date().getFullYear()} Ariela Israel</p>
           </div>
         </div>
       </div>

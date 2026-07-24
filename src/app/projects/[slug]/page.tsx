@@ -23,11 +23,11 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
 
   if (!caseStudy) {
     return {
-      title: "Project Not Found | Chanaya W",
+      title: "Project Not Found | Ariela Israel",
     };
   }
 
-  const url = `https://www.chanayaw.com/projects/${caseStudy.slug}`;
+  const url = `https://www.arielainstem.com/projects/${caseStudy.slug}`;
 
   return {
     title: caseStudy.title,

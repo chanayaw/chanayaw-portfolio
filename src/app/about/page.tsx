@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "About",
 
   description:
-    "Learn about Chanaya W's transition from software development into health information, healthcare data, and informatics, and her path toward becoming a Women's Health Equity Advocate & Informatician.",
+    "Learn about Ariela Israel's transition from software development into health information, healthcare data, and informatics, and her path toward becoming a Women's Health Equity Advocate & Informatician.",
 
   alternates: {
     canonical: "/about",

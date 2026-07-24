@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Chanaya W | Software, Health Information & Informatics",
+    absolute: "Ariela Israel | Software, Health Information & Informatics",
   },
 
   description:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Chanaya W | Software, Health Information & Informatics",
+    title: "Ariela Israel | Software, Health Information & Informatics",
     description:
       "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare.",
     url: "/",

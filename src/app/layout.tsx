@@ -26,30 +26,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.chanayaw.com"),
+  metadataBase: new URL("https://www.arielainstem.com"),
 
   title: {
-    default: "Chanaya W | Software, Health Information & Informatics",
-    template: "%s | Chanaya W",
+    default: "Ariela Israel | Software, Health Information & Informatics",
+    template: "%s | Ariela Israel",
   },
 
   description:
     "Software developer and Health Services Management student transitioning into health information, healthcare data, and informatics while building toward becoming a Women's Health Equity Advocate & Informatician.",
 
-  applicationName: "Chanaya W",
+  applicationName: "Ariela Israel",
 
   authors: [
     {
-      name: "Chanaya W",
-      url: "https://www.chanayaw.com",
+      name: "Ariela Israel",
+      url: "https://www.arielainstem.com",
     },
   ],
 
-  creator: "Chanaya W",
-  publisher: "Chanaya W",
+  creator: "Ariela Israel",
+  publisher: "Ariela Israel",
 
   keywords: [
-    "Chanaya W",
+    "Ariela Israel",
     "health information",
     "medical records",
     "release of information",
@@ -77,16 +77,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Chanaya W",
-    title: "Chanaya W | Software, Health Information & Informatics",
+    siteName: "Ariela Israel",
+    title: "Ariela Israel | Software, Health Information & Informatics",
     description:
       "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare and building toward becoming a Women's Health Equity Advocate & Informatician.",
-    url: "https://www.chanayaw.com",
+    url: "https://www.arielainstem.com",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Chanaya W | Software, Health Information & Informatics",
+    title: "Ariela Israel | Software, Health Information & Informatics",
     description:
       "Software developer and Health Services Management student bringing a systems-and-data foundation into healthcare and building toward becoming a Women's Health Equity Advocate & Informatician.",
   },

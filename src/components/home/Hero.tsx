@@ -39,9 +39,9 @@ export default function Hero() {
 
             <div className="text-muted mt-6 max-w-3xl space-y-4 text-base leading-relaxed md:text-lg">
               <p>
-                I&apos;m Chanaya
+                I&apos;m Ariela
                 <span className="text-accent ml-2 align-top text-sm font-semibold tracking-wide opacity-85 md:text-base">
-                  (shh-nay-yuh)
+                  (ar-ree-el-la)
                 </span>
                 . My professional foundation includes structured data, SQL-backed systems,
                 documentation, quality assurance, accessibility, troubleshooting, and operational

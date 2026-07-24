@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Experience",
 
   description:
-    "Professional software-development, data, documentation, accessibility, quality-assurance, and operational experience supporting Chanaya W's transition into health information and informatics.",
+    "Professional software-development, data, documentation, accessibility, quality-assurance, and operational experience supporting Ariela Israel's transition into health information and informatics.",
 
   alternates: {
     canonical: "/experience",
